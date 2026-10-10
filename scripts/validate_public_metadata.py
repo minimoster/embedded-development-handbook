@@ -21,7 +21,8 @@ for name in ('core-catalog.json','official-catalog.json','primary-verification.j
  j=read('sources/'+name)
  for item in j:assert item['url'].startswith('https://'),(name,item)
 for p in R.rglob('*'):
- if not p.is_file():continue
+ # Only the root .git path is checkout metadata; nested and other hidden files remain public inputs.
+ if p.relative_to(R).parts[0]=='.git' or not p.is_file():continue
  try:s=p.read_text(encoding='utf-8')
  except UnicodeDecodeError:raise AssertionError(f'Unexpected binary public asset: {p.relative_to(R)}')
  if p.suffix in ('.md','.json') or p.name=='data.js':assert not re.search(r'(?:ghp_[A-Za-z0-9]{30,}|sediment://file_|["\'](?:sentry-trace|scrapeId|indexId|download_url|library_file_id)["\']\s*:)',s),str(p.relative_to(R))
