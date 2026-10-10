@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-10T08:36:36.330753+00:00",
+  "checked_at_utc": "2026-10-10T10:08:26.996882+00:00",
   "core_topics": 120,
   "official_hot100": 100,
   "core_host_tests": {
@@ -14,13 +14,21 @@
       "c-core",
       "linux-lifecycle",
       "cpp-language",
+      "cpp-followups",
+      "queue-regression",
       "cpp-core",
       "c-abi"
     ],
     "numeric_roundtrips": 20001,
     "numeric_int64_oracle_cases": 50000,
     "numeric_strtoimax_differential_cases": 216403,
-    "real_c_cpp_boundary": "C11 caller separately compiled; C++17 implementation compiled with -fno-exceptions, then linked; fake resource only"
+    "real_c_cpp_boundary": "C11 caller separately compiled; C++17 implementation compiled with -fno-exceptions, then linked; fake resource only",
+    "controlled_queue_regression": "Empty/full close with entered-wait observer under queue mutex; 10 one-allocation-failure producer handoffs; closed move-only ownership",
+    "followup_exercises": {
+      "maximum_subarray_arrays": 9840,
+      "median_streams": 19607,
+      "status": "normal and ASan/UBSan passed; independent checked-iterator run also passed"
+    }
   },
   "algorithms": {
     "passed": true,
@@ -28,12 +36,12 @@
     "asan_ubsan_entrypoints": 101,
     "checked_iterator_entrypoints": 101,
     "additional_small_domain_oracles": 17,
-    "frozen_file_count": 314,
-    "freeze_manifest_sha256": "7bcb0926c56e22a753ecb251acd720a2604fa1c3e3feacb6fece764ba0d29de0",
+    "frozen_file_count": 316,
+    "freeze_manifest_sha256": "ce6d88658f763d1edf059a005843f16233f53ae6c38c7c3aba24fb9ba78355c5",
     "inventory_reverified": true,
-    "source_link_checks": 515,
+    "source_link_checks": 529,
     "result_path": "docs/80-hot100-cpp/validation-result.json",
-    "execution_status": "Prior complete101-entry three-mode code run retained;220 compilation/runtime inputs unchanged and hash-verified. Current101-lesson inventory, public links and314-file freeze revalidated."
+    "execution_status": "Fresh complete101-entry normal, ASan/UBSan and checked-iterator run passed;17 independent bounded exhaustive oracles passed; no compiled input changed during run."
   },
   "reader_static": {
     "status": "passed",
@@ -47,7 +55,7 @@
       "manifest counts",
       "no fetch or remote services"
     ],
-    "offline_resources": 225,
+    "offline_resources": 228,
     "navigation_simulation": "Repeated/current and changed sections, collapse-before-scroll, heading focus, back/forward history, modified clicks, responsive960px boundary, sidebar close/Esc/focus trap passed"
   },
   "actual_browser": {

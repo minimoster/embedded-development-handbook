@@ -57,7 +57,7 @@ public:
 
 ## C++ 常见陷阱
 
-- 官方n<=45才能用 int 返回；n=46的答案已经超过 INT_MAX。long long 也不是无限精度。
+- 官方n<=45时答案可由本目标的32位有符号 int 返回。n=45为1836311903，n=46为2971215073，后者超过32位有符号 int 上界2147483647；这不是所有C++17 int 的共同上界。本地目标由 [support.hpp](../../../algorithms/cpp/support.hpp) 断言，详见[表示契约](../SOURCES.md)。当前接口只承诺官方范围及n=0扩展，扩大n时需同时检查中间值与返回类型；long long 也不是无限精度。
 - 不能先 before=current 再 current=before+current，否则读不到旧 before。
 - n=0 的结果是数学扩展，面试时要先说清楚而不是擅自当作官方要求。
 

@@ -30,6 +30,33 @@
 #include <utility>
 #include <vector>
 
+
+// This teaching target deliberately matches the tested integer value range.
+// C++17 alone does not promise these byte, range, or execution-encoding properties.
+namespace hot100::target_contract {
+constexpr bool asciiLettersAndDigits() {
+    constexpr char lower[] = "abcdefghijklmnopqrstuvwxyz";
+    constexpr char upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    constexpr char digits[] = "0123456789";
+    for (int i = 0; i < 26; ++i) {
+        if (static_cast<unsigned char>(lower[i]) != 0x61 + i ||
+            static_cast<unsigned char>(upper[i]) != 0x41 + i) return false;
+    }
+    for (int i = 0; i < 10; ++i)
+        if (static_cast<unsigned char>(digits[i]) != 0x30 + i) return false;
+    return true;
+}
+static_assert(CHAR_BIT == 8 && UCHAR_MAX == 255,
+              "Hot100 teaching target requires 8-bit bytes");
+static_assert(std::numeric_limits<int>::digits == 31 &&
+              INT_MAX == 2147483647 && INT_MIN == (-2147483647 - 1),
+              "Hot100 teaching target requires the signed 32-bit int value range");
+static_assert(std::numeric_limits<long long>::digits >= 63,
+              "Hot100 teaching target requires at least 63 long long value bits");
+static_assert(asciiLettersAndDigits(),
+              "Hot100 teaching target requires ASCII letters and digits");
+} // namespace hot100::target_contract
+
 struct ListNode {
     int val;
     ListNode* next;

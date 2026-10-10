@@ -10,6 +10,10 @@
 
 本地支持头 [support.hpp](../../algorithms/cpp/support.hpp) 提供STL、节点类型和测试所有权工具；它不是必须粘贴到在线平台的额外题解。
 
+本地目标明确要求32位有符号 `int` 的值域、8位字节和ASCII字母/数字；`long long` 至少63个值位。C++17本身不保证前三项，支持头会逐项断言，详见[表示契约](SOURCES.md)。移植验证与语言版本标签要分别说明。
+
+LC53的分治与LC295的全范围/99%范围追问另有[独立练习源码](../../algorithms/cpp/exercises/followup_variants.hpp)和[可执行回归](../../algorithms/cpp/exercises/test_followup_variants.cpp)，运行方法见[验证方法](TESTING.md)。它们不增加正式或补充题数。
+
 ## 正式100题
 
 ### 01. 哈希（3题）

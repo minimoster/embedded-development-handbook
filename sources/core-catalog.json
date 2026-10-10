@@ -803,5 +803,61 @@
     "url": "https://docs.kernel.org/driver-api/basics.html",
     "boundary": "模块加载/内建入口与退出差别；目标内核API签名与配置为准",
     "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gcc-arm-options",
+    "title": "GCC14.2：ARM编译选项",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/ARM-Options.html",
+    "boundary": "编译器版本固定；soft/softfp/hard及库兼容按目标检查",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "i2c-clients",
+    "title": "Linux kernel：I2C client驱动",
+    "url": "https://docs.kernel.org/i2c/writing-clients.html",
+    "boundary": "滚动文档；i2c_driver/i2c_client与目标内核匹配",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rcu-barrier",
+    "title": "Linux kernel：RCU与可卸载模块",
+    "url": "https://docs.kernel.org/RCU/rcubarrier.html",
+    "boundary": "宽限期与回调排空不同；匹配目标RCU变体",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gpio-userspace",
+    "title": "Linux kernel：GPIO字符设备UAPI",
+    "url": "https://docs.kernel.org/userspace-api/gpio/chardev.html",
+    "boundary": "当前页面为v2；目标内核与libgpiod版本另核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "i2c-userspace",
+    "title": "Linux kernel：I2C用户接口",
+    "url": "https://docs.kernel.org/i2c/dev-interface.html",
+    "boundary": "I2C_RDWR与适配器能力必须匹配",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "spi-userspace",
+    "title": "Linux kernel：SPI用户接口",
+    "url": "https://docs.kernel.org/spi/spidev.html",
+    "boundary": "SPI_IOC_MESSAGE；设备时序与节点按目标核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "posix-termios",
+    "title": "POSIX.1-2024：termios",
+    "url": "https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/termios.h.html",
+    "boundary": "POSIX属性定义；目标libc/驱动能力与协议处理另核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "modbus-serial-102",
+    "title": "Modbus Serial Line V1.02",
+    "url": "https://www.modbus.org/file/secure/modbusoverserial.pdf",
+    "boundary": "2006规范；RTU字符时间、广播与CRC；设备时序另验证",
+    "checked_date": "2026-10-10"
   }
 ]

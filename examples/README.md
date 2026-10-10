@@ -4,7 +4,7 @@
 
 - [C核心逻辑](c/embedded_core.c)与[头文件](c/embedded_core.h)：位掩码、溢出前检查、大端解码、tick回绕、顺序ring、消抖与流式解析。
 - [C边界测试](../tests/host_core_test.c)：32个合法bit、非法输入、回绕；50000步ring模型对照；11字节流的全部1024分片组合；坏长度/校验、截断与最大帧；消抖阈值与回绕。
-- [C++资源/有界队列](cpp/resources.hpp)与[测试](../tests/host_cpp_test.cpp)：move-only资源责任；10000项FIFO；空/满队列停止、重复停止与join。
+- [C++资源/有界队列](cpp/resources.hpp)与[测试](../tests/host_cpp_test.cpp)：move-only资源责任；10000项FIFO；空/满队列停止、重复停止与join；[受控等待与分配失败回归](../tests/host_queue_regression_test.cpp)。
 - [精确数值解析](c/numeric_parse.c)与[接口](c/numeric_parse.h)、[边界测试](../tests/host_numeric_test.c)：INT32_MIN/MAX、非法span、20001往返与50000小域int64对照。
 - [Linux进程/fd实验](../tests/host_linux_lifecycle_test.c)：fork/exec/wait回收、dup共享offset与unlink后打开fd存活，只操作受控子进程与临时文件。
 - [C++语言实验](../tests/host_cpp_language_test.cpp)：成员初始化、虚派发/默认参数、安全lambda捕获与容器适配器。
@@ -43,13 +43,15 @@ parser必须零初始化，callback不重入/改写该parser；回调payload只�
 
 ## 实验5：RAII 与有界队列
 
-Resource用计数器模拟close，计数器必须比资源活得长，且测试只在一个上下文操作资源。它不是已经连接真实fd的封装。Queue使用标准mutex/condition_variable，在host线程验证FIFO与关闭；不适用于ISR，不保证无堆分配或硬实时。队列要求元素移动构造/赋值不抛异常，并通过static_assert限制；线程开始/结束和容器分配失败仍由调用方处理。
+Resource用计数器模拟close，计数器必须比资源活得长，且测试只在一个上下文操作资源。它不是已经连接真实fd的封装。Queue使用标准mutex/condition_variable，在host线程验证FIFO与关闭；不适用于ISR，不保证无堆分配或硬实时。队列要求元素移动构造/赋值不抛异常，并通过static_assert限制。deque单端插入分配失败时队列不变，catch先把仍可用的空位通知另一生产者，再将异常交给调用方；否则被唤醒者失败后，另一等待者可能持续睡眠。默认allocator与wait observer保持普通使用，测试替换allocator注入一次真实分配失败；observer在持有queue mutex时报告即将等待，测试随后取得同一mutex的pop/close不能抢在atomic unlock-and-wait之前执行，不依赖sleep证明线程已等待。回归重复10次，并在超时失败时先close/join再断言。线程调度、公平性、持续资源耗尽与系统同步错误不在进展保证内。
+
+`push(T value)`在调用入口就接收值；move-only调用者用std::move传入后，即使返回false或插入抛异常，也不能假设原对象仍拥有资源。失败时参数由其析构释放，队列只拥有成功插入的元素。close停止新写入，pop排空已有项；所有使用线程必须先结束/join，再销毁queue。线程创建/加入及异常处理仍由调用方负责。
 
 代码片段、机制推演和可运行文件分开记录。未运行STM32、FreeRTOS端口、Linux内核模块、目标板网络、功耗、Flash耐久或真实OTA。
 
 ## 实验6：精确十进制解析
 
-parse_i32_span接受明确长度的ASCII十进制，可选符号，至少一个数字，不接受空白/尾字符/嵌入零，失败不修改输出。先比较剩余容量再乘10，独立处理INT32_MIN，避免先溢出再检查。它比strtol合同更严格，不伪称两者完全等价；源字符串无需NUL结尾。
+parse_i32_span接受明确长度的ASCII十进制，编译期要求8位字节和ASCII兼容执行字符集，可选符号，至少一个数字，不接受空白/尾字符/嵌入零，失败不修改输出。先比较剩余容量再乘10，独立处理INT32_MIN，避免先溢出再检查。它比strtol合同更严格，不伪称两者完全等价；源字符串无需NUL结尾。
 
 ## 实验7：进程与fd生命周期
 

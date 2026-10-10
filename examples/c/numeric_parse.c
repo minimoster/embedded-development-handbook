@@ -1,5 +1,10 @@
 #include "numeric_parse.h"
 #include <stdint.h>
+#include <limits.h>
+/* The public contract is ASCII octets; character literals require this target. */
+_Static_assert(CHAR_BIT == 8 && '+' == 0x2b && '-' == 0x2d &&
+               '0' == 0x30 && '9' == 0x39,
+               "parse_i32_span requires 8-bit ASCII-compatible execution characters");
 bool parse_i32_span(const char *data, size_t n, int32_t *out) {
     if (!data || !out || n == 0) return false;
     size_t i=0; bool negative=false;

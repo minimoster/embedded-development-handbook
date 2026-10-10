@@ -282,7 +282,8 @@
       "module": "arch",
       "priority": "P1",
       "source_ids": [
-        "abi"
+        "abi",
+        "gcc-arm-options"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -546,7 +547,8 @@
       "priority": "P0",
       "source_ids": [
         "cpp-race",
-        "c11"
+        "c11",
+        "cpp17"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -586,7 +588,8 @@
       "source_ids": [
         "c11",
         "timer",
-        "modbus"
+        "modbus",
+        "modbus-serial-102"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -820,7 +823,8 @@
       "priority": "P0",
       "source_ids": [
         "dt",
-        "gpio-linux"
+        "gpio-linux",
+        "i2c-clients"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -834,7 +838,8 @@
       "source_ids": [
         "dma-linux",
         "gpio-linux",
-        "volatile"
+        "volatile",
+        "device-io"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -1141,7 +1146,8 @@
       "source_ids": [
         "c11",
         "ubsan",
-        "abi"
+        "abi",
+        "cpp17"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -1335,7 +1341,11 @@
       "source_ids": [
         "gpio-linux",
         "vfs",
-        "ioctl"
+        "ioctl",
+        "gpio-userspace",
+        "i2c-userspace",
+        "spi-userspace",
+        "posix-termios"
       ],
       "anchor": "直接回答",
       "kind": "question"
@@ -1611,7 +1621,8 @@
       "source_ids": [
         "rcu",
         "locks",
-        "seqlock"
+        "seqlock",
+        "rcu-barrier"
       ],
       "anchor": "直接回答",
       "kind": "question"

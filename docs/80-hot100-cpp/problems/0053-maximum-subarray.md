@@ -60,7 +60,22 @@ best初始化为0会把全负输入误判成0。递推之前更新best会遗漏�
 
 ## 面试追问：先说变化，再改算法
 
-同时返回区间下标时，重启ending要记录新起点，best改善时保存端点。环形最大子数组可考虑总和减最小子数组，但全负情形需要独立处理。
+[官方分治追问](https://leetcode.com/problems/maximum-subarray/)可以不逐层扫描跨中点区间，而给每个非空区间保存四项摘要：total为总和，prefix为最大非空前缀和，suffix为最大非空后缀和，best为最大非空子数组和。相邻L、R合并时：
+
+```text
+total  = L.total + R.total
+prefix = max(L.prefix, L.total + R.prefix)
+suffix = max(R.suffix, R.total + L.suffix)
+best   = max(L.best, R.best, L.suffix + R.prefix)
+```
+
+前缀要么完全在L，要么取整个L再接R的非空前缀；后缀对称。最优子数组要么在L、要么在R、要么跨边界，由L的最佳后缀接R的最佳前缀，所以以上分类完备。叶节点x的四项都是x，不能把prefix、suffix、best初始化为0，否则全负数组会被空区间篡改。仅最外层对空输入沿用主解的返回0扩展。
+
+例如[-4,5]的摘要是(total=1,prefix=1,suffix=5,best=5)，[-2,3,-6]的摘要是(-5,1,-3,3)。合并得到(-4,2,0,6)，其中跨边界候选为5+1=6，对应[5,-2,3]。平衡二分、每次常数合并，递推T(n)=T(⌊n/2⌋)+T(⌈n/2⌉)+O(1)，总时间O(n)，递归栈O(log n)，无须保存整棵树。经典“每层向两边扫描跨中点最大和”的合并是O(n)，总时间才是O(n log n)，两种分治写法要区别。
+
+[完整分治练习](../../../algorithms/cpp/exercises/followup_variants.hpp)沿用官方输入规模和值域，使用long long摘要；[独立回归入口](../../../algorithms/cpp/exercises/test_followup_variants.cpp)对三值小域长度1到8的全部数组核对四项摘要、任意切分的合并及主解结果，也检查全负与100000项边界。运行方法见[验证方法](../TESTING.md)，不增加正式题数。
+
+其他变化：同时返回区间下标时，重启ending要记录新起点，best改善时保存端点。环形最大子数组可考虑总和减最小子数组，但全负情形需要独立处理。
 
 ## 自测与迁移练习
 

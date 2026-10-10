@@ -27,6 +27,12 @@ for p in R.rglob('*'):
  except UnicodeDecodeError:raise AssertionError(f'Unexpected binary public asset: {p.relative_to(R)}')
  if p.suffix in ('.md','.json') or p.name=='data.js':assert not re.search(r'(?:ghp_[A-Za-z0-9]{30,}|sediment://file_|["\'](?:sentry-trace|scrapeId|indexId|download_url|library_file_id)["\']\s*:)',s),str(p.relative_to(R))
 freeze=read('docs/80-hot100-cpp/freeze-manifest.json')
+assert freeze['schema_version']==2 and re.fullmatch(r'\d{4}-\d{2}-\d{2}-[a-z-]+',freeze['snapshot_id']),'Invalid current snapshot version'
+assert re.fullmatch(r'[0-9a-f]{40}',freeze['base_commit']),'Invalid public snapshot base'
+assert freeze['official_problem_count']==100 and freeze['supplementary_problem_count']==1
+inventory={str(p.relative_to(R)) for folder in ('algorithms/cpp','docs/80-hot100-cpp')
+           for p in (R/folder).rglob('*') if p.is_file() and p!=R/'docs/80-hot100-cpp/freeze-manifest.json'}
+assert set(freeze['files_sha256'])==inventory,'Current snapshot inventory drift'
 assert len(freeze['files_sha256'])==freeze['file_count']
 for name,digest in freeze['files_sha256'].items():assert (R/name).is_file() and hashlib.sha256((R/name).read_bytes()).hexdigest()==digest,name
 for p in (R/'site/assets/repo').rglob('*'):

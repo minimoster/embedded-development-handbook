@@ -15,6 +15,8 @@ with tempfile.TemporaryDirectory(prefix='embedded-host-') as build:
            ('c-core','gcc',['-std=c11',*flags,str(ROOT/'examples/c/embedded_core.c'),str(ROOT/'tests/host_core_test.c')]),
            ('linux-lifecycle','gcc',['-std=c11',*flags,str(ROOT/'tests/host_linux_lifecycle_test.c')]),
            ('cpp-language','g++',['-std=c++17',*flags,str(ROOT/'tests/host_cpp_language_test.cpp')]),
+           ('cpp-followups','g++',['-std=c++17',*flags,str(ROOT/'algorithms/cpp/exercises/test_followup_variants.cpp')]),
+           ('queue-regression','g++',['-std=c++17','-pthread',*flags,str(ROOT/'tests/host_queue_regression_test.cpp')]),
            ('cpp-core','g++',['-std=c++17','-pthread',*flags,str(ROOT/'tests/host_cpp_test.cpp')])]
     for name,compiler,inputs in cases:
         exe=str(Path(build)/name)

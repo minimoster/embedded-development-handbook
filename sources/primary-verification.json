@@ -348,5 +348,54 @@
     "verification": "正文多次timeout，搜索摘要存在；未声称该站全文可读",
     "read_scope": "已以GNU源文档镜像交叉核对",
     "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "gcc-arm-options",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/ARM-Options.html",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "-mfloat-abi：soft与softfp采用soft调用约定，hard为FPU约定",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "i2c-clients",
+    "url": "https://docs.kernel.org/i2c/writing-clients.html",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "i2c_driver/i2c_client；总线与DT匹配",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "rcu-barrier",
+    "url": "https://docs.kernel.org/RCU/rcubarrier.html",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "synchronize_rcu与rcu_barrier；停新回调后排空",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "gpio-userspace",
+    "url": "https://docs.kernel.org/userspace-api/gpio/chardev.html",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "UAPI v2自Linux5.10加入；用户API与kernel consumer分开",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "i2c-userspace",
+    "url": "https://docs.kernel.org/i2c/dev-interface.html",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "I2C_RDWR组合事务；I2C_FUNCS/I2C_FUNC_I2C",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "spi-userspace",
+    "url": "https://docs.kernel.org/spi/spidev.html",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "SPI_IOC_MESSAGE组合传输与芯片选择",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "modbus-serial-102",
+    "url": "https://www.modbus.org/file/secure/modbusoverserial.pdf",
+    "verification": "相关条款可读；未验证目标设备",
+    "read_scope": "§2.1/2.5.1：广播、11bit、t1.5/t3.5、高速推荐定时与CRC字节序",
+    "checked_date": "2026-10-10"
   }
 ]

@@ -8,10 +8,20 @@
 
 [实现风险与复用提醒](ERRATA.md)区分合法输入、重复调用、生命周期、接口扩展与复杂度模型。
 
+## 本地可运行目标的表示契约
+
+本轨道明确选择 `int` 值域为 [-2147483648,2147483647]、`long long` 至少63个值位（另有符号位）、8位 `char`，并要求英文字母和十进制数字采用ASCII编码。字母因此分别连续，`ch-'a'` 等索引才与本课的26项表对应。C++17语言本身不保证32位 `int` 值域、8位字节或ASCII字母编码；这里是所选目标的契约，不是所有C++17实现的属性。
+
+[support.hpp](../../algorithms/cpp/support.hpp) 用编译期断言检查值域、字节宽度和全部大小写字母/数字的编码。不满足契约的目标会拒绝编译；通过断言也只核对这些表示条件，不能据此声称已支持或验证某款MCU、MSVC、栈容量、分配器或实时延迟。移植时仍须核对官方输入范围、工具链和运行期约束，必要时改用明确宽度的接口或显式字符映射，并重新验证。
+
+LC3、LC76的256项表按8位字节建模。先转 `unsigned char` 解决负下标，8位字节契约保证索引在0到255；两者缺一不可。这不是通用Unicode字符表；UTF-8多字节序列、码点和用户感知字符需要另行定义与实现。LC70的n=46结果超过本目标32位有符号 `int` 上界，而不是超过所有符合C++17的 `int` 上界。
+
 ## C++17容器与平台口径的一手依据
 
 核对日期2026-10-10。以下C++草案链接固定到N4659（C++17工作草案的公开排版），用于核准本课程复杂度与迭代器规则，不把当前更新草案的新接口当作C++17功能。
 
+- [N4659基本类型](https://timsong-cpp.github.io/cppwp/n4659/basic.fundamental)、[数值范围](https://timsong-cpp.github.io/cppwp/n4659/support.limits)与[字符集](https://timsong-cpp.github.io/cppwp/n4659/lex.charset)：整数表示与执行字符集由目标决定；标准保证数字连续，不保证英文字母连续或ASCII编码。
+- [N4659 priority_queue成员](https://timsong-cpp.github.io/cppwp/n4659/priqueue.members)：push先调用底层容器push_back再调整堆；LC295因此区分均摊插入与单次扩容成本。
 - [N4659 vector概述](https://timsong-cpp.github.io/cppwp/n4659/vector.overview)：末端插入按均摊常数讨论。
 - [N4659 vector修改操作](https://timsong-cpp.github.io/cppwp/n4659/vector.modifiers)：重分配的引用、指针与迭代器失效规则；本课Trie因此持索引而非跨扩容引用。
 - [N4659 deque修改操作](https://timsong-cpp.github.io/cppwp/n4659/deque.modifiers)：单元素两端插入的常数复杂度；本课155的主容器选择依据。

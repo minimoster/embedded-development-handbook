@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-10T05:55:39.777950+00:00",
+  "checked_at_utc": "2026-10-10T10:03:02.640804+00:00",
   "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
   "scope": "local compilation and tests; no online judge submissions",
   "inventory": {
@@ -10,7 +10,7 @@
     "official_cpp_present": 100,
     "official_docs_present": 100,
     "official_tests_present": 100,
-    "local_links_checked": 515,
+    "local_links_checked": 529,
     "errors": [],
     "missing": [],
     "source_sha256": {
@@ -47,10 +47,10 @@
       "docs/80-hot100-cpp/problems/0239-sliding-window-maximum.md": "80fc112688a7c9da2f9779c49886da8b0c1a645e12bbebedbcdcd487cd436f27",
       "algorithms/cpp/solutions/p0239_sliding_window_maximum.hpp": "c2c7cd4d6f54d75bf9e73d4eedc601fcfd8d81a0ece2f1db3401e695238ac3fa",
       "algorithms/cpp/tests/test_p0239.cpp": "b8b1d9d7142e5de593211943808a8f4ed6d9dc07caba5d43c9e8d8453a8a53c9",
-      "docs/80-hot100-cpp/problems/0076-minimum-window-substring.md": "2266c1134abc75e2572665e0954e111844f2040718b0ac39c64d202ab51eca81",
+      "docs/80-hot100-cpp/problems/0076-minimum-window-substring.md": "4b728b519a604987c698387d86c9ec2ebbc8d385d547f4775473deafb6149046",
       "algorithms/cpp/solutions/p0076_minimum_window_substring.hpp": "3f0ac658747fb7cec7fb0a4907805c7c6ee92a2d9f0e47be32a7694e0f5f66a2",
-      "algorithms/cpp/tests/test_p0076.cpp": "3c110755293899127b4e2edef931099cd31f7074cd58f094c07c2ef3533efd61",
-      "docs/80-hot100-cpp/problems/0053-maximum-subarray.md": "31490f79f79403a1493a9969ba481cff151860378bcaf0284e0685e09717037e",
+      "algorithms/cpp/tests/test_p0076.cpp": "10bda6b8c4a4e20cf7d7cb7775bd70db91286d650858e1796c67591cc9aa070d",
+      "docs/80-hot100-cpp/problems/0053-maximum-subarray.md": "3701fb853808c47f9fa020626a48c65d67663051bba7a7883399344aa7da0207",
       "algorithms/cpp/solutions/p0053_maximum_subarray.hpp": "2b84559c247ec2897bd2e887d56c6450fab073b7e3bb2dcf894cb5c3f114e2bd",
       "algorithms/cpp/tests/test_p0053.cpp": "76e5bbc4e28d17f4be319689b0737204ee04a5a0d1aba6d23c45b5d6f069daf7",
       "docs/80-hot100-cpp/problems/0056-merge-intervals.md": "9d365dabe1820a10bc4155ae4b3647cfc9c0433809f3581aea2476dc6d8bf604",
@@ -239,7 +239,7 @@
       "docs/80-hot100-cpp/problems/0347-top-k-frequent-elements.md": "22db2bdbaa4b5df9c1c590b27ddbcf7bcb1e0e376c168dfa2560618e415eca26",
       "algorithms/cpp/solutions/p0347_top_k_frequent_elements.hpp": "638312b2333c95bd86fb49d174f5c04a1f7aed2168057e75666ec0ba343e1963",
       "algorithms/cpp/tests/test_p0347.cpp": "b3529c1dcefe1db3c92b490a37a319214ebdc199c40046c890a40780c7fe27f7",
-      "docs/80-hot100-cpp/problems/0295-find-median-from-data-stream.md": "24d7b4e3f14ba6dc58455099d941b0ca697b9f1be7181d5ac20b439f11bf7e7c",
+      "docs/80-hot100-cpp/problems/0295-find-median-from-data-stream.md": "4314b386c02996216afd6188da8f46bdbbdbbccfc3f622e5884af1233c59e70e",
       "algorithms/cpp/solutions/p0295_find_median_from_data_stream.hpp": "6d1a9563695901e1976c5ea4c2ba74482a57812e61d1f70168b2cbf7b018558b",
       "algorithms/cpp/tests/test_p0295.cpp": "ba9ab082f07142aa5ca7f7c1d1e415ee50fd2364b747a1cdbf7b5f12115a2c0e",
       "docs/80-hot100-cpp/problems/0121-best-time-to-buy-and-sell-stock.md": "c412b7cf6f1f20e0263c59d56c279defe6fd4b236ed29fe5bef8b71720e4972c",
@@ -254,15 +254,15 @@
       "docs/80-hot100-cpp/problems/0763-partition-labels.md": "d94c735f1b19500fb0087726c72d3baa2d6e033354b1be5f3d7308b1249dd902",
       "algorithms/cpp/solutions/p0763_partition_labels.hpp": "357386b6974873e147fe53a98e39e64c01e0a4a2142c9fe754555521f565c13b",
       "algorithms/cpp/tests/test_p0763.cpp": "3329cf486c7876069532eaf831563eb3553fe933736cd9a7468088fa5a52da4f",
-      "docs/80-hot100-cpp/problems/0070-climbing-stairs.md": "b89b32065dbcf208e90c1fc96045f1e777a1e8063c6ffa64ea0ae9a16c5ce45a",
+      "docs/80-hot100-cpp/problems/0070-climbing-stairs.md": "423030416d206fbcfc718d43d7eaabaa7d33c870b6dcd59add0b44119af19d26",
       "algorithms/cpp/solutions/p0070_climbing_stairs.hpp": "50fd7f29e1edc447db221210772fdb06ec130db24f935f76e7375d227d760cfa",
       "algorithms/cpp/tests/test_p0070.cpp": "0f48750809163465f326fe32a41e8b40c88e229a035f4f3125ee9f5957689c1b",
       "docs/80-hot100-cpp/problems/0118-pascals-triangle.md": "47469c720f4304ba8c6c95629726b578fc5c478afd99435c2f188ee8c100a718",
       "algorithms/cpp/solutions/p0118_pascals_triangle.hpp": "370128a2cb015da2a2ae86bf0b885ae6a02168b4ff3b4a14046aaf85e7b29513",
       "algorithms/cpp/tests/test_p0118.cpp": "81f7601679bd015360beaf8c0a5859da556e88fe33840b415f8c808167000b73",
-      "docs/80-hot100-cpp/problems/0198-house-robber.md": "a78e5a908d2d50bc3b150c7043ee5aae1d4907c40c7c73a46a1b522564d93425",
+      "docs/80-hot100-cpp/problems/0198-house-robber.md": "acf2a548550ecfc0db531058efd3434f8d32fea6689ef50ec8cd500956b69594",
       "algorithms/cpp/solutions/p0198_house_robber.hpp": "418ecf30c777ea0cc1de16782f9107d4a75c1e398adb423501cd184711870a25",
-      "algorithms/cpp/tests/test_p0198.cpp": "b11af6f35c3f1c5c88941a652f94194cb28c9274247d96e3e62e0448c8662b2d",
+      "algorithms/cpp/tests/test_p0198.cpp": "bf508e5b8c3f4081d0107903fc38516e9941532b93aa179cdd010011daeb9716",
       "docs/80-hot100-cpp/problems/0279-perfect-squares.md": "00e5bb3caada599aee1832c76dd3bccc4a72e1d7a2463f7249226546e7c72f13",
       "algorithms/cpp/solutions/p0279_perfect_squares.hpp": "1313a5bf8938ccdb2350c20d8851a21704a1095eec6baf9aa94ede3c6515f767",
       "algorithms/cpp/tests/test_p0279.cpp": "44855bfd8bd11c7776ba8c4c54af72308d4cdc31b603d5543b9c942552319203",
@@ -296,7 +296,7 @@
       "docs/80-hot100-cpp/problems/1143-longest-common-subsequence.md": "1dd9d6cff22e708cbb1086b56d9cd2f0349664fb3cd084d94b22429a57edeee9",
       "algorithms/cpp/solutions/p1143_longest_common_subsequence.hpp": "837c1301b1b29203a03afe0dc81f4724c4bca0cec9eab0c6c6a2b39778ea4f05",
       "algorithms/cpp/tests/test_p1143.cpp": "d4e3fc57f587769200e0e8c09938bb0fc7768bd5061b93a14d503a032cbf3a0c",
-      "docs/80-hot100-cpp/problems/0072-edit-distance.md": "e0059fcfa3255458383bc40b8be75ba4e6bd5b1e500b4b49089d3c23a9ff2b13",
+      "docs/80-hot100-cpp/problems/0072-edit-distance.md": "5d75a64bb1c9cc49dfb88edac9e5cbe002fd45d60b4d46fd34224218f36357c5",
       "algorithms/cpp/solutions/p0072_edit_distance.hpp": "0aa01694ee2311c74a075767d07fcd7bacb8b074123872db025cc047553a1f4b",
       "algorithms/cpp/tests/test_p0072.cpp": "25b1a3df3e077052270129ab79b3cdf8068c22a26b6e265a023ff676ec9cdba7",
       "docs/80-hot100-cpp/problems/0136-single-number.md": "e1727165673f6b12244d68cb88995875df5e3d11f9c3db74dd48ca272cab7e2a",
@@ -317,7 +317,7 @@
       "docs/80-hot100-cpp/supplementary/0695-max-area-of-island.md": "62546eb7177ad2a348641f75faaef99caf9f2d26cdc20936c5e5533bf1adde78",
       "algorithms/cpp/supplementary/p0695_max_area_of_island.hpp": "bc82fb12e84ab530b76cd46872e334fc8c594ada42e59e19e5cfd8b3b1666b56",
       "algorithms/cpp/tests/test_p0695.cpp": "a37c7edb8767327e295b6a518b52af8ca597f98ed3b390cbf568218737de3380",
-      "algorithms/cpp/support.hpp": "3032f9d958b206f5f180d96a41249bad4b1f5b44f48c9d27ff8ba3f89ded2b22"
+      "algorithms/cpp/support.hpp": "d33442cbfafebfb1a388c714b17c4d7b38013ac0d5ef8af79f81530368335a66"
     }
   },
   "selected_ids": [
@@ -4689,18 +4689,8 @@
     "status": "not_run",
     "reason": "Execution environment ptrace blocks LeakSanitizer; ASan uses detect_leaks=0. Do not interpret as leak-free proof."
   },
-  "all_headers_together": {
-    "returncode": 0,
-    "stdout": "",
-    "stderr": ""
-  },
-  "passed": true,
-  "elapsed_seconds": 186.969,
-  "compiled_sources_changed_since_test_run": false,
-  "post_run_inventory_checked_at_utc": "2026-10-10T08:34:16.294149+00:00",
   "additional_exhaustive": {
     "status": "run",
-    "passed": true,
     "problem_ids": [
       3,
       4,
@@ -4720,22 +4710,26 @@
       287,
       438
     ],
-    "source_path": "algorithms/cpp/tests/independent_exhaustive.cpp",
+    "compile": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "run": {
+      "returncode": 0,
+      "stdout": "Independent exhaustive cases passed\n",
+      "stderr": ""
+    },
     "source_sha256": "5c58f8f5ce330815e6d073ae4a27f9d85a45cfe446874470cb03fbb2e9b97b6a",
-    "compile_flags": [
-      "-std=c++17",
-      "-O2",
-      "-D_GLIBCXX_DEBUG",
-      "-D_GLIBCXX_ASSERTIONS",
-      "-Wall",
-      "-Wextra",
-      "-Werror",
-      "-pedantic"
-    ],
-    "compile_returncode": 0,
-    "run_returncode": 0,
-    "stdout": "Independent exhaustive cases passed\n",
-    "limits": "Bounded small input domains, not a proof over all legal inputs; this additional suite not run under ASan."
+    "passed": true
   },
-  "execution_status": "Prior full 101-entry three-mode code run retained; compilation/runtime inputs byte-for-byte unchanged. Current lesson inventory and links revalidated."
+  "all_headers_together": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "compiled_sources_changed_during_run": [],
+  "post_run_inventory_checked_at_utc": "2026-10-10T10:07:33.884850+00:00",
+  "passed": true,
+  "elapsed_seconds": 271.246
 }

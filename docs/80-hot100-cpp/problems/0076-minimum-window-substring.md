@@ -18,7 +18,16 @@
 
 ## 手推一组自建例子
 
-s=cabbaa,t=aba。到第二个a时窗口cabba已覆盖；移c、移首a后是否仍够要看a的计数。最终窗口baa包含a2 b1，长度3；继续移b就缺b，停止收缩。
+s=cabbaa,t=aba，下标从0开始，right为当前已纳入窗口的下标；每个步骤的状态写在操作之后：
+
+1. right=4、left=0：窗口cabba有a2、b2，missing=0，记录长度5。
+2. 移走c后left=1、right=4：窗口abba仍覆盖，missing=0，记录长度4。
+3. 移走首个a后left=2、right=4：窗口bba只有a1、b2，missing=1，停止收缩，必须先右扩。
+4. 右扩到right=5、left=2：窗口bbaa有a2、b2，missing=0。长度4与已有最优相同，代码不更新平局答案。
+5. 移走多余的首个b后left=3、right=5：窗口baa有a2、b1，missing=0，记录长度3。
+6. 再移走b后left=4、right=5：窗口aa缺b，missing=1，停止收缩。最终返回先前记录的baa。
+
+因此baa来自停止收缩后的再次右扩，不是把cabba直接一路缩到baa。
 
 读到这里先暂停：不看代码，画出每次选择/指针移动后的状态；必须能解释为什么这一步安全，才算理解。
 
