@@ -171,6 +171,18 @@
 - [IC06 · 新固件能启动，却在一分钟后故障，如何确认升级](docs/120-interviews/ic06.md)
 - [IC07 · Linux设备remove后，打开的fd和异步worker仍访问旧对象](docs/120-interviews/ic07.md)
 
+## FreeRTOS源码扩展 · 7篇
+
+基础RT01–RT10验收后按下列顺序阅读；扩展讲义不计入120核心或官方Hot100，历史co-routines为P2选读。
+
+- [FreeRTOS 源码导读 · 先固定版本，再追状态变化](docs/50-rtos/source-reading.md) · P1 · 源码导读 / 版本配置
+- [FreeRTOS 内核链表 · 节点归属、排序与轮转](docs/50-rtos/kernel-lists.md) · P1 · 内核链表 / 不变量
+- [FreeRTOS 任务生命周期 · 从 TCB 到阻塞与唤醒](docs/50-rtos/kernel-task-lifecycle.md) · P1 · 任务生命周期 / 状态迁移
+- [FreeRTOS 队列等待 · 复制、解阻塞与超时复查](docs/50-rtos/kernel-queue-waits.md) · P1 · 队列等待 / 超时
+- [源码补充 · 事件组的条件判断、快照与延迟处理](docs/50-rtos/kernel-event-groups.md) · P1 · 事件组 / 条件快照
+- [软件定时器与共享 daemon 的命令和寿命](docs/50-rtos/kernel-timer-daemon.md) · P1 · 软件定时器 / daemon寿命
+- [历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？](docs/50-rtos/historical-co-routines.md) · P2 · 历史选读 / co-routines
+
 ## Hot100 · C++17
 
 - [学习路线、完整题单与测试](docs/80-hot100-cpp/README.md)

@@ -602,6 +602,42 @@
       ]
     },
     {
+      "path": "docs/50-rtos/historical-co-routines.md",
+      "title": "历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
+      "path": "docs/50-rtos/kernel-event-groups.md",
+      "title": "源码补充 · 事件组的条件判断、快照与延迟处理",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
+      "path": "docs/50-rtos/kernel-lists.md",
+      "title": "FreeRTOS 内核链表 · 节点归属、排序与轮转",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
+      "path": "docs/50-rtos/kernel-queue-waits.md",
+      "title": "FreeRTOS 队列等待 · 复制、解阻塞与超时复查",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
+      "path": "docs/50-rtos/kernel-task-lifecycle.md",
+      "title": "FreeRTOS 任务生命周期 · 从 TCB 到阻塞与唤醒",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
+      "path": "docs/50-rtos/kernel-timer-daemon.md",
+      "title": "软件定时器与共享 daemon 的命令和寿命",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
       "path": "docs/50-rtos/rt01.md",
       "title": "RT01 · 任务状态、抢占和时间片怎么区分？",
       "module": "rtos",
@@ -680,6 +716,12 @@
       "question_ids": [
         "RT10"
       ]
+    },
+    {
+      "path": "docs/50-rtos/source-reading.md",
+      "title": "FreeRTOS 源码导读 · 先固定版本，再追状态变化",
+      "module": "rtos",
+      "question_ids": []
     },
     {
       "path": "docs/60-protocols/pr01.md",
@@ -3769,6 +3811,76 @@
       "path": "docs/120-interviews/ic07.md",
       "module": "interview",
       "kind": "original_scenario"
+    },
+    {
+      "title": "FreeRTOS 源码导读 · 先固定版本，再追状态变化",
+      "path": "docs/50-rtos/source-reading.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "源码导读 / 版本配置",
+      "priority": "P1",
+      "order": 1,
+      "optional_historical": false
+    },
+    {
+      "title": "FreeRTOS 内核链表 · 节点归属、排序与轮转",
+      "path": "docs/50-rtos/kernel-lists.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "内核链表 / 不变量",
+      "priority": "P1",
+      "order": 2,
+      "optional_historical": false
+    },
+    {
+      "title": "FreeRTOS 任务生命周期 · 从 TCB 到阻塞与唤醒",
+      "path": "docs/50-rtos/kernel-task-lifecycle.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "任务生命周期 / 状态迁移",
+      "priority": "P1",
+      "order": 3,
+      "optional_historical": false
+    },
+    {
+      "title": "FreeRTOS 队列等待 · 复制、解阻塞与超时复查",
+      "path": "docs/50-rtos/kernel-queue-waits.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "队列等待 / 超时",
+      "priority": "P1",
+      "order": 4,
+      "optional_historical": false
+    },
+    {
+      "title": "源码补充 · 事件组的条件判断、快照与延迟处理",
+      "path": "docs/50-rtos/kernel-event-groups.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "事件组 / 条件快照",
+      "priority": "P1",
+      "order": 5,
+      "optional_historical": false
+    },
+    {
+      "title": "软件定时器与共享 daemon 的命令和寿命",
+      "path": "docs/50-rtos/kernel-timer-daemon.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "软件定时器 / daemon寿命",
+      "priority": "P1",
+      "order": 6,
+      "optional_historical": false
+    },
+    {
+      "title": "历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？",
+      "path": "docs/50-rtos/historical-co-routines.md",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "历史选读 / co-routines",
+      "priority": "P2",
+      "order": 7,
+      "optional_historical": true
     },
     {
       "id": "LC1",

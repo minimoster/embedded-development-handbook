@@ -17,3 +17,9 @@
 - 静态渲染器：Marked17.0.5 MIT，第三方许可证保存在site/vendor。无CDN、统计、后台接口、登录或上传阅读记录。
 
 测试仅在有限输入和本次环境提供证据。文中未测项目均写明，不把模型、QEMU或主机结果推定为真实硬件通过。
+
+## FreeRTOS 源码扩展的固定基线
+
+- 六篇现代源码讲义：FreeRTOS-Kernel V11.1.0，commit `dbf70559b27d39c1fdb68dfb9a32140b6a6777a0`，单核GCC `portable/GCC/ARM_CM4F`；tick宽度、抢占/时间片、timer队列和可选功能以各章明确的配置为准。[固定源码与MIT许可](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/LICENSE.md)
+- 历史co-routines选读：FreeRTOS V9.0.0，commit `165c24cba94e3d3f386c3b77d3bb0f4a524d8511`；GPLv2加FreeRTOS exception，与现代MIT边界分别记录。[历史许可](https://github.com/FreeRTOS/FreeRTOS/blob/165c24cba94e3d3f386c3b77d3bb0f4a524d8511/FreeRTOS/License/license.txt)
+- 源码核读、原创伪代码和手推时序不是运行记录；这些章节没有编译或运行主机模型、内核、模拟器及板级实验。其他版本、SMP、MPU包装、厂商修改内核和其他port须重新核对。

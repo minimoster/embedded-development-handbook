@@ -60,3 +60,15 @@ P0/P1/P2是课程依赖建议，不是招聘市场考频。P0先修；P1随主�
 - [验证与覆盖边界](../../coverage/README.md)
 - [资料实际阅读状态](../../sources/README.md)
 - [版本适用范围](../../VERSIONS.md)
+
+## FreeRTOS 源码：基础验收后的第二遍
+
+初学者先完成阶段C的RT01–RT10：能解释任务/ISR优先级、同步对象、超时与资源预算，再读[源码导读](../50-rtos/source-reading.md)。不要把阅读全部内核文件作为开始做小项目的前提。
+
+1. [固定版本、port与配置](../50-rtos/source-reading.md)：先写阅读合同，再追一条阻塞/唤醒路径。
+2. [内核链表](../50-rtos/kernel-lists.md) → [任务生命周期](../50-rtos/kernel-task-lifecycle.md)：手画两个节点的归属和状态迁移。
+3. [队列等待](../50-rtos/kernel-queue-waits.md)：分别推发送/接收、空间/数据与超时复查。
+4. [事件组](../50-rtos/kernel-event-groups.md) → [共享timer daemon](../50-rtos/kernel-timer-daemon.md)：分开条件快照、命令接收、执行与资源寿命。
+5. [V9.0.0历史co-routines](../50-rtos/historical-co-routines.md)只作P2选读，用于旧工程比较。
+
+这7篇是扩展讲义，120核心主题、RT01–RT10和官方Hot100的100题保持独立。六篇现代主线固定V11.1.0、单核GCC ARM_CM4F；历史版本和许可另列。先手推并写出待验证条件，文中练习尚未运行主机模型、内核、模拟器或板级实验。

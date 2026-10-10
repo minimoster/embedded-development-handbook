@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-10T10:08:26.996882+00:00",
+  "checked_at_utc": "2026-10-10T15:56:06.349319+00:00",
   "core_topics": 120,
   "official_hot100": 100,
   "core_host_tests": {
@@ -28,7 +28,8 @@
       "maximum_subarray_arrays": 9840,
       "median_streams": 19607,
       "status": "normal and ASan/UBSan passed; independent checked-iterator run also passed"
-    }
+    },
+    "fresh_regression": "All nine existing host suites rerun in normal and fail-fast ASan/UBSan modes; explicit detect_leaks=0."
   },
   "algorithms": {
     "passed": true,
@@ -41,11 +42,13 @@
     "inventory_reverified": true,
     "source_link_checks": 529,
     "result_path": "docs/80-hot100-cpp/validation-result.json",
-    "execution_status": "Fresh complete101-entry normal, ASan/UBSan and checked-iterator run passed;17 independent bounded exhaustive oracles passed; no compiled input changed during run."
+    "execution_status": "Fresh complete 101-entry normal, ASan/UBSan and checked-iterator regression passed; 17 independent bounded exhaustive oracles passed; no compiled input changed during run.",
+    "fresh_regression_checked_at_utc": "2026-10-10T15:47:51.304643+00:00",
+    "result_path_status": "Previously published detailed record kept byte-identical; the fresh regression result is summarized here."
   },
   "reader_static": {
     "status": "passed",
-    "documents": 239,
+    "documents": 255,
     "checks": [
       "source consistency",
       "exact local routes and anchors",
@@ -55,22 +58,57 @@
       "manifest counts",
       "no fetch or remote services"
     ],
-    "offline_resources": 228,
-    "navigation_simulation": "Repeated/current and changed sections, collapse-before-scroll, heading focus, back/forward history, modified clicks, responsive960px boundary, sidebar close/Esc/focus trap passed"
+    "offline_resources": 231,
+    "navigation_simulation": "Repeated/current and changed sections, collapse-before-scroll, heading focus, back/forward history, modified clicks, responsive960px boundary, sidebar close/Esc/focus trap passed",
+    "freertos_extensions": "7 distinct categories, full-text searches and ordered RT01–RT10 then seven-chapter route passed; extension count is independent of core and algorithm counts."
   },
   "actual_browser": {
-    "status": "not run for current derivative",
-    "reason": "Event/DOM simulation and static rendering checks are not actual browser or physical-device verification."
+    "status": "passed bounded current Chrome QA",
+    "method": "Native cloud Chrome, loopback-only HTTP preview; measured desktop and narrow desktop viewports",
+    "desktop_css_viewport": [
+      1180,
+      757
+    ],
+    "narrow_desktop_css_viewport": [
+      385,
+      621
+    ],
+    "narrow_zoom_percent": 150,
+    "source_study_documents_checked": 7,
+    "source_view_sha256": "All seven exactly match current chapter files and frozen manifest",
+    "flow_groups_passed": 19,
+    "checks": [
+      "All seven titles and chapter renders",
+      "Seven category filters and seven searches; full-text symbol search",
+      "RTOS order and actual RT10 then seven-chapter next links",
+      "All seven beginner-link targets with foundation and version boundaries",
+      "Repeated TOC, heading focus and back/forward",
+      "All seven narrow pages without page-wide overflow; table/code local overflow and keyboard scroll",
+      "Narrow menu focus, Escape close and navigation"
+    ],
+    "console_sample": "Captured sample had no application-origin warnings/errors; this is not a complete error or network audit.",
+    "not_run": [
+      "Full 255-document actual browser sweep",
+      "Physical mobile/touch device or exact touch emulation",
+      "Assistive technology accessibility audit",
+      "Complete request/network/error capture",
+      "New FreeRTOS chapter host models, kernels, simulators or board experiments"
+    ]
   },
   "leak_sanitizer": {
-    "status": "not run",
-    "reason": "ptrace environment restriction; detect_leaks=0 is not a leak-free proof"
+    "status": "blocked",
+    "reason": "A fresh default sanitizer attempt reported the LeakSanitizer ptrace fatal error before the first suite completed. Explicit detect_leaks=0 regression passed ASan/UBSan; this is not leak-check evidence."
   },
   "hardware_rtos_kernel_online_judge": "not run",
-  "release_status": "prepared locally; publisher verifies remote and deployment",
+  "release_status": "This record describes local verification before publication; exact-commit CI, deployment and live checks are separate release evidence.",
   "publication_privacy": {
     "status": "passed",
     "scope": "Full UTF-8 public source and generated-output scan; bounded metadata schemas and exact offline resource inventory verified"
   },
-  "supplementary_exercises": 1
+  "supplementary_exercises": 1,
+  "freertos_source_study_chapters": 7,
+  "freertos_source_study_runtime": {
+    "status": "not run",
+    "scope": "Seven source-reviewed original chapters, hand traces and proposed exercises; no chapter host model, kernel, simulator or board experiments were compiled or executed."
+  }
 }

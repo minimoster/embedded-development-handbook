@@ -31,7 +31,7 @@
         results.push({d,section,score});
       }
       if(terms.length)results.sort((a,b)=>b.score-a.score||a.d.path.localeCompare(b.d.path,'en'));
-      else results.sort((a,b)=>a.d.module==='supplement'&&b.d.module==='supplement'?(a.d.resourceOrder||0)-(b.d.resourceOrder||0):a.d.module==='hot100cpp'&&b.d.module==='hot100cpp'?(a.d.kind==='overview'?-1:b.d.kind==='overview'?1:(a.d.problemId||0)-(b.d.problemId||0)):a.d.path.localeCompare(b.d.path,'en'));
+      else results.sort((a,b)=>a.d.module==='supplement'&&b.d.module==='supplement'?(a.d.resourceOrder||0)-(b.d.resourceOrder||0):a.d.module==='rtos'&&b.d.module==='rtos'?(a.d.readingOrder||0)-(b.d.readingOrder||0):a.d.module==='hot100cpp'&&b.d.module==='hot100cpp'?(a.d.kind==='overview'?-1:b.d.kind==='overview'?1:(a.d.problemId||0)-(b.d.problemId||0)):a.d.path.localeCompare(b.d.path,'en'));
       return {results,terms};
     }};
   }

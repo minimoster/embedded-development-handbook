@@ -17,3 +17,5 @@ node site/test.mjs
 ```
 
 若目标硬件或工具不可用，写“未运行”及需要的验证条件。不要将测试失败或已知限制删掉来制造通过。
+
+FreeRTOS源码扩展使用docs/50-rtos/source-study-manifest.json维护独立分类、阅读顺序和章文哈希，不放入核心题manifest。修改这些章文时同步更新其SHA256，再运行scripts/validate_source_study.py及全部阅读器检查。现代与历史版本/许可分别核对；实际内核与板级实验未执行时保持该边界。

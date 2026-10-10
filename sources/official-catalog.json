@@ -358,5 +358,41 @@
     "boundary": "vtable 与对象布局是 ABI 层；平台供应商有最终定义权，不能视为 C++ 标准规定的唯一实现。",
     "verification": "正文可读",
     "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R05",
+    "title": "FreeRTOS-Kernel V11.1.0固定源码",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0",
+    "topic": "FreeRTOS源码扩展",
+    "boundary": "六篇现代源码讲义的公开实现依据；单核GCC ARM_CM4F、明确配置边界；没有执行内核或板级实验。",
+    "verification": "固定源码/许可核读；非运行验证",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R06",
+    "title": "FreeRTOS V9.0.0历史co-routines源码",
+    "url": "https://github.com/FreeRTOS/FreeRTOS/tree/165c24cba94e3d3f386c3b77d3bb0f4a524d8511",
+    "topic": "FreeRTOS源码扩展",
+    "boundary": "历史选读，CRCB、宏恢复点与协作调度；不作为新项目推荐或现代MIT证据。",
+    "verification": "固定源码/许可核读；非运行验证",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R07",
+    "title": "FreeRTOS-Kernel V11.1.0 MIT许可",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/LICENSE.md",
+    "topic": "FreeRTOS源码扩展",
+    "boundary": "只适用于对应上游版本；本仓库讲义未分发上游内核实现。",
+    "verification": "固定源码/许可核读；非运行验证",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R08",
+    "title": "FreeRTOS V9.0.0历史许可",
+    "url": "https://github.com/FreeRTOS/FreeRTOS/blob/165c24cba94e3d3f386c3b77d3bb0f4a524d8511/FreeRTOS/License/license.txt",
+    "topic": "FreeRTOS源码扩展",
+    "boundary": "GPLv2加FreeRTOS exception；不能以现代MIT覆盖。",
+    "verification": "固定源码/许可核读；非运行验证",
+    "checked_at": "2026-10-10"
   }
 ]

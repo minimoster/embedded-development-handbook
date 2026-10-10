@@ -9,7 +9,8 @@
 3. [主机实验](examples/README.md)：边界、分片、回绕、资源和线程关闭；先测硬件无关逻辑。
 4. [C++ Hot100](docs/80-hot100-cpp/README.md)：官方100题与LC695额外公开练习，独立题解/源码/测试。
 5. [公开面经与原创故障场景](docs/120-interviews/README.md)：17份新增完整自报页面、7卡追问，日期/岗位边界单列。
-6. [版本与来源](VERSIONS.md)、[资料阅读状态](sources/README.md)、[覆盖边界](docs/130-reference/coverage-boundaries.md)。
+6. [FreeRTOS 源码导读](docs/50-rtos/source-reading.md)：7篇原创扩展讲义，沿链表、任务、队列、事件组与共享daemon读固定版本；历史co-routines单独选读。
+7. [版本与来源](VERSIONS.md)、[资料阅读状态](sources/README.md)、[覆盖边界](docs/130-reference/coverage-boundaries.md)。
 
 ## 阅读方式
 

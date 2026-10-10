@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-10",
+  "kind": "original_source_study_extension",
+  "chapter_count": 7,
+  "preserved_core_count": 120,
+  "preserved_rtos_core_ids": [
+    "RT01",
+    "RT02",
+    "RT03",
+    "RT04",
+    "RT05",
+    "RT06",
+    "RT07",
+    "RT08",
+    "RT09",
+    "RT10"
+  ],
+  "modern_basis": {
+    "tag": "V11.1.0",
+    "commit": "dbf70559b27d39c1fdb68dfb9a32140b6a6777a0",
+    "port": "portable/GCC/ARM_CM4F",
+    "scope": "single-core; chapter-specific configuration assumptions",
+    "license": "MIT",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0"
+  },
+  "historical_basis": {
+    "tag": "V9.0.0",
+    "commit": "165c24cba94e3d3f386c3b77d3bb0f4a524d8511",
+    "license": "GPLv2 plus FreeRTOS exception",
+    "optional": true,
+    "url": "https://github.com/FreeRTOS/FreeRTOS/tree/165c24cba94e3d3f386c3b77d3bb0f4a524d8511"
+  },
+  "execution_status": "source_reading_and_hand_traces_only; no host model, kernel, simulator or board experiments",
+  "chapters": [
+    {
+      "path": "docs/50-rtos/source-reading.md",
+      "title": "FreeRTOS 源码导读 · 先固定版本，再追状态变化",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "源码导读 / 版本配置",
+      "priority": "P1",
+      "order": 1,
+      "optional_historical": false,
+      "sha256": "43f95a2df234140bdb7e11f5302b45f308678257edaa923a1a35ef004027f4d0"
+    },
+    {
+      "path": "docs/50-rtos/kernel-lists.md",
+      "title": "FreeRTOS 内核链表 · 节点归属、排序与轮转",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "内核链表 / 不变量",
+      "priority": "P1",
+      "order": 2,
+      "optional_historical": false,
+      "sha256": "fd9f8f57f3015b456f93b2a335893fc368ad1cc730d1e4d6ef89e587b2bf44bc"
+    },
+    {
+      "path": "docs/50-rtos/kernel-task-lifecycle.md",
+      "title": "FreeRTOS 任务生命周期 · 从 TCB 到阻塞与唤醒",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "任务生命周期 / 状态迁移",
+      "priority": "P1",
+      "order": 3,
+      "optional_historical": false,
+      "sha256": "c7d3537d2866c8b0e4acceaee55718230a0cc7ec224003e007c50346e3a75731"
+    },
+    {
+      "path": "docs/50-rtos/kernel-queue-waits.md",
+      "title": "FreeRTOS 队列等待 · 复制、解阻塞与超时复查",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "队列等待 / 超时",
+      "priority": "P1",
+      "order": 4,
+      "optional_historical": false,
+      "sha256": "b43177a05b9ef2ba958fcf2ec2e1d870e4e16c4e443a67ff7fb8140fa993b5e0"
+    },
+    {
+      "path": "docs/50-rtos/kernel-event-groups.md",
+      "title": "源码补充 · 事件组的条件判断、快照与延迟处理",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "事件组 / 条件快照",
+      "priority": "P1",
+      "order": 5,
+      "optional_historical": false,
+      "sha256": "e59948d8add4908936559c57586ec8325af3998e24e9d874977ac77a8b93620a"
+    },
+    {
+      "path": "docs/50-rtos/kernel-timer-daemon.md",
+      "title": "软件定时器与共享 daemon 的命令和寿命",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "软件定时器 / daemon寿命",
+      "priority": "P1",
+      "order": 6,
+      "optional_historical": false,
+      "sha256": "e2431b896302439fe2c780afea7f7baca539ca1cb036fb8751727bdcefde7acc"
+    },
+    {
+      "path": "docs/50-rtos/historical-co-routines.md",
+      "title": "历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？",
+      "module": "rtos",
+      "kind": "source-study",
+      "category": "历史选读 / co-routines",
+      "priority": "P2",
+      "order": 7,
+      "optional_historical": true,
+      "sha256": "26619f05333641eb9af52e75d60e250f329e41f451c759ae9a88cf46613115a7"
+    }
+  ]
+}

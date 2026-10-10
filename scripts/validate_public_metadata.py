@@ -43,3 +43,5 @@ print(f'Public metadata PASS: {len(core["questions"])} core topics, 100 official
 
 import runpy
 runpy.run_path(str(R/'scripts/validate_interview_supplement.py'),run_name='__main__')
+
+runpy.run_path(str(R/'scripts/validate_source_study.py'),run_name='__main__')

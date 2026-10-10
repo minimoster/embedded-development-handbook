@@ -1,6 +1,7 @@
 {
   "checked_date": "2026-10-10",
   "core_count": 120,
+  "freertos_source_study_chapter_count": 7,
   "original_interview_scenario_count": 7,
   "new_full_public_interview_pages": 17,
   "core_modules": [

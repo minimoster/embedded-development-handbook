@@ -42,7 +42,7 @@
       "id": "rtos",
       "folder": "50-rtos",
       "label": "FreeRTOS 与并发",
-      "description": "调度、同步、优先级与时序正确性",
+      "description": "基础调度与同步，7篇固定版本源码扩展与历史选读",
       "number": "06"
     },
     {

@@ -7,6 +7,7 @@ core=json.loads((R/'coverage/core-question-manifest.json').read_text())['questio
 modules=json.loads((R/'site/config.json').read_text())['modules']
 hotfile=R/'docs/80-hot100-cpp/manifest.json'
 hot=json.loads(hotfile.read_text()) if hotfile.exists() else {'problems':[],'supplementary':[],'categories':[]}
+study=json.loads((R/'docs/50-rtos/source-study-manifest.json').read_text())
 lines=['# 题目索引','',f"原创核心：{len(core)}主题。官方Hot100：{len(hot['problems'])}题。额外公开练习：{len(hot.get('supplementary',[]))}题。",'','优先级是课程依赖建议，不是面试考频。题目按manifest生成；实现是否实际测试以验证报告为准。','']
 summary=[]
 for m in modules:
@@ -18,6 +19,7 @@ interviewfile=R/'docs/120-interviews/manifest.json'
 interview=json.loads(interviewfile.read_text()) if interviewfile.exists() else {'cards':[],'counts':{}}
 if interview['cards']:
     lines += [f"## 公开面经与原创故障场景 · {len(interview['cards'])}卡",'',f"{interview['counts']['new_full_public_pages']}份新增完整自报页面，试读和无日期GitHub日志另列；场景不计入120核心主题或Hot100。",'', '- [来源日期、岗位与学习导航](docs/120-interviews/README.md)', '- [公开自报目录](docs/120-interviews/source-catalog.md)']+[f"- [{c['id']} · {c['title']}]({c['path']})" for c in interview['cards']]+['']
+lines += [f"## FreeRTOS源码扩展 · {len(study['chapters'])}篇",'', '基础RT01–RT10验收后按下列顺序阅读；扩展讲义不计入120核心或官方Hot100，历史co-routines为P2选读。','']+[f"- [{c['title']}]({c['path']}) · {c['priority']} · {c['category']}" for c in study['chapters']]+['']
 lines+=['## Hot100 · C++17','','- [学习路线、完整题单与测试](docs/80-hot100-cpp/README.md)','- [源码与编译](algorithms/cpp/README.md)','']
 for c in hot.get('categories',[]):
     ps=[p for p in hot['problems'] if p['category']==c['name']]
@@ -25,5 +27,5 @@ for c in hot.get('categories',[]):
 if hot.get('supplementary'):
     lines += ['### 额外公开练习：不计入官方100','']+[f"- [LC{p['id']} · {p['title_zh']}]({p['doc_path']})" for p in hot['supplementary']]+['']
 (R/'QUESTION_INDEX.md').write_text('\n'.join(lines))
-(R/'coverage/topic-summary.json').write_text(json.dumps({'checked_date':'2026-10-10','core_count':len(core),'original_interview_scenario_count':len(interview['cards']),'new_full_public_interview_pages':interview['counts'].get('new_full_public_pages',0),'core_modules':summary,'official_hot100_count':len(hot['problems']),'supplementary_count':len(hot.get('supplementary',[]))},ensure_ascii=False,indent=2)+'\n')
+(R/'coverage/topic-summary.json').write_text(json.dumps({'checked_date':'2026-10-10','core_count':len(core),'freertos_source_study_chapter_count':len(study['chapters']),'original_interview_scenario_count':len(interview['cards']),'new_full_public_interview_pages':interview['counts'].get('new_full_public_pages',0),'core_modules':summary,'official_hot100_count':len(hot['problems']),'supplementary_count':len(hot.get('supplementary',[]))},ensure_ascii=False,indent=2)+'\n')
 print(f"Index regenerated: {len(core)} core + {len(hot['problems'])} official + {len(hot.get('supplementary',[]))} supplementary")

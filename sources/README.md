@@ -11,3 +11,9 @@
 
 - [新增公开自报页面目录](../docs/120-interviews/source-catalog.md)、[结构化来源](interview-supplement.json)：17份完整页面，试读和无日期GitHub日志另列。
 - [七个原创故障场景](../docs/120-interviews/README.md)：问题主题与官方技术答案分开，练习均尚未执行。
+
+## FreeRTOS源码扩展
+
+- [7篇原创扩展与阅读顺序](../docs/50-rtos/source-study-manifest.json)、[源码导读](../docs/50-rtos/source-reading.md)：章节引用公开固定版本源码，用于机制核对；手推与设计练习尚未运行。
+- [现代V11.1.0固定提交](https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0)，单核GCC ARM_CM4F，MIT；[历史V9.0.0固定提交](https://github.com/FreeRTOS/FreeRTOS/tree/165c24cba94e3d3f386c3b77d3bb0f4a524d8511)仅用于co-routines选读，GPLv2加FreeRTOS exception。
+- 引用范围是各章实际讨论的文件与分支，不声称读完所有版本、所有配置或全部官方文档；没有转载上游实现与注释。
