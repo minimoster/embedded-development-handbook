@@ -1,0 +1,105 @@
+{
+  "repository_url": "https://github.com/minimoster/embedded-development-handbook",
+  "branch": "main",
+  "checked_date": "2026-10-10",
+  "modules": [
+    {
+      "id": "guide",
+      "folder": "00-guide",
+      "label": "学习路线",
+      "description": "先学会验证，再逐步连接硬件、系统与项目",
+      "number": "01"
+    },
+    {
+      "id": "c",
+      "folder": "10-c-cpp",
+      "label": "C / C++ 与内存",
+      "description": "对象、生命周期、未定义行为与资源所有权",
+      "number": "02"
+    },
+    {
+      "id": "stl",
+      "folder": "20-stl",
+      "label": "STL 与数据结构",
+      "description": "容器、迭代器、复杂度与嵌入式取舍",
+      "number": "03"
+    },
+    {
+      "id": "arch",
+      "folder": "30-architecture",
+      "label": "架构、编译与链接",
+      "description": "从源代码走到 Flash、异常与启动",
+      "number": "04"
+    },
+    {
+      "id": "mcu",
+      "folder": "40-mcu",
+      "label": "STM32 与外设",
+      "description": "GPIO、定时器、ADC、DMA、低功耗与中断",
+      "number": "05"
+    },
+    {
+      "id": "rtos",
+      "folder": "50-rtos",
+      "label": "FreeRTOS 与并发",
+      "description": "调度、同步、优先级与时序正确性",
+      "number": "06"
+    },
+    {
+      "id": "protocol",
+      "folder": "60-protocols",
+      "label": "协议与网络",
+      "description": "串口总线、帧解析、TCP/IP 与可靠传输",
+      "number": "07"
+    },
+    {
+      "id": "linux",
+      "folder": "70-linux-apps",
+      "label": "Linux 应用",
+      "description": "进程、线程、I/O、IPC 与交叉开发",
+      "number": "08"
+    },
+    {
+      "id": "driver",
+      "folder": "80-linux-drivers",
+      "label": "Linux 驱动",
+      "description": "设备模型、设备树、字符设备与并发",
+      "number": "09"
+    },
+    {
+      "id": "boot",
+      "folder": "90-boot-rootfs",
+      "label": "启动与根文件系统",
+      "description": "Bootloader、内核、设备树与部署",
+      "number": "10"
+    },
+    {
+      "id": "debug",
+      "folder": "100-debugging",
+      "label": "调试与工程质量",
+      "description": "证据链、测试、故障注入与发布纪律",
+      "number": "11"
+    },
+    {
+      "id": "project",
+      "folder": "110-projects",
+      "label": "项目与面试表达",
+      "description": "把知识落实为可复现的工程证据",
+      "number": "12"
+    },
+    {
+      "id": "hot100cpp",
+      "folder": "80-hot100-cpp",
+      "label": "Hot100 · C++",
+      "description": "题单核验、原创题解、独立实现与测试",
+      "number": "13"
+    },
+    {
+      "id": "reference",
+      "folder": "130-reference",
+      "label": "来源与覆盖边界",
+      "description": "阅读状态、版本、权利与尚未覆盖的内容",
+      "number": "14"
+    }
+  ]
+}

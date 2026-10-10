@@ -1,0 +1,23 @@
+name: Check handbook
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/validate.py --strict
+      - run: python3 scripts/validate_public_metadata.py
+      - run: python3 tests/run_host_tests.py
+      - run: python3 tests/run_host_tests.py --sanitize
+      - run: python3 algorithms/cpp/validate.py --output /tmp/hot100-ci-validation.json
+      - run: node site/build.mjs --check
+      - run: node site/test.mjs

@@ -1,0 +1,68 @@
+{
+  "checked_at_utc": "2026-10-10T08:36:36.330753+00:00",
+  "core_topics": 120,
+  "official_hot100": 100,
+  "core_host_tests": {
+    "normal": "passed with warnings as errors",
+    "address_undefined": "passed, fail-fast -fno-sanitize-recover=all; detect_leaks=0",
+    "ring_model_steps": 50000,
+    "frame_partitions": 1024,
+    "fifo_items": 10000,
+    "suites": [
+      "numeric-parse",
+      "numeric-differential",
+      "c-core",
+      "linux-lifecycle",
+      "cpp-language",
+      "cpp-core",
+      "c-abi"
+    ],
+    "numeric_roundtrips": 20001,
+    "numeric_int64_oracle_cases": 50000,
+    "numeric_strtoimax_differential_cases": 216403,
+    "real_c_cpp_boundary": "C11 caller separately compiled; C++17 implementation compiled with -fno-exceptions, then linked; fake resource only"
+  },
+  "algorithms": {
+    "passed": true,
+    "normal_entrypoints": 101,
+    "asan_ubsan_entrypoints": 101,
+    "checked_iterator_entrypoints": 101,
+    "additional_small_domain_oracles": 17,
+    "frozen_file_count": 314,
+    "freeze_manifest_sha256": "7bcb0926c56e22a753ecb251acd720a2604fa1c3e3feacb6fece764ba0d29de0",
+    "inventory_reverified": true,
+    "source_link_checks": 515,
+    "result_path": "docs/80-hot100-cpp/validation-result.json",
+    "execution_status": "Prior complete101-entry three-mode code run retained;220 compilation/runtime inputs unchanged and hash-verified. Current101-lesson inventory, public links and314-file freeze revalidated."
+  },
+  "reader_static": {
+    "status": "passed",
+    "documents": 239,
+    "checks": [
+      "source consistency",
+      "exact local routes and anchors",
+      "offline source resources",
+      "escaped HTML",
+      "full-text IDs and filters",
+      "manifest counts",
+      "no fetch or remote services"
+    ],
+    "offline_resources": 225,
+    "navigation_simulation": "Repeated/current and changed sections, collapse-before-scroll, heading focus, back/forward history, modified clicks, responsive960px boundary, sidebar close/Esc/focus trap passed"
+  },
+  "actual_browser": {
+    "status": "not run for current derivative",
+    "reason": "Event/DOM simulation and static rendering checks are not actual browser or physical-device verification."
+  },
+  "leak_sanitizer": {
+    "status": "not run",
+    "reason": "ptrace environment restriction; detect_leaks=0 is not a leak-free proof"
+  },
+  "hardware_rtos_kernel_online_judge": "not run",
+  "release_status": "prepared locally; publisher verifies remote and deployment",
+  "publication_privacy": {
+    "status": "passed",
+    "scope": "Full UTF-8 public source and generated-output scan; bounded metadata schemas and exact offline resource inventory verified"
+  },
+  "supplementary_exercises": 1
+}

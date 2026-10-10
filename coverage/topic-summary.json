@@ -1,0 +1,63 @@
+{
+  "checked_date": "2026-10-10",
+  "core_count": 120,
+  "core_modules": [
+    {
+      "module": "c",
+      "label": "C / C++ 与内存",
+      "original_core_count": 22
+    },
+    {
+      "module": "stl",
+      "label": "STL 与数据结构",
+      "original_core_count": 7
+    },
+    {
+      "module": "arch",
+      "label": "架构、编译与链接",
+      "original_core_count": 9
+    },
+    {
+      "module": "mcu",
+      "label": "STM32 与外设",
+      "original_core_count": 10
+    },
+    {
+      "module": "rtos",
+      "label": "FreeRTOS 与并发",
+      "original_core_count": 10
+    },
+    {
+      "module": "protocol",
+      "label": "协议与网络",
+      "original_core_count": 13
+    },
+    {
+      "module": "linux",
+      "label": "Linux 应用",
+      "original_core_count": 18
+    },
+    {
+      "module": "driver",
+      "label": "Linux 驱动",
+      "original_core_count": 12
+    },
+    {
+      "module": "boot",
+      "label": "启动与根文件系统",
+      "original_core_count": 8
+    },
+    {
+      "module": "debug",
+      "label": "调试与工程质量",
+      "original_core_count": 6
+    },
+    {
+      "module": "project",
+      "label": "项目与面试表达",
+      "original_core_count": 5
+    }
+  ],
+  "official_hot100_count": 100,
+  "supplementary_count": 1
+}

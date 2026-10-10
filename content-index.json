@@ -1,0 +1,4353 @@
+{
+  "checked_date": "2026-10-10",
+  "documents": [
+    {
+      "path": "CHANGELOG.md",
+      "title": "修订记录",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "title": "如何改进这本手册",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "LICENSE.md",
+      "title": "权利与使用边界",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "QUESTION_INDEX.md",
+      "title": "题目索引",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "README.md",
+      "title": "嵌入式开发 · 学习与面试手册",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "VERSIONS.md",
+      "title": "版本与适用范围",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "algorithms/cpp/README.md",
+      "title": "Hot100 C++17本地工程",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "coverage/README.md",
+      "title": "验证与覆盖",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "docs/00-guide/learning-path.md",
+      "title": "从一条可验证的数据链开始",
+      "module": "guide",
+      "question_ids": []
+    },
+    {
+      "path": "docs/10-c-cpp/c01.md",
+      "title": "C01 · 数组、指针和长度为什么必须一起设计？",
+      "module": "c",
+      "question_ids": [
+        "C01"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c02.md",
+      "title": "C02 · 栈、堆、静态存储与对象生命周期怎么区分？",
+      "module": "c",
+      "question_ids": [
+        "C02"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c03.md",
+      "title": "C03 · const 能保证什么，不能保证什么？",
+      "module": "c",
+      "question_ids": [
+        "C03"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c04.md",
+      "title": "C04 · volatile、atomic 与内存屏障怎样分工？",
+      "module": "c",
+      "question_ids": [
+        "C04"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c05.md",
+      "title": "C05 · 未定义行为、未指定行为与实现定义如何回答？",
+      "module": "c",
+      "question_ids": [
+        "C05"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c06.md",
+      "title": "C06 · 结构体对齐、padding 与网络序列化有什么关系？",
+      "module": "c",
+      "question_ids": [
+        "C06"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c07.md",
+      "title": "C07 · malloc/free 与嵌入式内存分配如何取舍？",
+      "module": "c",
+      "question_ids": [
+        "C07"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c08.md",
+      "title": "C08 · C++ RAII、unique_ptr 与错误路径有什么价值？",
+      "module": "c",
+      "question_ids": [
+        "C08"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c09.md",
+      "title": "C09 · 引用、拷贝、移动和完美转发如何区分？",
+      "module": "c",
+      "question_ids": [
+        "C09"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c10.md",
+      "title": "C10 · 回调函数、函数指针和上下文对象怎么设计？",
+      "module": "c",
+      "question_ids": [
+        "C10"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c11.md",
+      "title": "C11 · 虚析构、虚函数与对象切片有什么区别？",
+      "module": "c",
+      "question_ids": [
+        "C11"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c12.md",
+      "title": "C12 · 整型提升、位运算与移位如何写得可移植？",
+      "module": "c",
+      "question_ids": [
+        "C12"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c13.md",
+      "title": "C13 · static、extern、声明与定义怎样区分？",
+      "module": "c",
+      "question_ids": [
+        "C13"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c14.md",
+      "title": "C14 · memcpy、memmove 与字符串 API 怎样避免越界？",
+      "module": "c",
+      "question_ids": [
+        "C14"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c15.md",
+      "title": "C15 · class/struct、访问控制与 const 成员函数的真实边界？",
+      "module": "c",
+      "question_ids": [
+        "C15"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c16.md",
+      "title": "C16 · shared_ptr、weak_ptr 与循环引用如何判断？",
+      "module": "c",
+      "question_ids": [
+        "C16"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c17.md",
+      "title": "C17 · 宏、inline 与 constexpr 怎样避免重复求值和控制流陷阱？",
+      "module": "c",
+      "question_ids": [
+        "C17"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c18.md",
+      "title": "C18 · atoi、strtol 与有界数值解析怎样定义失败合同？",
+      "module": "c",
+      "question_ids": [
+        "C18"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c19.md",
+      "title": "C19 · 成员初始化顺序与 Rule Zero/Five 怎样维护对象不变量？",
+      "module": "c",
+      "question_ids": [
+        "C19"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c20.md",
+      "title": "C20 · lambda 捕获怎样跨越异步回调的生命周期？",
+      "module": "c",
+      "question_ids": [
+        "C20"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c21.md",
+      "title": "C21 · extern \"C\" 与 opaque handle 怎样建立可靠的 C/C++ 边界？",
+      "module": "c",
+      "question_ids": [
+        "C21"
+      ]
+    },
+    {
+      "path": "docs/10-c-cpp/c22.md",
+      "title": "C22 · 重载、覆盖、名字隐藏与默认参数怎样决定一次调用？",
+      "module": "c",
+      "question_ids": [
+        "C22"
+      ]
+    },
+    {
+      "path": "docs/100-debugging/db01.md",
+      "title": "DB01 · HardFault 怎么从寄存器走到源码？",
+      "module": "debug",
+      "question_ids": [
+        "DB01"
+      ]
+    },
+    {
+      "path": "docs/100-debugging/db02.md",
+      "title": "DB02 · GDB、SWD/JTAG、断点与观察点怎么用？",
+      "module": "debug",
+      "question_ids": [
+        "DB02"
+      ]
+    },
+    {
+      "path": "docs/100-debugging/db03.md",
+      "title": "DB03 · 逻辑分析仪、示波器与软件日志各能证明什么？",
+      "module": "debug",
+      "question_ids": [
+        "DB03"
+      ]
+    },
+    {
+      "path": "docs/100-debugging/db04.md",
+      "title": "DB04 · 主机单元测试、sanitizer 与板测如何分层？",
+      "module": "debug",
+      "question_ids": [
+        "DB04"
+      ]
+    },
+    {
+      "path": "docs/100-debugging/db05.md",
+      "title": "DB05 · 故障注入、背压和恢复为何比正常 Demo 重要？",
+      "module": "debug",
+      "question_ids": [
+        "DB05"
+      ]
+    },
+    {
+      "path": "docs/100-debugging/db06.md",
+      "title": "DB06 · 版本、CI、勘误与公开项目该保存什么？",
+      "module": "debug",
+      "question_ids": [
+        "DB06"
+      ]
+    },
+    {
+      "path": "docs/110-projects/pj01.md",
+      "title": "PJ01 · 怎样做一个可答辩的 MCU 数据采集项目？",
+      "module": "project",
+      "question_ids": [
+        "PJ01"
+      ]
+    },
+    {
+      "path": "docs/110-projects/pj02.md",
+      "title": "PJ02 · 怎样做一个 Linux 设备网关项目？",
+      "module": "project",
+      "question_ids": [
+        "PJ02"
+      ]
+    },
+    {
+      "path": "docs/110-projects/pj03.md",
+      "title": "PJ03 · 面试项目介绍怎样从功能讲到工程证据？",
+      "module": "project",
+      "question_ids": [
+        "PJ03"
+      ]
+    },
+    {
+      "path": "docs/110-projects/pj04.md",
+      "title": "PJ04 · 一场模拟面试如何评分与复盘？",
+      "module": "project",
+      "question_ids": [
+        "PJ04"
+      ]
+    },
+    {
+      "path": "docs/110-projects/pj05.md",
+      "title": "PJ05 · 面向 EE 背景怎样连接硬件优势与软件短板？",
+      "module": "project",
+      "question_ids": [
+        "PJ05"
+      ]
+    },
+    {
+      "path": "docs/130-reference/coverage-boundaries.md",
+      "title": "知道已经做了什么，也知道还没有做什么",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "docs/20-stl/st01.md",
+      "title": "ST01 · vector、array、list 的选择依据是什么？",
+      "module": "stl",
+      "question_ids": [
+        "ST01"
+      ]
+    },
+    {
+      "path": "docs/20-stl/st02.md",
+      "title": "ST02 · 迭代器失效为什么比复杂度更容易出 bug？",
+      "module": "stl",
+      "question_ids": [
+        "ST02"
+      ]
+    },
+    {
+      "path": "docs/20-stl/st03.md",
+      "title": "ST03 · map、unordered_map 与哈希退化怎么回答？",
+      "module": "stl",
+      "question_ids": [
+        "ST03"
+      ]
+    },
+    {
+      "path": "docs/20-stl/st04.md",
+      "title": "ST04 · string、string_view 与二进制数据有哪些坑？",
+      "module": "stl",
+      "question_ids": [
+        "ST04"
+      ]
+    },
+    {
+      "path": "docs/20-stl/st05.md",
+      "title": "ST05 · 排序的比较器必须满足什么？",
+      "module": "stl",
+      "question_ids": [
+        "ST05"
+      ]
+    },
+    {
+      "path": "docs/20-stl/st06.md",
+      "title": "ST06 · 复杂度、内存上界与实时性怎样一起讲？",
+      "module": "stl",
+      "question_ids": [
+        "ST06"
+      ]
+    },
+    {
+      "path": "docs/20-stl/st07.md",
+      "title": "ST07 · deque、stack、queue 和 priority_queue 应按什么合同选择？",
+      "module": "stl",
+      "question_ids": [
+        "ST07"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar01.md",
+      "title": "AR01 · 预处理、编译、汇编、链接各负责什么？",
+      "module": "arch",
+      "question_ids": [
+        "AR01"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar02.md",
+      "title": "AR02 · 链接脚本、Flash/RAM 与 VMA/LMA 怎么理解？",
+      "module": "arch",
+      "question_ids": [
+        "AR02"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar03.md",
+      "title": "AR03 · Cortex-M 从复位到 main 发生什么？",
+      "module": "arch",
+      "question_ids": [
+        "AR03"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar04.md",
+      "title": "AR04 · 中断优先级与抢占优先级怎样避免混淆？",
+      "module": "arch",
+      "question_ids": [
+        "AR04"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar05.md",
+      "title": "AR05 · ABI、调用约定与栈对齐为什么会影响固件？",
+      "module": "arch",
+      "question_ids": [
+        "AR05"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar06.md",
+      "title": "AR06 · 交叉编译怎样避免误链接主机库？",
+      "module": "arch",
+      "question_ids": [
+        "AR06"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar07.md",
+      "title": "AR07 · MSP、PSP、SVC 和 PendSV 如何参与任务切换？",
+      "module": "arch",
+      "question_ids": [
+        "AR07"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar08.md",
+      "title": "AR08 · Harvard/von Neumann、MCU/MPU 与实时性如何区分？",
+      "module": "arch",
+      "question_ids": [
+        "AR08"
+      ]
+    },
+    {
+      "path": "docs/30-architecture/ar09.md",
+      "title": "AR09 · Make 的依赖图、头文件追踪与增量构建怎样验证？",
+      "module": "arch",
+      "question_ids": [
+        "AR09"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc01.md",
+      "title": "MC01 · GPIO 推挽、开漏、上下拉怎么选？",
+      "module": "mcu",
+      "question_ids": [
+        "MC01"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc02.md",
+      "title": "MC02 · 定时器频率、PWM 与时钟倍频怎么计算？",
+      "module": "mcu",
+      "question_ids": [
+        "MC02"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc03.md",
+      "title": "MC03 · 输入捕获测频率和编码器有哪些边界？",
+      "module": "mcu",
+      "question_ids": [
+        "MC03"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc04.md",
+      "title": "MC04 · UART 接收为什么必须设计帧边界？",
+      "module": "mcu",
+      "question_ids": [
+        "MC04"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc05.md",
+      "title": "MC05 · DMA 什么时候比中断逐字节更合适？",
+      "module": "mcu",
+      "question_ids": [
+        "MC05"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc06.md",
+      "title": "MC06 · Cortex-M7 DMA 与 cache 一致性怎么处理？",
+      "module": "mcu",
+      "question_ids": [
+        "MC06"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc07.md",
+      "title": "MC07 · ADC 精度、采样时间与滤波怎么区分？",
+      "module": "mcu",
+      "question_ids": [
+        "MC07"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc08.md",
+      "title": "MC08 · 按键消抖和非阻塞状态机怎样设计？",
+      "module": "mcu",
+      "question_ids": [
+        "MC08"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc09.md",
+      "title": "MC09 · 看门狗与低功耗为何不能孤立设计？",
+      "module": "mcu",
+      "question_ids": [
+        "MC09"
+      ]
+    },
+    {
+      "path": "docs/40-mcu/mc10.md",
+      "title": "MC10 · Flash 擦写和掉电安全存储怎么做？",
+      "module": "mcu",
+      "question_ids": [
+        "MC10"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt01.md",
+      "title": "RT01 · 任务状态、抢占和时间片怎么区分？",
+      "module": "rtos",
+      "question_ids": [
+        "RT01"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt02.md",
+      "title": "RT02 · vTaskDelay 与 vTaskDelayUntil 的周期差异？",
+      "module": "rtos",
+      "question_ids": [
+        "RT02"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt03.md",
+      "title": "RT03 · 互斥量、二值信号量和计数信号量怎么选？",
+      "module": "rtos",
+      "question_ids": [
+        "RT03"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt04.md",
+      "title": "RT04 · 优先级反转、继承与死锁怎么解释？",
+      "module": "rtos",
+      "question_ids": [
+        "RT04"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt05.md",
+      "title": "RT05 · 队列、任务通知和事件组的语义差别？",
+      "module": "rtos",
+      "question_ids": [
+        "RT05"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt06.md",
+      "title": "RT06 · FromISR API 与中断优先级上限怎么配合？",
+      "module": "rtos",
+      "question_ids": [
+        "RT06"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt07.md",
+      "title": "RT07 · 临界区、调度器挂起和中断屏蔽有什么不同？",
+      "module": "rtos",
+      "question_ids": [
+        "RT07"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt08.md",
+      "title": "RT08 · 任务栈、heap_1..heap_5 与内存预算怎么看？",
+      "module": "rtos",
+      "question_ids": [
+        "RT08"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt09.md",
+      "title": "RT09 · SPSC 环形缓冲怎样避免看似正确的竞态？",
+      "module": "rtos",
+      "question_ids": [
+        "RT09"
+      ]
+    },
+    {
+      "path": "docs/50-rtos/rt10.md",
+      "title": "RT10 · 任务创建、参数生命周期与软件定时器怎么设计？",
+      "module": "rtos",
+      "question_ids": [
+        "RT10"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr01.md",
+      "title": "PR01 · I²C 起止、ACK、仲裁和时钟拉伸怎么理解？",
+      "module": "protocol",
+      "question_ids": [
+        "PR01"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr02.md",
+      "title": "PR02 · SPI 模式、片选与事务边界怎么核对？",
+      "module": "protocol",
+      "question_ids": [
+        "PR02"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr03.md",
+      "title": "PR03 · RS485 和 Modbus RTU 不是同一层东西？",
+      "module": "protocol",
+      "question_ids": [
+        "PR03"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr04.md",
+      "title": "PR04 · CAN 仲裁、标识符和错误处理怎样建立主线？",
+      "module": "protocol",
+      "question_ids": [
+        "PR04"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr05.md",
+      "title": "PR05 · OSI/TCP-IP 分层对嵌入式排障有何用？",
+      "module": "protocol",
+      "question_ids": [
+        "PR05"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr06.md",
+      "title": "PR06 · TCP 为什么会半包和粘包，怎样正确接收？",
+      "module": "protocol",
+      "question_ids": [
+        "PR06"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr07.md",
+      "title": "PR07 · TCP 建连、关闭和 TIME_WAIT 怎么讲？",
+      "module": "protocol",
+      "question_ids": [
+        "PR07"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr08.md",
+      "title": "PR08 · TCP/UDP、超时重试和幂等怎样一起选？",
+      "module": "protocol",
+      "question_ids": [
+        "PR08"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr09.md",
+      "title": "PR09 · CRC、checksum、MAC 和签名怎么区分？",
+      "module": "protocol",
+      "question_ids": [
+        "PR09"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr10.md",
+      "title": "PR10 · IP、MAC、子网掩码与 ARP 怎样串起来？",
+      "module": "protocol",
+      "question_ids": [
+        "PR10"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr11.md",
+      "title": "PR11 · DNS、HTTP、HTTPS 与 TLS 握手怎样避免混说？",
+      "module": "protocol",
+      "question_ids": [
+        "PR11"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr12.md",
+      "title": "PR12 · TCP 流量控制与拥塞控制有什么不同？",
+      "module": "protocol",
+      "question_ids": [
+        "PR12"
+      ]
+    },
+    {
+      "path": "docs/60-protocols/pr13.md",
+      "title": "PR13 · HTTP 的方法语义、消息定界和重试怎样写对？",
+      "module": "protocol",
+      "question_ids": [
+        "PR13"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx01.md",
+      "title": "LX01 · 进程、线程和虚拟地址空间怎么区分？",
+      "module": "linux",
+      "question_ids": [
+        "LX01"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx02.md",
+      "title": "LX02 · read/write 的短读、短写与 EINTR 如何处理？",
+      "module": "linux",
+      "question_ids": [
+        "LX02"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx03.md",
+      "title": "LX03 · 阻塞、非阻塞、select/poll/epoll 如何建立模型？",
+      "module": "linux",
+      "question_ids": [
+        "LX03"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx04.md",
+      "title": "LX04 · pthread 互斥量与条件变量如何正确配合？",
+      "module": "linux",
+      "question_ids": [
+        "LX04"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx05.md",
+      "title": "LX05 · mmap 共享内存、文件映射和持久化的边界？",
+      "module": "linux",
+      "question_ids": [
+        "LX05"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx06.md",
+      "title": "LX06 · 信号处理函数为什么不能随便打印和加锁？",
+      "module": "linux",
+      "question_ids": [
+        "LX06"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx07.md",
+      "title": "LX07 · IPC 的 pipe、socket 和共享内存怎么选？",
+      "module": "linux",
+      "question_ids": [
+        "LX07"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx08.md",
+      "title": "LX08 · 从应用性能问题到 CPU/内存/I/O 证据链？",
+      "module": "linux",
+      "question_ids": [
+        "LX08"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx09.md",
+      "title": "LX09 · join、detach、退出与资源回收怎么设计？",
+      "module": "linux",
+      "question_ids": [
+        "LX09"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx10.md",
+      "title": "LX10 · timerfd 和绝对时刻周期任务怎么保证边界？",
+      "module": "linux",
+      "question_ids": [
+        "LX10"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx11.md",
+      "title": "LX11 · 系统调用、库函数与用户态/内核态有何不同？",
+      "module": "linux",
+      "question_ids": [
+        "LX11"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx12.md",
+      "title": "LX12 · Linux GPIO/UART/SPI/I²C 应用应走什么接口？",
+      "module": "linux",
+      "question_ids": [
+        "LX12"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx13.md",
+      "title": "LX13 · fork、exec、wait 与僵尸回收怎样形成完整生命周期？",
+      "module": "linux",
+      "question_ids": [
+        "LX13"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx14.md",
+      "title": "LX14 · fd、打开文件描述、inode 与 unlink 的生命周期怎么区分？",
+      "module": "linux",
+      "question_ids": [
+        "LX14"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx15.md",
+      "title": "LX15 · 教材调度算法、Linux 公平策略和实时上限怎样分层回答？",
+      "module": "linux",
+      "question_ids": [
+        "LX15"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx16.md",
+      "title": "LX16 · 页表、TLB、缺页和 COW 如何解释虚拟内存？",
+      "module": "linux",
+      "question_ids": [
+        "LX16"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx17.md",
+      "title": "LX17 · 有界线程池怎样设计背压、拥有权和停止协议？",
+      "module": "linux",
+      "question_ids": [
+        "LX17"
+      ]
+    },
+    {
+      "path": "docs/70-linux-apps/lx18.md",
+      "title": "LX18 · select、poll、epoll 的资源上限与公平预算怎么验证？",
+      "module": "linux",
+      "question_ids": [
+        "LX18"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/ERRATA.md",
+      "title": "算法实现的复用与边界提醒",
+      "module": "hot100cpp",
+      "question_ids": []
+    },
+    {
+      "path": "docs/80-hot100-cpp/PATTERNS.md",
+      "title": "从100题练到能解释、能写、能迁移",
+      "module": "hot100cpp",
+      "question_ids": []
+    },
+    {
+      "path": "docs/80-hot100-cpp/README.md",
+      "title": "C++17 Hot100：完整原创学习轨道",
+      "module": "hot100cpp",
+      "question_ids": []
+    },
+    {
+      "path": "docs/80-hot100-cpp/SOURCES.md",
+      "title": "官方题单与实现边界",
+      "module": "hot100cpp",
+      "question_ids": []
+    },
+    {
+      "path": "docs/80-hot100-cpp/TESTING.md",
+      "title": "可复现验证与诚实边界",
+      "module": "hot100cpp",
+      "question_ids": []
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0001-two-sum.md",
+      "title": "1. 两数之和（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC1"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0002-add-two-numbers.md",
+      "title": "2. 两数相加 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC2"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0003-longest-substring-without-repeating-characters.md",
+      "title": "3. 无重复字符的最长子串（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC3"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0004-median-of-two-sorted-arrays.md",
+      "title": "4. 寻找两个正序数组的中位数：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC4"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0005-longest-palindromic-substring.md",
+      "title": "5. 最长回文子串：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC5"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0011-container-with-most-water.md",
+      "title": "11. 盛最多水的容器（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC11"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0015-3sum.md",
+      "title": "15. 三数之和（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC15"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0017-letter-combinations-of-a-phone-number.md",
+      "title": "17. 电话号码的字母组合（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC17"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0019-remove-nth-node-from-end-of-list.md",
+      "title": "19. 删除链表的倒数第 N 个结点 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC19"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0020-valid-parentheses.md",
+      "title": "20. 有效的括号：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC20"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0021-merge-two-sorted-lists.md",
+      "title": "21. 合并两个有序链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC21"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0022-generate-parentheses.md",
+      "title": "22. 括号生成（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC22"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0023-merge-k-sorted-lists.md",
+      "title": "23. 合并 K 个升序链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC23"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0024-swap-nodes-in-pairs.md",
+      "title": "24. 两两交换链表中的节点 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC24"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0025-reverse-nodes-in-k-group.md",
+      "title": "25. K 个一组翻转链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC25"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0031-next-permutation.md",
+      "title": "31. 下一个排列：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC31"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0032-longest-valid-parentheses.md",
+      "title": "32. 最长有效括号：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC32"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0033-search-in-rotated-sorted-array.md",
+      "title": "33. 搜索旋转排序数组：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC33"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0034-find-first-and-last-position-of-element-in-sorted-array.md",
+      "title": "34. 在排序数组中查找元素的第一个和最后一个位置：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC34"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0035-search-insert-position.md",
+      "title": "35. 搜索插入位置：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC35"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0039-combination-sum.md",
+      "title": "39. 组合总和（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC39"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0041-first-missing-positive.md",
+      "title": "41. 缺失的第一个正数（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC41"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0042-trapping-rain-water.md",
+      "title": "42. 接雨水（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC42"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0045-jump-game-ii.md",
+      "title": "45. 跳跃游戏 II：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC45"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0046-permutations.md",
+      "title": "46. 全排列（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC46"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0048-rotate-image.md",
+      "title": "48. 旋转图像（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC48"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0049-group-anagrams.md",
+      "title": "49. 字母异位词分组（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC49"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0051-n-queens.md",
+      "title": "51. N 皇后（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC51"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0053-maximum-subarray.md",
+      "title": "53. 最大子数组和（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC53"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0054-spiral-matrix.md",
+      "title": "54. 螺旋矩阵（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC54"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0055-jump-game.md",
+      "title": "55. 跳跃游戏：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC55"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0056-merge-intervals.md",
+      "title": "56. 合并区间（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC56"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0062-unique-paths.md",
+      "title": "62. 不同路径：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC62"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0064-minimum-path-sum.md",
+      "title": "64. 最小路径和：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC64"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0070-climbing-stairs.md",
+      "title": "70. 爬楼梯：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC70"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0072-edit-distance.md",
+      "title": "72. 编辑距离：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC72"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0073-set-matrix-zeroes.md",
+      "title": "73. 矩阵置零（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC73"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0074-search-a-2d-matrix.md",
+      "title": "74. 搜索二维矩阵：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC74"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0075-sort-colors.md",
+      "title": "75. 颜色分类：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC75"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0076-minimum-window-substring.md",
+      "title": "76. 最小覆盖子串（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC76"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0078-subsets.md",
+      "title": "78. 子集（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC78"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0079-word-search.md",
+      "title": "79. 单词搜索（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC79"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0084-largest-rectangle-in-histogram.md",
+      "title": "84. 柱状图中最大的矩形：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC84"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0094-binary-tree-inorder-traversal.md",
+      "title": "94 二叉树的中序遍历",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC94"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0098-validate-binary-search-tree.md",
+      "title": "98 验证二叉搜索树",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC98"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0101-symmetric-tree.md",
+      "title": "101 对称二叉树",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC101"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0102-binary-tree-level-order-traversal.md",
+      "title": "102 二叉树的层序遍历",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC102"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0104-maximum-depth-of-binary-tree.md",
+      "title": "104 二叉树的最大深度",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC104"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0105-construct-binary-tree-from-preorder-and-inorder-traversal.md",
+      "title": "105 从前序与中序遍历序列构造二叉树",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC105"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0108-convert-sorted-array-to-binary-search-tree.md",
+      "title": "108 将有序数组转换为二叉搜索树",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC108"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0114-flatten-binary-tree-to-linked-list.md",
+      "title": "114 二叉树展开为链表",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC114"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0118-pascals-triangle.md",
+      "title": "118. 杨辉三角：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC118"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0121-best-time-to-buy-and-sell-stock.md",
+      "title": "121. 买卖股票的最佳时机：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC121"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0124-binary-tree-maximum-path-sum.md",
+      "title": "124 二叉树中的最大路径和",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC124"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0128-longest-consecutive-sequence.md",
+      "title": "128. 最长连续序列（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC128"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0131-palindrome-partitioning.md",
+      "title": "131. 分割回文串（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC131"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0136-single-number.md",
+      "title": "136. 只出现一次的数字：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC136"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0138-copy-list-with-random-pointer.md",
+      "title": "138. 随机链表的复制 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC138"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0139-word-break.md",
+      "title": "139. 单词拆分：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC139"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0141-linked-list-cycle.md",
+      "title": "141. 环形链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC141"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0142-linked-list-cycle-ii.md",
+      "title": "142. 环形链表 II · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC142"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0146-lru-cache.md",
+      "title": "146. LRU 缓存 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC146"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0148-sort-list.md",
+      "title": "148. 排序链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC148"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0152-maximum-product-subarray.md",
+      "title": "152. 乘积最大子数组：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC152"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0153-find-minimum-in-rotated-sorted-array.md",
+      "title": "153. 寻找旋转排序数组中的最小值：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC153"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0155-min-stack.md",
+      "title": "155. 最小栈：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC155"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0160-intersection-of-two-linked-lists.md",
+      "title": "160. 相交链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC160"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0169-majority-element.md",
+      "title": "169. 多数元素：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC169"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0189-rotate-array.md",
+      "title": "189. 轮转数组（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC189"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0198-house-robber.md",
+      "title": "198. 打家劫舍：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC198"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0199-binary-tree-right-side-view.md",
+      "title": "199 二叉树的右视图",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC199"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0200-number-of-islands.md",
+      "title": "200. 岛屿数量 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC200"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0206-reverse-linked-list.md",
+      "title": "206. 反转链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC206"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0207-course-schedule.md",
+      "title": "207. 课程表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC207"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0208-implement-trie-prefix-tree.md",
+      "title": "208. 实现 Trie (前缀树) · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC208"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0215-kth-largest-element-in-an-array.md",
+      "title": "215. 数组中的第K个最大元素：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC215"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0226-invert-binary-tree.md",
+      "title": "226 翻转二叉树",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC226"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0230-kth-smallest-element-in-a-bst.md",
+      "title": "230 二叉搜索树中第 K 小的元素",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC230"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0234-palindrome-linked-list.md",
+      "title": "234. 回文链表 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC234"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0236-lowest-common-ancestor-of-a-binary-tree.md",
+      "title": "236 二叉树的最近公共祖先",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC236"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0238-product-of-array-except-self.md",
+      "title": "238. 除了自身以外数组的乘积（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC238"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0239-sliding-window-maximum.md",
+      "title": "239. 滑动窗口最大值（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC239"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0240-search-a-2d-matrix-ii.md",
+      "title": "240. 搜索二维矩阵 II（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC240"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0279-perfect-squares.md",
+      "title": "279. 完全平方数：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC279"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0283-move-zeroes.md",
+      "title": "283. 移动零（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC283"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0287-find-the-duplicate-number.md",
+      "title": "287. 寻找重复数：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC287"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0295-find-median-from-data-stream.md",
+      "title": "295. 数据流的中位数：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC295"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0300-longest-increasing-subsequence.md",
+      "title": "300. 最长递增子序列：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC300"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0322-coin-change.md",
+      "title": "322. 零钱兑换：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC322"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0347-top-k-frequent-elements.md",
+      "title": "347. 前 K 个高频元素：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC347"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0394-decode-string.md",
+      "title": "394. 字符串解码：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC394"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0416-partition-equal-subset-sum.md",
+      "title": "416. 分割等和子集：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC416"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0437-path-sum-iii.md",
+      "title": "437 路径总和 III",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC437"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0438-find-all-anagrams-in-a-string.md",
+      "title": "438. 找到字符串中所有字母异位词（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC438"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0543-diameter-of-binary-tree.md",
+      "title": "543 二叉树的直径",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC543"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0560-subarray-sum-equals-k.md",
+      "title": "560. 和为 K 的子数组（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC560"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0739-daily-temperatures.md",
+      "title": "739. 每日温度：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC739"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0763-partition-labels.md",
+      "title": "763. 划分字母区间：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC763"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/0994-rotting-oranges.md",
+      "title": "994. 腐烂的橘子 · C++17",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC994"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/problems/1143-longest-common-subsequence.md",
+      "title": "1143. 最长公共子序列：C++17 推导与实现",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC1143"
+      ]
+    },
+    {
+      "path": "docs/80-hot100-cpp/supplementary/0695-max-area-of-island.md",
+      "title": "695. 岛屿的最大面积（C++17）",
+      "module": "hot100cpp",
+      "question_ids": [
+        "LC695"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv01.md",
+      "title": "DV01 · 字符设备、file_operations 和用户态 fd 如何连起来？",
+      "module": "driver",
+      "question_ids": [
+        "DV01"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv02.md",
+      "title": "DV02 · 为什么不能直接解引用用户指针？",
+      "module": "driver",
+      "question_ids": [
+        "DV02"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv03.md",
+      "title": "DV03 · platform 驱动、设备树与 probe 的关系？",
+      "module": "driver",
+      "question_ids": [
+        "DV03"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv04.md",
+      "title": "DV04 · MMIO、ioremap 与寄存器读改写有什么风险？",
+      "module": "driver",
+      "question_ids": [
+        "DV04"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv05.md",
+      "title": "DV05 · Linux DMA mapping 与裸机 DMA 为什么不同？",
+      "module": "driver",
+      "question_ids": [
+        "DV05"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv06.md",
+      "title": "DV06 · 内核 mutex、spinlock 与中断上下文怎么选？",
+      "module": "driver",
+      "question_ids": [
+        "DV06"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv07.md",
+      "title": "DV07 · 中断下半部、workqueue 与线程化 IRQ 怎么选？",
+      "module": "driver",
+      "question_ids": [
+        "DV07"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv08.md",
+      "title": "DV08 · ioctl、sysfs、poll 的接口设计原则？",
+      "module": "driver",
+      "question_ids": [
+        "DV08"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv09.md",
+      "title": "DV09 · kmalloc、vmalloc 与 GFP 标志怎么选？",
+      "module": "driver",
+      "question_ids": [
+        "DV09"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv10.md",
+      "title": "DV10 · 内核模块加载、probe、移除与版本匹配怎么验证？",
+      "module": "driver",
+      "question_ids": [
+        "DV10"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv11.md",
+      "title": "DV11 · RCU 为什么允许并发读写，旧对象什么时候能释放？",
+      "module": "driver",
+      "question_ids": [
+        "DV11"
+      ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dv12.md",
+      "title": "DV12 · 设备号、cdev、sysfs、devtmpfs 与 /dev 怎样连起来？",
+      "module": "driver",
+      "question_ids": [
+        "DV12"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt01.md",
+      "title": "BT01 · Boot ROM、SPL、U-Boot、kernel、init 的责任链？",
+      "module": "boot",
+      "question_ids": [
+        "BT01"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt02.md",
+      "title": "BT02 · kernel image、DTB、initramfs 与 rootfs 的区别？",
+      "module": "boot",
+      "question_ids": [
+        "BT02"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt03.md",
+      "title": "BT03 · Buildroot、BusyBox 与可复现系统如何搭建？",
+      "module": "boot",
+      "question_ids": [
+        "BT03"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt04.md",
+      "title": "BT04 · OTA 的 A/B、回滚与掉电安全如何联动？",
+      "module": "boot",
+      "question_ids": [
+        "BT04"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt05.md",
+      "title": "BT05 · Flash 分区、环境变量与救砖如何规划？",
+      "module": "boot",
+      "question_ids": [
+        "BT05"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt06.md",
+      "title": "BT06 · initramfs、initrd、文件系统和 PID1 怎么区分？",
+      "module": "boot",
+      "question_ids": [
+        "BT06"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt07.md",
+      "title": "BT07 · 交叉编译 Linux 内核后怎样验证目标部署契约？",
+      "module": "boot",
+      "question_ids": [
+        "BT07"
+      ]
+    },
+    {
+      "path": "docs/90-boot-rootfs/bt08.md",
+      "title": "BT08 · U-Boot 的 bootm、booti 与内核入口契约怎样核对？",
+      "module": "boot",
+      "question_ids": [
+        "BT08"
+      ]
+    },
+    {
+      "path": "examples/README.md",
+      "title": "主机实验：先把硬件无关逻辑测稳",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "site/README.md",
+      "title": "可离线的静态阅读器",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "sources/README.md",
+      "title": "公开参考资料与核查范围",
+      "module": "reference",
+      "question_ids": []
+    }
+  ],
+  "items": [
+    {
+      "id": "C01",
+      "title": "数组、指针和长度为什么必须一起设计？",
+      "path": "docs/10-c-cpp/c01.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c01.md"
+    },
+    {
+      "id": "C02",
+      "title": "栈、堆、静态存储与对象生命周期怎么区分？",
+      "path": "docs/10-c-cpp/c02.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c02.md"
+    },
+    {
+      "id": "C03",
+      "title": "const 能保证什么，不能保证什么？",
+      "path": "docs/10-c-cpp/c03.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c03.md"
+    },
+    {
+      "id": "C04",
+      "title": "volatile、atomic 与内存屏障怎样分工？",
+      "path": "docs/10-c-cpp/c04.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "volatile",
+        "cpp-race",
+        "dma-cache"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c04.md"
+    },
+    {
+      "id": "C05",
+      "title": "未定义行为、未指定行为与实现定义如何回答？",
+      "path": "docs/10-c-cpp/c05.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "ubsan"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c05.md"
+    },
+    {
+      "id": "C06",
+      "title": "结构体对齐、padding 与网络序列化有什么关系？",
+      "path": "docs/10-c-cpp/c06.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "abi",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c06.md"
+    },
+    {
+      "id": "C07",
+      "title": "malloc/free 与嵌入式内存分配如何取舍？",
+      "path": "docs/10-c-cpp/c07.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "malloc-linux",
+        "asan"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c07.md"
+    },
+    {
+      "id": "C08",
+      "title": "C++ RAII、unique_ptr 与错误路径有什么价值？",
+      "path": "docs/10-c-cpp/c08.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp-race",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c08.md"
+    },
+    {
+      "id": "C09",
+      "title": "引用、拷贝、移动和完美转发如何区分？",
+      "path": "docs/10-c-cpp/c09.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp17",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c09.md"
+    },
+    {
+      "id": "C10",
+      "title": "回调函数、函数指针和上下文对象怎么设计？",
+      "path": "docs/10-c-cpp/c10.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c10.md"
+    },
+    {
+      "id": "ST01",
+      "title": "vector、array、list 的选择依据是什么？",
+      "path": "docs/20-stl/st01.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "dma-cache",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st01.md"
+    },
+    {
+      "id": "ST02",
+      "title": "迭代器失效为什么比复杂度更容易出 bug？",
+      "path": "docs/20-stl/st02.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp-race",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st02.md"
+    },
+    {
+      "id": "ST03",
+      "title": "map、unordered_map 与哈希退化怎么回答？",
+      "path": "docs/20-stl/st03.md",
+      "module": "stl",
+      "priority": "P1",
+      "source_ids": [
+        "cpp-life",
+        "cpp17",
+        "cpp-assoc",
+        "cpp-unord",
+        "rbtree"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st03.md"
+    },
+    {
+      "id": "ST04",
+      "title": "string、string_view 与二进制数据有哪些坑？",
+      "path": "docs/20-stl/st04.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st04.md"
+    },
+    {
+      "id": "ST05",
+      "title": "排序的比较器必须满足什么？",
+      "path": "docs/20-stl/st05.md",
+      "module": "stl",
+      "priority": "P1",
+      "source_ids": [
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st05.md"
+    },
+    {
+      "id": "ST06",
+      "title": "复杂度、内存上界与实时性怎样一起讲？",
+      "path": "docs/20-stl/st06.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "abi",
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st06.md"
+    },
+    {
+      "id": "AR01",
+      "title": "预处理、编译、汇编、链接各负责什么？",
+      "path": "docs/30-architecture/ar01.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "ld",
+        "cmake",
+        "ld-options",
+        "glibc-loader"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar01.md"
+    },
+    {
+      "id": "AR02",
+      "title": "链接脚本、Flash/RAM 与 VMA/LMA 怎么理解？",
+      "path": "docs/30-architecture/ar02.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "ld",
+        "lma"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar02.md"
+    },
+    {
+      "id": "AR03",
+      "title": "Cortex-M 从复位到 main 发生什么？",
+      "path": "docs/30-architecture/ar03.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "nvic",
+        "abi",
+        "lma"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar03.md"
+    },
+    {
+      "id": "AR04",
+      "title": "中断优先级与抢占优先级怎样避免混淆？",
+      "path": "docs/30-architecture/ar04.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "nvic"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar04.md"
+    },
+    {
+      "id": "AR05",
+      "title": "ABI、调用约定与栈对齐为什么会影响固件？",
+      "path": "docs/30-architecture/ar05.md",
+      "module": "arch",
+      "priority": "P1",
+      "source_ids": [
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar05.md"
+    },
+    {
+      "id": "AR06",
+      "title": "交叉编译怎样避免误链接主机库？",
+      "path": "docs/30-architecture/ar06.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "cmake",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar06.md"
+    },
+    {
+      "id": "MC01",
+      "title": "GPIO 推挽、开漏、上下拉怎么选？",
+      "path": "docs/40-mcu/mc01.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "i2c",
+        "timer",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc01.md"
+    },
+    {
+      "id": "MC02",
+      "title": "定时器频率、PWM 与时钟倍频怎么计算？",
+      "path": "docs/40-mcu/mc02.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc02.md"
+    },
+    {
+      "id": "MC03",
+      "title": "输入捕获测频率和编码器有哪些边界？",
+      "path": "docs/40-mcu/mc03.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc03.md"
+    },
+    {
+      "id": "MC04",
+      "title": "UART 接收为什么必须设计帧边界？",
+      "path": "docs/40-mcu/mc04.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "dma-cache",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc04.md"
+    },
+    {
+      "id": "MC05",
+      "title": "DMA 什么时候比中断逐字节更合适？",
+      "path": "docs/40-mcu/mc05.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "dma-cache",
+        "c11",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc05.md"
+    },
+    {
+      "id": "MC06",
+      "title": "Cortex-M7 DMA 与 cache 一致性怎么处理？",
+      "path": "docs/40-mcu/mc06.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "dma-cache"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc06.md"
+    },
+    {
+      "id": "MC07",
+      "title": "ADC 精度、采样时间与滤波怎么区分？",
+      "path": "docs/40-mcu/mc07.md",
+      "module": "mcu",
+      "priority": "P1",
+      "source_ids": [
+        "timer",
+        "adc"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc07.md"
+    },
+    {
+      "id": "MC08",
+      "title": "按键消抖和非阻塞状态机怎样设计？",
+      "path": "docs/40-mcu/mc08.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc08.md"
+    },
+    {
+      "id": "MC09",
+      "title": "看门狗与低功耗为何不能孤立设计？",
+      "path": "docs/40-mcu/mc09.md",
+      "module": "mcu",
+      "priority": "P1",
+      "source_ids": [
+        "nvic",
+        "timer",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc09.md"
+    },
+    {
+      "id": "MC10",
+      "title": "Flash 擦写和掉电安全存储怎么做？",
+      "path": "docs/40-mcu/mc10.md",
+      "module": "mcu",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/40-mcu/mc10.md"
+    },
+    {
+      "id": "RT01",
+      "title": "任务状态、抢占和时间片怎么区分？",
+      "path": "docs/50-rtos/rt01.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-schedule",
+        "rtos-task-source"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt01.md"
+    },
+    {
+      "id": "RT02",
+      "title": "vTaskDelay 与 vTaskDelayUntil 的周期差异？",
+      "path": "docs/50-rtos/rt02.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-schedule",
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt02.md"
+    },
+    {
+      "id": "RT03",
+      "title": "互斥量、二值信号量和计数信号量怎么选？",
+      "path": "docs/50-rtos/rt03.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "rtos-mutex"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt03.md"
+    },
+    {
+      "id": "RT04",
+      "title": "优先级反转、继承与死锁怎么解释？",
+      "path": "docs/50-rtos/rt04.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-mutex",
+        "rtos-book"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt04.md"
+    },
+    {
+      "id": "RT05",
+      "title": "队列、任务通知和事件组的语义差别？",
+      "path": "docs/50-rtos/rt05.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "rtos-schedule",
+        "rtos-queue-source"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt05.md"
+    },
+    {
+      "id": "RT06",
+      "title": "FromISR API 与中断优先级上限怎么配合？",
+      "path": "docs/50-rtos/rt06.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "nvic"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt06.md"
+    },
+    {
+      "id": "RT07",
+      "title": "临界区、调度器挂起和中断屏蔽有什么不同？",
+      "path": "docs/50-rtos/rt07.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "nvic",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt07.md"
+    },
+    {
+      "id": "RT08",
+      "title": "任务栈、heap_1..heap_5 与内存预算怎么看？",
+      "path": "docs/50-rtos/rt08.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-heap",
+        "rtos-book",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt08.md"
+    },
+    {
+      "id": "RT09",
+      "title": "SPSC 环形缓冲怎样避免看似正确的竞态？",
+      "path": "docs/50-rtos/rt09.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-race",
+        "c11"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt09.md"
+    },
+    {
+      "id": "PR01",
+      "title": "I²C 起止、ACK、仲裁和时钟拉伸怎么理解？",
+      "path": "docs/60-protocols/pr01.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "i2c"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr01.md"
+    },
+    {
+      "id": "PR02",
+      "title": "SPI 模式、片选与事务边界怎么核对？",
+      "path": "docs/60-protocols/pr02.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "timer",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr02.md"
+    },
+    {
+      "id": "PR03",
+      "title": "RS485 和 Modbus RTU 不是同一层东西？",
+      "path": "docs/60-protocols/pr03.md",
+      "module": "protocol",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "timer",
+        "modbus"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr03.md"
+    },
+    {
+      "id": "PR04",
+      "title": "CAN 仲裁、标识符和错误处理怎样建立主线？",
+      "path": "docs/60-protocols/pr04.md",
+      "module": "protocol",
+      "priority": "P2",
+      "source_ids": [
+        "timer",
+        "can",
+        "canfd"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr04.md"
+    },
+    {
+      "id": "PR05",
+      "title": "OSI/TCP-IP 分层对嵌入式排障有何用？",
+      "path": "docs/60-protocols/pr05.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "udp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr05.md"
+    },
+    {
+      "id": "PR06",
+      "title": "TCP 为什么会半包和粘包，怎样正确接收？",
+      "path": "docs/60-protocols/pr06.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr06.md"
+    },
+    {
+      "id": "PR07",
+      "title": "TCP 建连、关闭和 TIME_WAIT 怎么讲？",
+      "path": "docs/60-protocols/pr07.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr07.md"
+    },
+    {
+      "id": "PR08",
+      "title": "TCP/UDP、超时重试和幂等怎样一起选？",
+      "path": "docs/60-protocols/pr08.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "udp",
+        "socket"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr08.md"
+    },
+    {
+      "id": "PR09",
+      "title": "CRC、checksum、MAC 和签名怎么区分？",
+      "path": "docs/60-protocols/pr09.md",
+      "module": "protocol",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "tcp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr09.md"
+    },
+    {
+      "id": "LX01",
+      "title": "进程、线程和虚拟地址空间怎么区分？",
+      "path": "docs/70-linux-apps/lx01.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "mmap",
+        "cpp-race",
+        "pthread",
+        "proc-stat",
+        "pthread-exit",
+        "fork2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx01.md"
+    },
+    {
+      "id": "LX02",
+      "title": "read/write 的短读、短写与 EINTR 如何处理？",
+      "path": "docs/70-linux-apps/lx02.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "epoll",
+        "tcp",
+        "read",
+        "write"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx02.md"
+    },
+    {
+      "id": "LX03",
+      "title": "阻塞、非阻塞、select/poll/epoll 如何建立模型？",
+      "path": "docs/70-linux-apps/lx03.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx03.md"
+    },
+    {
+      "id": "LX04",
+      "title": "pthread 互斥量与条件变量如何正确配合？",
+      "path": "docs/70-linux-apps/lx04.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-race",
+        "locks",
+        "cond"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx04.md"
+    },
+    {
+      "id": "LX05",
+      "title": "mmap 共享内存、文件映射和持久化的边界？",
+      "path": "docs/70-linux-apps/lx05.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "mmap",
+        "dma-linux"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx05.md"
+    },
+    {
+      "id": "LX06",
+      "title": "信号处理函数为什么不能随便打印和加锁？",
+      "path": "docs/70-linux-apps/lx06.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "epoll",
+        "signal"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx06.md"
+    },
+    {
+      "id": "LX07",
+      "title": "IPC 的 pipe、socket 和共享内存怎么选？",
+      "path": "docs/70-linux-apps/lx07.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "mmap",
+        "epoll",
+        "tcp",
+        "pipe",
+        "socket"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx07.md"
+    },
+    {
+      "id": "LX08",
+      "title": "从应用性能问题到 CPU/内存/I/O 证据链？",
+      "path": "docs/70-linux-apps/lx08.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "epoll",
+        "mmap",
+        "vmstat",
+        "unlink2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx08.md"
+    },
+    {
+      "id": "DV01",
+      "title": "字符设备、file_operations 和用户态 fd 如何连起来？",
+      "path": "docs/80-linux-drivers/dv01.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "vfs"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv01.md"
+    },
+    {
+      "id": "DV02",
+      "title": "为什么不能直接解引用用户指针？",
+      "path": "docs/80-linux-drivers/dv02.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "ioctl",
+        "vfs",
+        "locks"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv02.md"
+    },
+    {
+      "id": "DV03",
+      "title": "platform 驱动、设备树与 probe 的关系？",
+      "path": "docs/80-linux-drivers/dv03.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "dt",
+        "gpio-linux"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv03.md"
+    },
+    {
+      "id": "DV04",
+      "title": "MMIO、ioremap 与寄存器读改写有什么风险？",
+      "path": "docs/80-linux-drivers/dv04.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "dma-linux",
+        "gpio-linux",
+        "volatile"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv04.md"
+    },
+    {
+      "id": "DV05",
+      "title": "Linux DMA mapping 与裸机 DMA 为什么不同？",
+      "path": "docs/80-linux-drivers/dv05.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "dma-linux"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv05.md"
+    },
+    {
+      "id": "DV06",
+      "title": "内核 mutex、spinlock 与中断上下文怎么选？",
+      "path": "docs/80-linux-drivers/dv06.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "locks",
+        "rcu"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv06.md"
+    },
+    {
+      "id": "DV07",
+      "title": "中断下半部、workqueue 与线程化 IRQ 怎么选？",
+      "path": "docs/80-linux-drivers/dv07.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "locks",
+        "gpio-linux",
+        "kunit",
+        "irq-generic",
+        "pm0214",
+        "workqueue"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv07.md"
+    },
+    {
+      "id": "DV08",
+      "title": "ioctl、sysfs、poll 的接口设计原则？",
+      "path": "docs/80-linux-drivers/dv08.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "ioctl",
+        "vfs",
+        "kselftest"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv08.md"
+    },
+    {
+      "id": "BT01",
+      "title": "Boot ROM、SPL、U-Boot、kernel、init 的责任链？",
+      "path": "docs/90-boot-rootfs/bt01.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "uboot-init",
+        "uboot-spl",
+        "dt",
+        "uboot-bootm",
+        "uboot-booti",
+        "arm64-boot"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt01.md"
+    },
+    {
+      "id": "BT02",
+      "title": "kernel image、DTB、initramfs 与 rootfs 的区别？",
+      "path": "docs/90-boot-rootfs/bt02.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "buildroot",
+        "uboot-init",
+        "vfs",
+        "uboot-bootm",
+        "uboot-booti"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt02.md"
+    },
+    {
+      "id": "BT03",
+      "title": "Buildroot、BusyBox 与可复现系统如何搭建？",
+      "path": "docs/90-boot-rootfs/bt03.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "buildroot"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt03.md"
+    },
+    {
+      "id": "BT04",
+      "title": "OTA 的 A/B、回滚与掉电安全如何联动？",
+      "path": "docs/90-boot-rootfs/bt04.md",
+      "module": "boot",
+      "priority": "P1",
+      "source_ids": [
+        "uboot-init",
+        "buildroot",
+        "c11"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt04.md"
+    },
+    {
+      "id": "BT05",
+      "title": "Flash 分区、环境变量与救砖如何规划？",
+      "path": "docs/90-boot-rootfs/bt05.md",
+      "module": "boot",
+      "priority": "P2",
+      "source_ids": [
+        "uboot-spl",
+        "buildroot"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt05.md"
+    },
+    {
+      "id": "DB01",
+      "title": "HardFault 怎么从寄存器走到源码？",
+      "path": "docs/100-debugging/db01.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "pm0214",
+        "openocd",
+        "ubsan"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/100-debugging/db01.md"
+    },
+    {
+      "id": "DB02",
+      "title": "GDB、SWD/JTAG、断点与观察点怎么用？",
+      "path": "docs/100-debugging/db02.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "openocd"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/100-debugging/db02.md"
+    },
+    {
+      "id": "DB03",
+      "title": "逻辑分析仪、示波器与软件日志各能证明什么？",
+      "path": "docs/100-debugging/db03.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "i2c",
+        "timer",
+        "openocd"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/100-debugging/db03.md"
+    },
+    {
+      "id": "DB04",
+      "title": "主机单元测试、sanitizer 与板测如何分层？",
+      "path": "docs/100-debugging/db04.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "asan",
+        "ubsan",
+        "kunit",
+        "kselftest"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/100-debugging/db04.md"
+    },
+    {
+      "id": "DB05",
+      "title": "故障注入、背压和恢复为何比正常 Demo 重要？",
+      "path": "docs/100-debugging/db05.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "rtos-book"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/100-debugging/db05.md"
+    },
+    {
+      "id": "DB06",
+      "title": "版本、CI、勘误与公开项目该保存什么？",
+      "path": "docs/100-debugging/db06.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "cmake",
+        "kselftest"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/100-debugging/db06.md"
+    },
+    {
+      "id": "PJ01",
+      "title": "怎样做一个可答辩的 MCU 数据采集项目？",
+      "path": "docs/110-projects/pj01.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "timer",
+        "rtos-book",
+        "dma-cache"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/110-projects/pj01.md"
+    },
+    {
+      "id": "PJ02",
+      "title": "怎样做一个 Linux 设备网关项目？",
+      "path": "docs/110-projects/pj02.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "epoll",
+        "tcp",
+        "read",
+        "write"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/110-projects/pj02.md"
+    },
+    {
+      "id": "PJ03",
+      "title": "面试项目介绍怎样从功能讲到工程证据？",
+      "path": "docs/110-projects/pj03.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "cmake"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/110-projects/pj03.md"
+    },
+    {
+      "id": "PJ04",
+      "title": "一场模拟面试如何评分与复盘？",
+      "path": "docs/110-projects/pj04.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "cmake",
+        "kunit"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/110-projects/pj04.md"
+    },
+    {
+      "id": "PJ05",
+      "title": "面向 EE 背景怎样连接硬件优势与软件短板？",
+      "path": "docs/110-projects/pj05.md",
+      "module": "project",
+      "priority": "P1",
+      "source_ids": [
+        "adc",
+        "timer",
+        "cmake"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/110-projects/pj05.md"
+    },
+    {
+      "id": "C11",
+      "title": "虚析构、虚函数与对象切片有什么区别？",
+      "path": "docs/10-c-cpp/c11.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp17",
+        "cxx-abi",
+        "ld"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c11.md"
+    },
+    {
+      "id": "C12",
+      "title": "整型提升、位运算与移位如何写得可移植？",
+      "path": "docs/10-c-cpp/c12.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "ubsan",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c12.md"
+    },
+    {
+      "id": "C13",
+      "title": "static、extern、声明与定义怎样区分？",
+      "path": "docs/10-c-cpp/c13.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "ld",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c13.md"
+    },
+    {
+      "id": "C14",
+      "title": "memcpy、memmove 与字符串 API 怎样避免越界？",
+      "path": "docs/10-c-cpp/c14.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c14.md"
+    },
+    {
+      "id": "C15",
+      "title": "class/struct、访问控制与 const 成员函数的真实边界？",
+      "path": "docs/10-c-cpp/c15.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c15.md"
+    },
+    {
+      "id": "C16",
+      "title": "shared_ptr、weak_ptr 与循环引用如何判断？",
+      "path": "docs/10-c-cpp/c16.md",
+      "module": "c",
+      "priority": "P1",
+      "source_ids": [
+        "cpp17",
+        "cpp-race",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c16.md"
+    },
+    {
+      "id": "AR07",
+      "title": "MSP、PSP、SVC 和 PendSV 如何参与任务切换？",
+      "path": "docs/30-architecture/ar07.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "pm0214",
+        "rtos-book",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar07.md"
+    },
+    {
+      "id": "AR08",
+      "title": "Harvard/von Neumann、MCU/MPU 与实时性如何区分？",
+      "path": "docs/30-architecture/ar08.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "pm0214",
+        "locks",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar08.md"
+    },
+    {
+      "id": "RT10",
+      "title": "任务创建、参数生命周期与软件定时器怎么设计？",
+      "path": "docs/50-rtos/rt10.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "rtos-schedule",
+        "rtos-heap"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/50-rtos/rt10.md"
+    },
+    {
+      "id": "PR10",
+      "title": "IP、MAC、子网掩码与 ARP 怎样串起来？",
+      "path": "docs/60-protocols/pr10.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "arp",
+        "tcp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr10.md"
+    },
+    {
+      "id": "PR11",
+      "title": "DNS、HTTP、HTTPS 与 TLS 握手怎样避免混说？",
+      "path": "docs/60-protocols/pr11.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "dns",
+        "tls",
+        "tcp",
+        "dns-tcp",
+        "http-semantics"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr11.md"
+    },
+    {
+      "id": "PR12",
+      "title": "TCP 流量控制与拥塞控制有什么不同？",
+      "path": "docs/60-protocols/pr12.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr12.md"
+    },
+    {
+      "id": "LX09",
+      "title": "join、detach、退出与资源回收怎么设计？",
+      "path": "docs/70-linux-apps/lx09.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "pthread",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx09.md"
+    },
+    {
+      "id": "LX10",
+      "title": "timerfd 和绝对时刻周期任务怎么保证边界？",
+      "path": "docs/70-linux-apps/lx10.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "timerfd",
+        "nanosleep",
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx10.md"
+    },
+    {
+      "id": "LX11",
+      "title": "系统调用、库函数与用户态/内核态有何不同？",
+      "path": "docs/70-linux-apps/lx11.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "read",
+        "write",
+        "vfs",
+        "linux-rt"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx11.md"
+    },
+    {
+      "id": "LX12",
+      "title": "Linux GPIO/UART/SPI/I²C 应用应走什么接口？",
+      "path": "docs/70-linux-apps/lx12.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "gpio-linux",
+        "vfs",
+        "ioctl"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx12.md"
+    },
+    {
+      "id": "DV09",
+      "title": "kmalloc、vmalloc 与 GFP 标志怎么选？",
+      "path": "docs/80-linux-drivers/dv09.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "allocation",
+        "dma-linux",
+        "kunit",
+        "highmem",
+        "device-io"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv09.md"
+    },
+    {
+      "id": "DV10",
+      "title": "内核模块加载、probe、移除与版本匹配怎么验证？",
+      "path": "docs/80-linux-drivers/dv10.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "vfs",
+        "dt",
+        "locks"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv10.md"
+    },
+    {
+      "id": "BT06",
+      "title": "initramfs、initrd、文件系统和 PID1 怎么区分？",
+      "path": "docs/90-boot-rootfs/bt06.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "initramfs",
+        "buildroot",
+        "vfs"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt06.md"
+    },
+    {
+      "id": "C17",
+      "title": "宏、inline 与 constexpr 怎样避免重复求值和控制流陷阱？",
+      "path": "docs/10-c-cpp/c17.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "gcc-macro",
+        "gcc-inline"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c17.md"
+    },
+    {
+      "id": "C18",
+      "title": "atoi、strtol 与有界数值解析怎样定义失败合同？",
+      "path": "docs/10-c-cpp/c18.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "strtol"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c18.md"
+    },
+    {
+      "id": "C19",
+      "title": "成员初始化顺序与 Rule Zero/Five 怎样维护对象不变量？",
+      "path": "docs/10-c-cpp/c19.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c19.md"
+    },
+    {
+      "id": "C20",
+      "title": "lambda 捕获怎样跨越异步回调的生命周期？",
+      "path": "docs/10-c-cpp/c20.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "cpp-life",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c20.md"
+    },
+    {
+      "id": "C21",
+      "title": "extern \"C\" 与 opaque handle 怎样建立可靠的 C/C++ 边界？",
+      "path": "docs/10-c-cpp/c21.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "abi",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c21.md"
+    },
+    {
+      "id": "C22",
+      "title": "重载、覆盖、名字隐藏与默认参数怎样决定一次调用？",
+      "path": "docs/10-c-cpp/c22.md",
+      "module": "c",
+      "priority": "P1",
+      "source_ids": [
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/10-c-cpp/c22.md"
+    },
+    {
+      "id": "ST07",
+      "title": "deque、stack、queue 和 priority_queue 应按什么合同选择？",
+      "path": "docs/20-stl/st07.md",
+      "module": "stl",
+      "priority": "P1",
+      "source_ids": [
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/20-stl/st07.md"
+    },
+    {
+      "id": "LX13",
+      "title": "fork、exec、wait 与僵尸回收怎样形成完整生命周期？",
+      "path": "docs/70-linux-apps/lx13.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "fork2",
+        "execve2",
+        "wait2",
+        "pthread"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx13.md"
+    },
+    {
+      "id": "LX14",
+      "title": "fd、打开文件描述、inode 与 unlink 的生命周期怎么区分？",
+      "path": "docs/70-linux-apps/lx14.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "open2",
+        "dup2",
+        "unlink2",
+        "vfs"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx14.md"
+    },
+    {
+      "id": "LX15",
+      "title": "教材调度算法、Linux 公平策略和实时上限怎样分层回答？",
+      "path": "docs/70-linux-apps/lx15.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "linux-sched",
+        "linux-eevdf"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx15.md"
+    },
+    {
+      "id": "LX16",
+      "title": "页表、TLB、缺页和 COW 如何解释虚拟内存？",
+      "path": "docs/70-linux-apps/lx16.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "page-tables",
+        "mmap",
+        "fork2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx16.md"
+    },
+    {
+      "id": "AR09",
+      "title": "Make 的依赖图、头文件追踪与增量构建怎样验证？",
+      "path": "docs/30-architecture/ar09.md",
+      "module": "arch",
+      "priority": "P1",
+      "source_ids": [
+        "gnu-make",
+        "gcc-deps"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/30-architecture/ar09.md"
+    },
+    {
+      "id": "LX17",
+      "title": "有界线程池怎样设计背压、拥有权和停止协议？",
+      "path": "docs/70-linux-apps/lx17.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "cond-wait",
+        "pthread",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx17.md"
+    },
+    {
+      "id": "LX18",
+      "title": "select、poll、epoll 的资源上限与公平预算怎么验证？",
+      "path": "docs/70-linux-apps/lx18.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "epoll",
+        "select2",
+        "resource2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/70-linux-apps/lx18.md"
+    },
+    {
+      "id": "PR13",
+      "title": "HTTP 的方法语义、消息定界和重试怎样写对？",
+      "path": "docs/60-protocols/pr13.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "http-semantics",
+        "http1-framing",
+        "http2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/60-protocols/pr13.md"
+    },
+    {
+      "id": "BT07",
+      "title": "交叉编译 Linux 内核后怎样验证目标部署契约？",
+      "path": "docs/90-boot-rootfs/bt07.md",
+      "module": "boot",
+      "priority": "P1",
+      "source_ids": [
+        "kbuild",
+        "kbuild-modules",
+        "allocation"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt07.md"
+    },
+    {
+      "id": "DV11",
+      "title": "RCU 为什么允许并发读写，旧对象什么时候能释放？",
+      "path": "docs/80-linux-drivers/dv11.md",
+      "module": "driver",
+      "priority": "P1",
+      "source_ids": [
+        "rcu",
+        "locks",
+        "seqlock"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv11.md"
+    },
+    {
+      "id": "DV12",
+      "title": "设备号、cdev、sysfs、devtmpfs 与 /dev 怎样连起来？",
+      "path": "docs/80-linux-drivers/dv12.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "vfs",
+        "driver-infra",
+        "devtmpfs-source"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/80-linux-drivers/dv12.md"
+    },
+    {
+      "id": "BT08",
+      "title": "U-Boot 的 bootm、booti 与内核入口契约怎样核对？",
+      "path": "docs/90-boot-rootfs/bt08.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "uboot-bootm",
+        "uboot-booti",
+        "arm64-boot",
+        "uboot-init"
+      ],
+      "anchor": "直接回答",
+      "kind": "question",
+      "relative_path": "docs/90-boot-rootfs/bt08.md"
+    },
+    {
+      "id": "LC1",
+      "title": "1. 两数之和（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0001-two-sum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC2",
+      "title": "2. 两数相加 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0002-add-two-numbers.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC3",
+      "title": "3. 无重复字符的最长子串（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0003-longest-substring-without-repeating-characters.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC4",
+      "title": "4. 寻找两个正序数组的中位数：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0004-median-of-two-sorted-arrays.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC5",
+      "title": "5. 最长回文子串：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0005-longest-palindromic-substring.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC11",
+      "title": "11. 盛最多水的容器（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0011-container-with-most-water.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC15",
+      "title": "15. 三数之和（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0015-3sum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC17",
+      "title": "17. 电话号码的字母组合（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0017-letter-combinations-of-a-phone-number.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC19",
+      "title": "19. 删除链表的倒数第 N 个结点 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0019-remove-nth-node-from-end-of-list.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC20",
+      "title": "20. 有效的括号：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0020-valid-parentheses.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC21",
+      "title": "21. 合并两个有序链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0021-merge-two-sorted-lists.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC22",
+      "title": "22. 括号生成（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0022-generate-parentheses.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC23",
+      "title": "23. 合并 K 个升序链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0023-merge-k-sorted-lists.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC24",
+      "title": "24. 两两交换链表中的节点 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0024-swap-nodes-in-pairs.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC25",
+      "title": "25. K 个一组翻转链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0025-reverse-nodes-in-k-group.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC31",
+      "title": "31. 下一个排列：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0031-next-permutation.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC32",
+      "title": "32. 最长有效括号：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0032-longest-valid-parentheses.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC33",
+      "title": "33. 搜索旋转排序数组：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0033-search-in-rotated-sorted-array.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC34",
+      "title": "34. 在排序数组中查找元素的第一个和最后一个位置：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0034-find-first-and-last-position-of-element-in-sorted-array.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC35",
+      "title": "35. 搜索插入位置：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0035-search-insert-position.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC39",
+      "title": "39. 组合总和（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0039-combination-sum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC41",
+      "title": "41. 缺失的第一个正数（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0041-first-missing-positive.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC42",
+      "title": "42. 接雨水（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0042-trapping-rain-water.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC45",
+      "title": "45. 跳跃游戏 II：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0045-jump-game-ii.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC46",
+      "title": "46. 全排列（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0046-permutations.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC48",
+      "title": "48. 旋转图像（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0048-rotate-image.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC49",
+      "title": "49. 字母异位词分组（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0049-group-anagrams.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC51",
+      "title": "51. N 皇后（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0051-n-queens.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC53",
+      "title": "53. 最大子数组和（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0053-maximum-subarray.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC54",
+      "title": "54. 螺旋矩阵（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0054-spiral-matrix.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC55",
+      "title": "55. 跳跃游戏：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0055-jump-game.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC56",
+      "title": "56. 合并区间（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0056-merge-intervals.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC62",
+      "title": "62. 不同路径：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0062-unique-paths.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC64",
+      "title": "64. 最小路径和：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0064-minimum-path-sum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC70",
+      "title": "70. 爬楼梯：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0070-climbing-stairs.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC72",
+      "title": "72. 编辑距离：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0072-edit-distance.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC73",
+      "title": "73. 矩阵置零（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0073-set-matrix-zeroes.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC74",
+      "title": "74. 搜索二维矩阵：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0074-search-a-2d-matrix.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC75",
+      "title": "75. 颜色分类：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0075-sort-colors.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC76",
+      "title": "76. 最小覆盖子串（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0076-minimum-window-substring.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC78",
+      "title": "78. 子集（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0078-subsets.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC79",
+      "title": "79. 单词搜索（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0079-word-search.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC84",
+      "title": "84. 柱状图中最大的矩形：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0084-largest-rectangle-in-histogram.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC94",
+      "title": "94 二叉树的中序遍历",
+      "path": "docs/80-hot100-cpp/problems/0094-binary-tree-inorder-traversal.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC98",
+      "title": "98 验证二叉搜索树",
+      "path": "docs/80-hot100-cpp/problems/0098-validate-binary-search-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC101",
+      "title": "101 对称二叉树",
+      "path": "docs/80-hot100-cpp/problems/0101-symmetric-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC102",
+      "title": "102 二叉树的层序遍历",
+      "path": "docs/80-hot100-cpp/problems/0102-binary-tree-level-order-traversal.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC104",
+      "title": "104 二叉树的最大深度",
+      "path": "docs/80-hot100-cpp/problems/0104-maximum-depth-of-binary-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC105",
+      "title": "105 从前序与中序遍历序列构造二叉树",
+      "path": "docs/80-hot100-cpp/problems/0105-construct-binary-tree-from-preorder-and-inorder-traversal.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC108",
+      "title": "108 将有序数组转换为二叉搜索树",
+      "path": "docs/80-hot100-cpp/problems/0108-convert-sorted-array-to-binary-search-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC114",
+      "title": "114 二叉树展开为链表",
+      "path": "docs/80-hot100-cpp/problems/0114-flatten-binary-tree-to-linked-list.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC118",
+      "title": "118. 杨辉三角：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0118-pascals-triangle.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC121",
+      "title": "121. 买卖股票的最佳时机：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0121-best-time-to-buy-and-sell-stock.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC124",
+      "title": "124 二叉树中的最大路径和",
+      "path": "docs/80-hot100-cpp/problems/0124-binary-tree-maximum-path-sum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC128",
+      "title": "128. 最长连续序列（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0128-longest-consecutive-sequence.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC131",
+      "title": "131. 分割回文串（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0131-palindrome-partitioning.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC136",
+      "title": "136. 只出现一次的数字：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0136-single-number.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC138",
+      "title": "138. 随机链表的复制 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0138-copy-list-with-random-pointer.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC139",
+      "title": "139. 单词拆分：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0139-word-break.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC141",
+      "title": "141. 环形链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0141-linked-list-cycle.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC142",
+      "title": "142. 环形链表 II · C++17",
+      "path": "docs/80-hot100-cpp/problems/0142-linked-list-cycle-ii.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC146",
+      "title": "146. LRU 缓存 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0146-lru-cache.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC148",
+      "title": "148. 排序链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0148-sort-list.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC152",
+      "title": "152. 乘积最大子数组：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0152-maximum-product-subarray.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC153",
+      "title": "153. 寻找旋转排序数组中的最小值：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0153-find-minimum-in-rotated-sorted-array.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC155",
+      "title": "155. 最小栈：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0155-min-stack.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC160",
+      "title": "160. 相交链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0160-intersection-of-two-linked-lists.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC169",
+      "title": "169. 多数元素：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0169-majority-element.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC189",
+      "title": "189. 轮转数组（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0189-rotate-array.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC198",
+      "title": "198. 打家劫舍：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0198-house-robber.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC199",
+      "title": "199 二叉树的右视图",
+      "path": "docs/80-hot100-cpp/problems/0199-binary-tree-right-side-view.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC200",
+      "title": "200. 岛屿数量 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0200-number-of-islands.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC206",
+      "title": "206. 反转链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0206-reverse-linked-list.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC207",
+      "title": "207. 课程表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0207-course-schedule.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC208",
+      "title": "208. 实现 Trie (前缀树) · C++17",
+      "path": "docs/80-hot100-cpp/problems/0208-implement-trie-prefix-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC215",
+      "title": "215. 数组中的第K个最大元素：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0215-kth-largest-element-in-an-array.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC226",
+      "title": "226 翻转二叉树",
+      "path": "docs/80-hot100-cpp/problems/0226-invert-binary-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC230",
+      "title": "230 二叉搜索树中第 K 小的元素",
+      "path": "docs/80-hot100-cpp/problems/0230-kth-smallest-element-in-a-bst.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC234",
+      "title": "234. 回文链表 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0234-palindrome-linked-list.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC236",
+      "title": "236 二叉树的最近公共祖先",
+      "path": "docs/80-hot100-cpp/problems/0236-lowest-common-ancestor-of-a-binary-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC238",
+      "title": "238. 除了自身以外数组的乘积（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0238-product-of-array-except-self.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC239",
+      "title": "239. 滑动窗口最大值（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0239-sliding-window-maximum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC240",
+      "title": "240. 搜索二维矩阵 II（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0240-search-a-2d-matrix-ii.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC279",
+      "title": "279. 完全平方数：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0279-perfect-squares.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC283",
+      "title": "283. 移动零（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0283-move-zeroes.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC287",
+      "title": "287. 寻找重复数：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0287-find-the-duplicate-number.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC295",
+      "title": "295. 数据流的中位数：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0295-find-median-from-data-stream.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC300",
+      "title": "300. 最长递增子序列：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0300-longest-increasing-subsequence.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC322",
+      "title": "322. 零钱兑换：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0322-coin-change.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC347",
+      "title": "347. 前 K 个高频元素：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0347-top-k-frequent-elements.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC394",
+      "title": "394. 字符串解码：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0394-decode-string.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC416",
+      "title": "416. 分割等和子集：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0416-partition-equal-subset-sum.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC437",
+      "title": "437 路径总和 III",
+      "path": "docs/80-hot100-cpp/problems/0437-path-sum-iii.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC438",
+      "title": "438. 找到字符串中所有字母异位词（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0438-find-all-anagrams-in-a-string.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC543",
+      "title": "543 二叉树的直径",
+      "path": "docs/80-hot100-cpp/problems/0543-diameter-of-binary-tree.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC560",
+      "title": "560. 和为 K 的子数组（C++17）",
+      "path": "docs/80-hot100-cpp/problems/0560-subarray-sum-equals-k.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC739",
+      "title": "739. 每日温度：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0739-daily-temperatures.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC763",
+      "title": "763. 划分字母区间：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/0763-partition-labels.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC994",
+      "title": "994. 腐烂的橘子 · C++17",
+      "path": "docs/80-hot100-cpp/problems/0994-rotting-oranges.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC1143",
+      "title": "1143. 最长公共子序列：C++17 推导与实现",
+      "path": "docs/80-hot100-cpp/problems/1143-longest-common-subsequence.md",
+      "module": "hot100cpp",
+      "supplemental": false
+    },
+    {
+      "id": "LC695",
+      "title": "695. 岛屿的最大面积（C++17）",
+      "path": "docs/80-hot100-cpp/supplementary/0695-max-area-of-island.md",
+      "module": "hot100cpp",
+      "supplemental": true
+    }
+  ]
+}

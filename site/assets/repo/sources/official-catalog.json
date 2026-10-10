@@ -1,0 +1,362 @@
+[
+  {
+    "id": "C01",
+    "title": "C11 公开委员会草案 N1570",
+    "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+    "topic": "语言基础",
+    "boundary": "2011-04-12；C11 草案，不是最新 C 标准。定位 6.2.4 生命周期、6.5 表达式/别名、6.7.3 限定符、7.22.3 分配。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C02",
+    "title": "C++17 公开工作草案 N4659",
+    "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf",
+    "topic": "C++",
+    "boundary": "2017-03-21 工作草案；用于标注 C++17 语境，不能称正式 ISO 标准文本。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C03",
+    "title": "C++ 标准草案编辑仓库",
+    "url": "https://github.com/cplusplus/draft",
+    "topic": "C++",
+    "boundary": "持续更新的草案源码；不能把未来草案规则直接套用到 C++11/17 项目。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C04",
+    "title": "C++ Core Guidelines",
+    "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+    "topic": "C++ 工程",
+    "boundary": "原创工程建议，非语言标准；RAII、所有权、接口、并发。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C05",
+    "title": "GCC：volatile 对象访问",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html",
+    "topic": "volatile / MMIO",
+    "boundary": "GCC 实现说明；非 volatile 访问不因 volatile 访问获得排序保证，volatile 不是通用内存屏障。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C06",
+    "title": "GCC：告警选项",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc-14.3.0/gcc/Warning-Options.html",
+    "topic": "构建 / 排错",
+    "boundary": "固定 GCC 14.3 文档；strict-aliasing 告警并不能发现所有违规。项目应记录实际 GCC 版本。",
+    "verification": "官方索引摘录",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C07",
+    "title": "GNU ld：链接脚本",
+    "url": "https://sourceware.org/binutils/docs/ld/Scripts.html",
+    "topic": "链接 / 内存布局",
+    "boundary": "输入段到输出段、MEMORY 与 SECTIONS；堆栈位置属于平台/链接脚本安排，不是 C 语言硬编码。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C08",
+    "title": "GNU ld：LMA/VMA",
+    "url": "https://sourceware.org/binutils/docs/ld/Output-Section-LMA.html",
+    "topic": "启动 / 链接",
+    "boundary": "载入地址和运行地址区别；典型 .data 从 Flash 载入、在 RAM 运行。",
+    "verification": "官方索引摘录",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C09",
+    "title": "CMake：交叉编译工具链",
+    "url": "https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html",
+    "topic": "构建",
+    "boundary": "动态最新文档；记录 toolchain、sysroot、目标 ABI，不能仅换编译器文件名。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C10",
+    "title": "Clang：AddressSanitizer",
+    "url": "https://clang.llvm.org/docs/AddressSanitizer.html",
+    "topic": "主机测试",
+    "boundary": "主机可测越界、use-after-free 等；不宣称所有裸机目标都支持。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C11",
+    "title": "Clang：UndefinedBehaviorSanitizer",
+    "url": "https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html",
+    "topic": "主机测试",
+    "boundary": "检查是辅助，不是 UB 不存在的证明；具体检查和恢复行为依选项。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A01",
+    "title": "Arm CMSIS 6：NVIC",
+    "url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__NVIC__gr.html",
+    "topic": "Cortex-M 中断",
+    "boundary": "优先级位数、分组、API 限制依内核；M0/M0+ 不支持部分分组 API。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A02",
+    "title": "Arm AAPCS32",
+    "url": "https://github.com/ARM-software/abi-aa/blob/main/aapcs32/aapcs32.rst",
+    "topic": "ABI / 汇编",
+    "boundary": "32-bit Arm 调用约定；浮点参数、栈对齐等依 ABI 变体，不能套到 AArch64。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A03",
+    "title": "ST：STM32F407VG 产品与文档入口",
+    "url": "https://www.st.com/en/microcontrollers-microprocessors/stm32f407vg.html",
+    "topic": "器件边界",
+    "boundary": "教学外设例子可选 F407；实际封装、Flash/RAM、引脚、外设数量按具体料号/数据手册。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A04",
+    "title": "ST：RM0090 参考手册",
+    "url": "https://www.st.com/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+    "topic": "STM32F4 外设",
+    "boundary": "F405/415、F407/417、F427/437、F429/439；不能泛化到 F1/G0/H7。URL 响应验证，但网页工具因 10.8 MB 限制未读完整正文。",
+    "verification": "官方索引与响应验证；未完整读取",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A05",
+    "title": "ST AN4776：通用定时器",
+    "url": "https://www.st.com/resource/en/application_note/an4776-generalpurpose-timer-cookbook-for-stm32-microcontrollers-stmicroelectronics.pdf",
+    "topic": "定时器",
+    "boundary": "计数/输入捕获/输出比较/PWM 示例；时钟倍频与高级功能以所用芯片手册为准。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A06",
+    "title": "ST AN4839：L1 Cache",
+    "url": "https://www.st.com/resource/en/application_note/an4839-level-1-cache-on-stm32f7-series-and-stm32h7-series-stmicroelectronics.pdf",
+    "topic": "DMA / Cache",
+    "boundary": "Rev 2；STM32F7/H7 Cortex-M7。单独作为进阶，不暗示 F407 具备 M7 D-cache。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A07",
+    "title": "NXP UM10204：I2C 规范",
+    "url": "https://cache.nxp.com/docs/en/user-guide/UM10204.pdf?fsrch=1&pageNum=1&sr=3",
+    "topic": "I2C",
+    "boundary": "Rev 7.0，2021-10-01；普通双向 I2C 与单向 UFm 的电气/仲裁差异要区分。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "A08",
+    "title": "CiA：CAN FD 基本原理",
+    "url": "https://can-cia.org/can-knowledge/can-fd-the-basic-idea",
+    "topic": "CAN",
+    "boundary": "CAN CC/FD 帧与数据阶段区别；F4 bxCAN 不等于带 FDCAN 控制器。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R01",
+    "title": "FreeRTOS：任务调度",
+    "url": "https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/01-Tasks-and-co-routines/04-Task-scheduling",
+    "topic": "RTOS",
+    "boundary": "官方当前文档含单核/AMP/SMP；默认 fixed-priority preemptive + 同优先级 time slicing；课程先限单核端口。",
+    "verification": "官方索引摘录；直接 HTML 提取为空",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R02",
+    "title": "FreeRTOS：mutex 与简化优先级继承",
+    "url": "https://freertos.org/Real-time-embedded-RTOS-mutexes.html",
+    "topic": "互斥 / 优先级反转",
+    "boundary": "mutex 不能在 ISR 中使用；简化 PI 不是消灭所有优先级反转，多 mutex 场景有特定限制。",
+    "verification": "官方索引正文",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R03",
+    "title": "FreeRTOS 官方内核书：中断管理",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel-Book/blob/main/ch07.md",
+    "topic": "ISR / 优先级",
+    "boundary": "Cortex-M 中断优先级、FromISR API 与 syscall ceiling；不要混同任务优先级数字方向。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "R04",
+    "title": "FreeRTOS：heap 分配方案",
+    "url": "https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/09-Memory-management/01-Memory-management",
+    "topic": "RTOS 内存",
+    "boundary": "heap_1 不能 free，heap_2 不合并空闲块，heap_3 包装 libc，heap_4 合并，heap_5 多区；合并不能保证不碎片。",
+    "verification": "官方索引摘录",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L01",
+    "title": "U-Boot：板级初始化",
+    "url": "https://docs.u-boot.org/en/latest/develop/init.html",
+    "topic": "Boot",
+    "boundary": "低层初始化、board_init_f/r、BSS/重定位可用时机；官方说明一些架构/板子不遵守通用流程。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L02",
+    "title": "U-Boot：xPL 框架",
+    "url": "https://docs.u-boot.org/en/latest/develop/spl.html",
+    "topic": "Boot",
+    "boundary": "TPL/VPL/SPL 可选；SPL 可加载 U-Boot、其他固件或直接 Linux，不能教固定万能启动链。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L03",
+    "title": "Buildroot 官方手册",
+    "url": "https://buildroot.org/downloads/manual/manual.html",
+    "topic": "Rootfs / 交叉编译",
+    "boundary": "本次页面明确 Buildroot 2026.08，2026-09-04 生成；toolchain、rootfs、内核/bootloader 产物，保存 defconfig 和 board 定制。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L04",
+    "title": "Linux：Device Tree 使用模型",
+    "url": "https://docs.kernel.org/devicetree/usage-model.html",
+    "topic": "设备树",
+    "boundary": "硬件描述与绑定；compatible 匹配并不自动生成驱动。文中历史 Arm 例子不应作为最新内核函数链保证。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L05",
+    "title": "Linux：VFS",
+    "url": "https://docs.kernel.org/filesystems/vfs.html",
+    "topic": "驱动 / 文件接口",
+    "boundary": "理解 fd、struct file、file_operations；动态最新文档，代码 API 必须按构建内核验证。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L06",
+    "title": "Linux：ioctl 接口",
+    "url": "https://docs.kernel.org/driver-api/ioctl.html",
+    "topic": "驱动 UAPI",
+    "boundary": "新 ioctl 参数布局、兼容性、固定宽度类型与填充；不要直接跨边界共享含裸指针的私有结构。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L07",
+    "title": "Linux：DMA API howto",
+    "url": "https://docs.kernel.org/core-api/dma-api-howto.html",
+    "topic": "Linux DMA",
+    "boundary": "CPU virtual、physical、device DMA 地址区别；DMA API、映射方向、所有权/同步及一致性。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L08",
+    "title": "Linux：锁类型规则",
+    "url": "https://docs.kernel.org/locking/locktypes.html",
+    "topic": "Linux 并发",
+    "boundary": "区分 PREEMPT_RT/non-RT；普通 spinlock_t 在 RT 上语义改变，raw_spinlock_t 的边界另讲。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L09",
+    "title": "Linux：GPIO descriptor consumer",
+    "url": "https://docs.kernel.org/driver-api/gpio/consumer.html",
+    "topic": "驱动 GPIO",
+    "boundary": "新代码优先描述符 API；gpiod_get/set_value_cansleep 场景区别，不要硬编码旧全局 GPIO 编号。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L10",
+    "title": "Linux man-pages：mmap(2)",
+    "url": "https://man7.org/linux/man-pages/man2/mmap.2.html",
+    "topic": "用户态 VM",
+    "boundary": "man-pages 维护者文档；映射属性、页对齐、共享/私有；mmap 不自动保证物理连续或所有权安全。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "L11",
+    "title": "Linux man-pages：epoll(7)",
+    "url": "https://man7.org/linux/man-pages/man7/epoll.7.html",
+    "topic": "IO 多路复用",
+    "boundary": "ET 需 nonblocking 并处理到 EAGAIN；epoll 不是天然异步 IO，也不是任何规模都更快。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "N01",
+    "title": "IETF RFC9293：TCP",
+    "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+    "topic": "网络",
+    "boundary": "2022 TCP 规范；字节流、重传/顺序/连接；一条 send 不对应一条 recv。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "N02",
+    "title": "IETF RFC768：UDP",
+    "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+    "topic": "网络",
+    "boundary": "1980；数据报的最小协议，可靠性需要应用或其他上层；不能凭使用 UDP 宣称一定更快/低延迟。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "D01",
+    "title": "OpenOCD：GDB 与 OpenOCD",
+    "url": "https://openocd.org/doc/html/GDB-and-OpenOCD.html",
+    "topic": "调试",
+    "boundary": "ELF + 交叉 GDB + remote server；硬件断点/watchpoint 数量与支持依芯片。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "T01",
+    "title": "Linux：KUnit",
+    "url": "https://docs.kernel.org/dev-tools/kunit/index.html",
+    "topic": "内核测试",
+    "boundary": "白盒内核单元测试；可在 QEMU/UML 等运行，不能替代硬件时序验收。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "T02",
+    "title": "Linux：kselftest",
+    "url": "https://docs.kernel.org/dev-tools/kselftest.html",
+    "topic": "用户态接口回归",
+    "boundary": "用户态执行内核接口测试；注意权限与测试副作用，教学先选受控子集。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  },
+  {
+    "id": "C12",
+    "title": "Itanium C++ ABI",
+    "url": "https://itanium-cxx-abi.github.io/cxx-abi/abi.html",
+    "topic": "C++ ABI",
+    "boundary": "vtable 与对象布局是 ABI 层；平台供应商有最终定义权，不能视为 C++ 标准规定的唯一实现。",
+    "verification": "正文可读",
+    "checked_at": "2026-10-10"
+  }
+]

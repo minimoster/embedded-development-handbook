@@ -1,0 +1,209 @@
+{
+  "checked_at": "2026-10-10",
+  "method": "有界便利样本：六位作者、六家公司、2023–2026公开报告。只纳入第一人称报告的可见正文；同一作者多轮计一次。排除付费推广汇编、转载题库、AI二次总结及无明确经历的推荐题单。没有验证作者身份、真实面试发生或公司代表性。",
+  "usage": "可称『本次样本重复出现』；不要称『所有大厂必问』『覆盖99%』『实习面试命中率』。P0/P1/P2优先级应由学习依赖和目标岗位决定，不能等同真实频率。报告问法不作为技术答案依据。",
+  "records": [
+    {
+      "id": "E01",
+      "company": "涂鸦智能",
+      "role": "嵌入式开发工程师",
+      "recruitment": "原帖未明确实习/校招/社招",
+      "author": "牛客673869888号",
+      "date": "2026-04-10",
+      "date_type": "正文明确面试日期；页面显示 04-10 已编辑",
+      "url": "https://www.nowcoder.com/feed/main/detail/6f06808a371c4c36addb85587762dd83?sourceSSR=enterprise",
+      "kind": "第一人称、自报面试，未经公司验证",
+      "summary": "二面围绕任务划分理由、FreeRTOS切换、中断职责、偶现故障排查、串口误码与断网恢复，也问C内存对齐和TCP/UDP。",
+      "tags": [
+        "project",
+        "c_cpp_memory",
+        "rtos",
+        "peripheral",
+        "debug"
+      ],
+      "limitations": "不得把楼主口头 OC 自述当官方录用结果；一面/二面同作者若加入都只算一个作者样本。"
+    },
+    {
+      "id": "E02",
+      "company": "元戎启行",
+      "role": "嵌入式；作者称面试官从事 SoC C++ 开发",
+      "recruitment": "原帖未明确招聘批次",
+      "author": "PinoVerde",
+      "date": "2025-09-21",
+      "date_type": "发布时间，不等于面试日期",
+      "url": "https://www.nowcoder.com/discuss/799355909414604800?sourceSSR=enterprise",
+      "kind": "第一人称、自报面试，未经公司验证",
+      "summary": "作者报告只问C++：C++11、智能指针选择、构造析构与虚函数、explicit、初始化列表；手写单例与继承多态并逐行解释。",
+      "tags": [
+        "c_cpp_memory",
+        "cpp_polymorphism",
+        "coding"
+      ],
+      "limitations": "标题为嵌入式，但岗位偏SoC C++，不能归纳为STM32/MCU岗题单；主站直链一次失败，带站点原有sourceSSR链接可读。"
+    },
+    {
+      "id": "E03",
+      "company": "大疆",
+      "role": "嵌入式工程师二面",
+      "recruitment": "正文未明确招聘批次",
+      "author": "幸运秋招人面经被收藏",
+      "date": "2025-09-07",
+      "date_type": "发布时间，不等于面试日期",
+      "url": "https://ac.nowcoder.com/discuss/1549653",
+      "kind": "第一人称、自报面试，未经公司验证",
+      "summary": "包含项目分工、volatile、泄漏/碎片、虚函数开销、SPI/I2C选型、波形诊断、FreeRTOS与Linux调度、HardFault与升级断电回退。",
+      "tags": [
+        "project",
+        "c_cpp_memory",
+        "rtos",
+        "peripheral",
+        "linux_os",
+        "debug",
+        "boot",
+        "cpp_polymorphism"
+      ],
+      "limitations": "本页无手写代码；问题出现不代表所有大疆团队同题。面经中问法可能存在错误前提，答案须用官方资料校验。"
+    },
+    {
+      "id": "E04",
+      "company": "字节跳动",
+      "role": "嵌入式社招，一年经验",
+      "recruitment": "社招；不可当作实习难度承诺",
+      "author": "牛客759499338号",
+      "date": "2024-09-18",
+      "date_type": "最后编辑时间，原面试日期未完整给出",
+      "url": "https://www.nowcoder.com/discuss/659471224992497664",
+      "kind": "第一人称、自报面试，未经公司验证",
+      "summary": "C内存段/分配与宏、ELF与静动态链接、Arm寄存器、RTOS调度切换、Linux SPI驱动/进程内存/系统调用；还报告崩溃排查、区间链表反转与格式化字符串题。",
+      "tags": [
+        "project",
+        "c_cpp_memory",
+        "rtos",
+        "peripheral",
+        "linux_os",
+        "debug",
+        "build",
+        "coding",
+        "algorithm"
+      ],
+      "limitations": "作者明确一些问题记不清；多轮仍算一个作者样本。作者把校招差距称不大仅为其观点，不据此推断门槛。"
+    },
+    {
+      "id": "E05",
+      "company": "小米",
+      "role": "暑期实习嵌入式软开",
+      "recruitment": "暑期实习",
+      "author": "可乐加冰",
+      "date": "2023-05-22",
+      "date_type": "发布时间，不等于面试日期",
+      "url": "https://www.nowcoder.com/feed/main/detail/e424c887bc3f47a88374226f7ec2385f",
+      "kind": "第一人称、自报面试，未经公司验证",
+      "summary": "简短项目提问；FreeRTOS、static、函数指针、野指针、头文件/重复定义、预处理、堆栈和数据结构；手写合并有序链表。",
+      "tags": [
+        "project",
+        "c_cpp_memory",
+        "rtos",
+        "build",
+        "coding",
+        "algorithm"
+      ],
+      "limitations": "年代较早，仅作实习案例；不能把旧报告写成当前小米统一题库。"
+    },
+    {
+      "id": "E06",
+      "company": "海康威视",
+      "role": "嵌入式软开；作者推测音频方向",
+      "recruitment": "原帖未明确招聘批次",
+      "author": "风一样的纬度",
+      "date": "2023-05-23",
+      "date_type": "编辑/发布日，标题明确5.23",
+      "url": "https://www.nowcoder.com/feed/main/detail/d038bb5c77f74902859c58dd2dbdd5f0",
+      "kind": "第一人称、自报面试，未经公司验证",
+      "summary": "主要讨论项目、Linux进程线程、信号量、互斥锁和内存管理，并要求结合实际使用；无手写算法。",
+      "tags": [
+        "project",
+        "linux_os"
+      ],
+      "limitations": "方向不匹配及音频判断是作者推测；15分钟样本不能作为统一流程或难度标准。"
+    }
+  ],
+  "topic_counts": [
+    {
+      "tag": "project",
+      "label": "项目背景/本人职责/实际使用",
+      "count": 5,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "c_cpp_memory",
+      "label": "C/C++语言或内存基础",
+      "count": 5,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "rtos",
+      "label": "RTOS/FreeRTOS被明确提及",
+      "count": 4,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "peripheral",
+      "label": "外设通信或串口故障",
+      "count": 3,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "linux_os",
+      "label": "Linux/操作系统机制",
+      "count": 3,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "debug",
+      "label": "故障诊断或调试",
+      "count": 3,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "coding",
+      "label": "手写代码",
+      "count": 3,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "algorithm",
+      "label": "明确算法/数据结构手写",
+      "count": 2,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "cpp_polymorphism",
+      "label": "C++多态或虚函数",
+      "count": 2,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "build",
+      "label": "编译/链接/预处理",
+      "count": 2,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    },
+    {
+      "tag": "boot",
+      "label": "升级/启动",
+      "count": 1,
+      "denominator": 6,
+      "meaning": "仅本次六位作者样本中明确出现的主题数，不是企业题目概率"
+    }
+  ]
+}

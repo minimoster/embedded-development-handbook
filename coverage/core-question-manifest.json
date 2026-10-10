@@ -1,0 +1,1649 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-10",
+  "questions": [
+    {
+      "id": "C01",
+      "title": "数组、指针和长度为什么必须一起设计？",
+      "path": "docs/10-c-cpp/c01.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C02",
+      "title": "栈、堆、静态存储与对象生命周期怎么区分？",
+      "path": "docs/10-c-cpp/c02.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C03",
+      "title": "const 能保证什么，不能保证什么？",
+      "path": "docs/10-c-cpp/c03.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C04",
+      "title": "volatile、atomic 与内存屏障怎样分工？",
+      "path": "docs/10-c-cpp/c04.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "volatile",
+        "cpp-race",
+        "dma-cache"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C05",
+      "title": "未定义行为、未指定行为与实现定义如何回答？",
+      "path": "docs/10-c-cpp/c05.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "ubsan"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C06",
+      "title": "结构体对齐、padding 与网络序列化有什么关系？",
+      "path": "docs/10-c-cpp/c06.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "abi",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C07",
+      "title": "malloc/free 与嵌入式内存分配如何取舍？",
+      "path": "docs/10-c-cpp/c07.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "malloc-linux",
+        "asan"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C08",
+      "title": "C++ RAII、unique_ptr 与错误路径有什么价值？",
+      "path": "docs/10-c-cpp/c08.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp-race",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C09",
+      "title": "引用、拷贝、移动和完美转发如何区分？",
+      "path": "docs/10-c-cpp/c09.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp17",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C10",
+      "title": "回调函数、函数指针和上下文对象怎么设计？",
+      "path": "docs/10-c-cpp/c10.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST01",
+      "title": "vector、array、list 的选择依据是什么？",
+      "path": "docs/20-stl/st01.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "dma-cache",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST02",
+      "title": "迭代器失效为什么比复杂度更容易出 bug？",
+      "path": "docs/20-stl/st02.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp-race",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST03",
+      "title": "map、unordered_map 与哈希退化怎么回答？",
+      "path": "docs/20-stl/st03.md",
+      "module": "stl",
+      "priority": "P1",
+      "source_ids": [
+        "cpp-life",
+        "cpp17",
+        "cpp-assoc",
+        "cpp-unord",
+        "rbtree"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST04",
+      "title": "string、string_view 与二进制数据有哪些坑？",
+      "path": "docs/20-stl/st04.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST05",
+      "title": "排序的比较器必须满足什么？",
+      "path": "docs/20-stl/st05.md",
+      "module": "stl",
+      "priority": "P1",
+      "source_ids": [
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST06",
+      "title": "复杂度、内存上界与实时性怎样一起讲？",
+      "path": "docs/20-stl/st06.md",
+      "module": "stl",
+      "priority": "P0",
+      "source_ids": [
+        "abi",
+        "cpp-life",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR01",
+      "title": "预处理、编译、汇编、链接各负责什么？",
+      "path": "docs/30-architecture/ar01.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "ld",
+        "cmake",
+        "ld-options",
+        "glibc-loader"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR02",
+      "title": "链接脚本、Flash/RAM 与 VMA/LMA 怎么理解？",
+      "path": "docs/30-architecture/ar02.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "ld",
+        "lma"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR03",
+      "title": "Cortex-M 从复位到 main 发生什么？",
+      "path": "docs/30-architecture/ar03.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "nvic",
+        "abi",
+        "lma"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR04",
+      "title": "中断优先级与抢占优先级怎样避免混淆？",
+      "path": "docs/30-architecture/ar04.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "nvic"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR05",
+      "title": "ABI、调用约定与栈对齐为什么会影响固件？",
+      "path": "docs/30-architecture/ar05.md",
+      "module": "arch",
+      "priority": "P1",
+      "source_ids": [
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR06",
+      "title": "交叉编译怎样避免误链接主机库？",
+      "path": "docs/30-architecture/ar06.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "cmake",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC01",
+      "title": "GPIO 推挽、开漏、上下拉怎么选？",
+      "path": "docs/40-mcu/mc01.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "i2c",
+        "timer",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC02",
+      "title": "定时器频率、PWM 与时钟倍频怎么计算？",
+      "path": "docs/40-mcu/mc02.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC03",
+      "title": "输入捕获测频率和编码器有哪些边界？",
+      "path": "docs/40-mcu/mc03.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC04",
+      "title": "UART 接收为什么必须设计帧边界？",
+      "path": "docs/40-mcu/mc04.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "dma-cache",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC05",
+      "title": "DMA 什么时候比中断逐字节更合适？",
+      "path": "docs/40-mcu/mc05.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "dma-cache",
+        "c11",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC06",
+      "title": "Cortex-M7 DMA 与 cache 一致性怎么处理？",
+      "path": "docs/40-mcu/mc06.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "dma-cache"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC07",
+      "title": "ADC 精度、采样时间与滤波怎么区分？",
+      "path": "docs/40-mcu/mc07.md",
+      "module": "mcu",
+      "priority": "P1",
+      "source_ids": [
+        "timer",
+        "adc"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC08",
+      "title": "按键消抖和非阻塞状态机怎样设计？",
+      "path": "docs/40-mcu/mc08.md",
+      "module": "mcu",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC09",
+      "title": "看门狗与低功耗为何不能孤立设计？",
+      "path": "docs/40-mcu/mc09.md",
+      "module": "mcu",
+      "priority": "P1",
+      "source_ids": [
+        "nvic",
+        "timer",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "MC10",
+      "title": "Flash 擦写和掉电安全存储怎么做？",
+      "path": "docs/40-mcu/mc10.md",
+      "module": "mcu",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT01",
+      "title": "任务状态、抢占和时间片怎么区分？",
+      "path": "docs/50-rtos/rt01.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-schedule",
+        "rtos-task-source"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT02",
+      "title": "vTaskDelay 与 vTaskDelayUntil 的周期差异？",
+      "path": "docs/50-rtos/rt02.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-schedule",
+        "timer"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT03",
+      "title": "互斥量、二值信号量和计数信号量怎么选？",
+      "path": "docs/50-rtos/rt03.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "rtos-mutex"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT04",
+      "title": "优先级反转、继承与死锁怎么解释？",
+      "path": "docs/50-rtos/rt04.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-mutex",
+        "rtos-book"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT05",
+      "title": "队列、任务通知和事件组的语义差别？",
+      "path": "docs/50-rtos/rt05.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "rtos-schedule",
+        "rtos-queue-source"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT06",
+      "title": "FromISR API 与中断优先级上限怎么配合？",
+      "path": "docs/50-rtos/rt06.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "nvic"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT07",
+      "title": "临界区、调度器挂起和中断屏蔽有什么不同？",
+      "path": "docs/50-rtos/rt07.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "nvic",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT08",
+      "title": "任务栈、heap_1..heap_5 与内存预算怎么看？",
+      "path": "docs/50-rtos/rt08.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-heap",
+        "rtos-book",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT09",
+      "title": "SPSC 环形缓冲怎样避免看似正确的竞态？",
+      "path": "docs/50-rtos/rt09.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-race",
+        "c11"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR01",
+      "title": "I²C 起止、ACK、仲裁和时钟拉伸怎么理解？",
+      "path": "docs/60-protocols/pr01.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "i2c"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR02",
+      "title": "SPI 模式、片选与事务边界怎么核对？",
+      "path": "docs/60-protocols/pr02.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "timer",
+        "rm0090"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR03",
+      "title": "RS485 和 Modbus RTU 不是同一层东西？",
+      "path": "docs/60-protocols/pr03.md",
+      "module": "protocol",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "timer",
+        "modbus"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR04",
+      "title": "CAN 仲裁、标识符和错误处理怎样建立主线？",
+      "path": "docs/60-protocols/pr04.md",
+      "module": "protocol",
+      "priority": "P2",
+      "source_ids": [
+        "timer",
+        "can",
+        "canfd"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR05",
+      "title": "OSI/TCP-IP 分层对嵌入式排障有何用？",
+      "path": "docs/60-protocols/pr05.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "udp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR06",
+      "title": "TCP 为什么会半包和粘包，怎样正确接收？",
+      "path": "docs/60-protocols/pr06.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR07",
+      "title": "TCP 建连、关闭和 TIME_WAIT 怎么讲？",
+      "path": "docs/60-protocols/pr07.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR08",
+      "title": "TCP/UDP、超时重试和幂等怎样一起选？",
+      "path": "docs/60-protocols/pr08.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "udp",
+        "socket"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR09",
+      "title": "CRC、checksum、MAC 和签名怎么区分？",
+      "path": "docs/60-protocols/pr09.md",
+      "module": "protocol",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "tcp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX01",
+      "title": "进程、线程和虚拟地址空间怎么区分？",
+      "path": "docs/70-linux-apps/lx01.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "mmap",
+        "cpp-race",
+        "pthread",
+        "proc-stat",
+        "pthread-exit",
+        "fork2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX02",
+      "title": "read/write 的短读、短写与 EINTR 如何处理？",
+      "path": "docs/70-linux-apps/lx02.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "epoll",
+        "tcp",
+        "read",
+        "write"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX03",
+      "title": "阻塞、非阻塞、select/poll/epoll 如何建立模型？",
+      "path": "docs/70-linux-apps/lx03.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX04",
+      "title": "pthread 互斥量与条件变量如何正确配合？",
+      "path": "docs/70-linux-apps/lx04.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-race",
+        "locks",
+        "cond"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX05",
+      "title": "mmap 共享内存、文件映射和持久化的边界？",
+      "path": "docs/70-linux-apps/lx05.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "mmap",
+        "dma-linux"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX06",
+      "title": "信号处理函数为什么不能随便打印和加锁？",
+      "path": "docs/70-linux-apps/lx06.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "c11",
+        "epoll",
+        "signal"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX07",
+      "title": "IPC 的 pipe、socket 和共享内存怎么选？",
+      "path": "docs/70-linux-apps/lx07.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "mmap",
+        "epoll",
+        "tcp",
+        "pipe",
+        "socket"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX08",
+      "title": "从应用性能问题到 CPU/内存/I/O 证据链？",
+      "path": "docs/70-linux-apps/lx08.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "epoll",
+        "mmap",
+        "vmstat",
+        "unlink2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV01",
+      "title": "字符设备、file_operations 和用户态 fd 如何连起来？",
+      "path": "docs/80-linux-drivers/dv01.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "vfs"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV02",
+      "title": "为什么不能直接解引用用户指针？",
+      "path": "docs/80-linux-drivers/dv02.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "ioctl",
+        "vfs",
+        "locks"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV03",
+      "title": "platform 驱动、设备树与 probe 的关系？",
+      "path": "docs/80-linux-drivers/dv03.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "dt",
+        "gpio-linux"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV04",
+      "title": "MMIO、ioremap 与寄存器读改写有什么风险？",
+      "path": "docs/80-linux-drivers/dv04.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "dma-linux",
+        "gpio-linux",
+        "volatile"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV05",
+      "title": "Linux DMA mapping 与裸机 DMA 为什么不同？",
+      "path": "docs/80-linux-drivers/dv05.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "dma-linux"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV06",
+      "title": "内核 mutex、spinlock 与中断上下文怎么选？",
+      "path": "docs/80-linux-drivers/dv06.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "locks",
+        "rcu"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV07",
+      "title": "中断下半部、workqueue 与线程化 IRQ 怎么选？",
+      "path": "docs/80-linux-drivers/dv07.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "locks",
+        "gpio-linux",
+        "kunit",
+        "irq-generic",
+        "pm0214",
+        "workqueue"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV08",
+      "title": "ioctl、sysfs、poll 的接口设计原则？",
+      "path": "docs/80-linux-drivers/dv08.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "ioctl",
+        "vfs",
+        "kselftest"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT01",
+      "title": "Boot ROM、SPL、U-Boot、kernel、init 的责任链？",
+      "path": "docs/90-boot-rootfs/bt01.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "uboot-init",
+        "uboot-spl",
+        "dt",
+        "uboot-bootm",
+        "uboot-booti",
+        "arm64-boot"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT02",
+      "title": "kernel image、DTB、initramfs 与 rootfs 的区别？",
+      "path": "docs/90-boot-rootfs/bt02.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "buildroot",
+        "uboot-init",
+        "vfs",
+        "uboot-bootm",
+        "uboot-booti"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT03",
+      "title": "Buildroot、BusyBox 与可复现系统如何搭建？",
+      "path": "docs/90-boot-rootfs/bt03.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "buildroot"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT04",
+      "title": "OTA 的 A/B、回滚与掉电安全如何联动？",
+      "path": "docs/90-boot-rootfs/bt04.md",
+      "module": "boot",
+      "priority": "P1",
+      "source_ids": [
+        "uboot-init",
+        "buildroot",
+        "c11"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT05",
+      "title": "Flash 分区、环境变量与救砖如何规划？",
+      "path": "docs/90-boot-rootfs/bt05.md",
+      "module": "boot",
+      "priority": "P2",
+      "source_ids": [
+        "uboot-spl",
+        "buildroot"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DB01",
+      "title": "HardFault 怎么从寄存器走到源码？",
+      "path": "docs/100-debugging/db01.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "pm0214",
+        "openocd",
+        "ubsan"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DB02",
+      "title": "GDB、SWD/JTAG、断点与观察点怎么用？",
+      "path": "docs/100-debugging/db02.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "openocd"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DB03",
+      "title": "逻辑分析仪、示波器与软件日志各能证明什么？",
+      "path": "docs/100-debugging/db03.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "i2c",
+        "timer",
+        "openocd"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DB04",
+      "title": "主机单元测试、sanitizer 与板测如何分层？",
+      "path": "docs/100-debugging/db04.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "asan",
+        "ubsan",
+        "kunit",
+        "kselftest"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DB05",
+      "title": "故障注入、背压和恢复为何比正常 Demo 重要？",
+      "path": "docs/100-debugging/db05.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "rtos-book"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DB06",
+      "title": "版本、CI、勘误与公开项目该保存什么？",
+      "path": "docs/100-debugging/db06.md",
+      "module": "debug",
+      "priority": "P0",
+      "source_ids": [
+        "cmake",
+        "kselftest"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PJ01",
+      "title": "怎样做一个可答辩的 MCU 数据采集项目？",
+      "path": "docs/110-projects/pj01.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "timer",
+        "rtos-book",
+        "dma-cache"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PJ02",
+      "title": "怎样做一个 Linux 设备网关项目？",
+      "path": "docs/110-projects/pj02.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "epoll",
+        "tcp",
+        "read",
+        "write"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PJ03",
+      "title": "面试项目介绍怎样从功能讲到工程证据？",
+      "path": "docs/110-projects/pj03.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "cmake"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PJ04",
+      "title": "一场模拟面试如何评分与复盘？",
+      "path": "docs/110-projects/pj04.md",
+      "module": "project",
+      "priority": "P0",
+      "source_ids": [
+        "cmake",
+        "kunit"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PJ05",
+      "title": "面向 EE 背景怎样连接硬件优势与软件短板？",
+      "path": "docs/110-projects/pj05.md",
+      "module": "project",
+      "priority": "P1",
+      "source_ids": [
+        "adc",
+        "timer",
+        "cmake"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C11",
+      "title": "虚析构、虚函数与对象切片有什么区别？",
+      "path": "docs/10-c-cpp/c11.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp-life",
+        "cpp17",
+        "cxx-abi",
+        "ld"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C12",
+      "title": "整型提升、位运算与移位如何写得可移植？",
+      "path": "docs/10-c-cpp/c12.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "ubsan",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C13",
+      "title": "static、extern、声明与定义怎样区分？",
+      "path": "docs/10-c-cpp/c13.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "ld",
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C14",
+      "title": "memcpy、memmove 与字符串 API 怎样避免越界？",
+      "path": "docs/10-c-cpp/c14.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "cpp-life"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C15",
+      "title": "class/struct、访问控制与 const 成员函数的真实边界？",
+      "path": "docs/10-c-cpp/c15.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C16",
+      "title": "shared_ptr、weak_ptr 与循环引用如何判断？",
+      "path": "docs/10-c-cpp/c16.md",
+      "module": "c",
+      "priority": "P1",
+      "source_ids": [
+        "cpp17",
+        "cpp-race",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR07",
+      "title": "MSP、PSP、SVC 和 PendSV 如何参与任务切换？",
+      "path": "docs/30-architecture/ar07.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "pm0214",
+        "rtos-book",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR08",
+      "title": "Harvard/von Neumann、MCU/MPU 与实时性如何区分？",
+      "path": "docs/30-architecture/ar08.md",
+      "module": "arch",
+      "priority": "P0",
+      "source_ids": [
+        "pm0214",
+        "locks",
+        "abi"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "RT10",
+      "title": "任务创建、参数生命周期与软件定时器怎么设计？",
+      "path": "docs/50-rtos/rt10.md",
+      "module": "rtos",
+      "priority": "P0",
+      "source_ids": [
+        "rtos-book",
+        "rtos-schedule",
+        "rtos-heap"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR10",
+      "title": "IP、MAC、子网掩码与 ARP 怎样串起来？",
+      "path": "docs/60-protocols/pr10.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "arp",
+        "tcp"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR11",
+      "title": "DNS、HTTP、HTTPS 与 TLS 握手怎样避免混说？",
+      "path": "docs/60-protocols/pr11.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "dns",
+        "tls",
+        "tcp",
+        "dns-tcp",
+        "http-semantics"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR12",
+      "title": "TCP 流量控制与拥塞控制有什么不同？",
+      "path": "docs/60-protocols/pr12.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "tcp",
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX09",
+      "title": "join、detach、退出与资源回收怎么设计？",
+      "path": "docs/70-linux-apps/lx09.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "pthread",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX10",
+      "title": "timerfd 和绝对时刻周期任务怎么保证边界？",
+      "path": "docs/70-linux-apps/lx10.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "timerfd",
+        "nanosleep",
+        "epoll"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX11",
+      "title": "系统调用、库函数与用户态/内核态有何不同？",
+      "path": "docs/70-linux-apps/lx11.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "read",
+        "write",
+        "vfs",
+        "linux-rt"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX12",
+      "title": "Linux GPIO/UART/SPI/I²C 应用应走什么接口？",
+      "path": "docs/70-linux-apps/lx12.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "gpio-linux",
+        "vfs",
+        "ioctl"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV09",
+      "title": "kmalloc、vmalloc 与 GFP 标志怎么选？",
+      "path": "docs/80-linux-drivers/dv09.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "allocation",
+        "dma-linux",
+        "kunit",
+        "highmem",
+        "device-io"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV10",
+      "title": "内核模块加载、probe、移除与版本匹配怎么验证？",
+      "path": "docs/80-linux-drivers/dv10.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "vfs",
+        "dt",
+        "locks"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT06",
+      "title": "initramfs、initrd、文件系统和 PID1 怎么区分？",
+      "path": "docs/90-boot-rootfs/bt06.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "initramfs",
+        "buildroot",
+        "vfs"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C17",
+      "title": "宏、inline 与 constexpr 怎样避免重复求值和控制流陷阱？",
+      "path": "docs/10-c-cpp/c17.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "gcc-macro",
+        "gcc-inline"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C18",
+      "title": "atoi、strtol 与有界数值解析怎样定义失败合同？",
+      "path": "docs/10-c-cpp/c18.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "c11",
+        "strtol"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C19",
+      "title": "成员初始化顺序与 Rule Zero/Five 怎样维护对象不变量？",
+      "path": "docs/10-c-cpp/c19.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C20",
+      "title": "lambda 捕获怎样跨越异步回调的生命周期？",
+      "path": "docs/10-c-cpp/c20.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "cpp-life",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C21",
+      "title": "extern \"C\" 与 opaque handle 怎样建立可靠的 C/C++ 边界？",
+      "path": "docs/10-c-cpp/c21.md",
+      "module": "c",
+      "priority": "P0",
+      "source_ids": [
+        "cpp17",
+        "abi",
+        "guidelines"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "C22",
+      "title": "重载、覆盖、名字隐藏与默认参数怎样决定一次调用？",
+      "path": "docs/10-c-cpp/c22.md",
+      "module": "c",
+      "priority": "P1",
+      "source_ids": [
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "ST07",
+      "title": "deque、stack、queue 和 priority_queue 应按什么合同选择？",
+      "path": "docs/20-stl/st07.md",
+      "module": "stl",
+      "priority": "P1",
+      "source_ids": [
+        "cpp17"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX13",
+      "title": "fork、exec、wait 与僵尸回收怎样形成完整生命周期？",
+      "path": "docs/70-linux-apps/lx13.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "fork2",
+        "execve2",
+        "wait2",
+        "pthread"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX14",
+      "title": "fd、打开文件描述、inode 与 unlink 的生命周期怎么区分？",
+      "path": "docs/70-linux-apps/lx14.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "open2",
+        "dup2",
+        "unlink2",
+        "vfs"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX15",
+      "title": "教材调度算法、Linux 公平策略和实时上限怎样分层回答？",
+      "path": "docs/70-linux-apps/lx15.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "linux-sched",
+        "linux-eevdf"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX16",
+      "title": "页表、TLB、缺页和 COW 如何解释虚拟内存？",
+      "path": "docs/70-linux-apps/lx16.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "page-tables",
+        "mmap",
+        "fork2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "AR09",
+      "title": "Make 的依赖图、头文件追踪与增量构建怎样验证？",
+      "path": "docs/30-architecture/ar09.md",
+      "module": "arch",
+      "priority": "P1",
+      "source_ids": [
+        "gnu-make",
+        "gcc-deps"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX17",
+      "title": "有界线程池怎样设计背压、拥有权和停止协议？",
+      "path": "docs/70-linux-apps/lx17.md",
+      "module": "linux",
+      "priority": "P1",
+      "source_ids": [
+        "cond-wait",
+        "pthread",
+        "cpp-race"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "LX18",
+      "title": "select、poll、epoll 的资源上限与公平预算怎么验证？",
+      "path": "docs/70-linux-apps/lx18.md",
+      "module": "linux",
+      "priority": "P0",
+      "source_ids": [
+        "epoll",
+        "select2",
+        "resource2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "PR13",
+      "title": "HTTP 的方法语义、消息定界和重试怎样写对？",
+      "path": "docs/60-protocols/pr13.md",
+      "module": "protocol",
+      "priority": "P0",
+      "source_ids": [
+        "http-semantics",
+        "http1-framing",
+        "http2"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT07",
+      "title": "交叉编译 Linux 内核后怎样验证目标部署契约？",
+      "path": "docs/90-boot-rootfs/bt07.md",
+      "module": "boot",
+      "priority": "P1",
+      "source_ids": [
+        "kbuild",
+        "kbuild-modules",
+        "allocation"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV11",
+      "title": "RCU 为什么允许并发读写，旧对象什么时候能释放？",
+      "path": "docs/80-linux-drivers/dv11.md",
+      "module": "driver",
+      "priority": "P1",
+      "source_ids": [
+        "rcu",
+        "locks",
+        "seqlock"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "DV12",
+      "title": "设备号、cdev、sysfs、devtmpfs 与 /dev 怎样连起来？",
+      "path": "docs/80-linux-drivers/dv12.md",
+      "module": "driver",
+      "priority": "P0",
+      "source_ids": [
+        "vfs",
+        "driver-infra",
+        "devtmpfs-source"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    },
+    {
+      "id": "BT08",
+      "title": "U-Boot 的 bootm、booti 与内核入口契约怎样核对？",
+      "path": "docs/90-boot-rootfs/bt08.md",
+      "module": "boot",
+      "priority": "P0",
+      "source_ids": [
+        "uboot-bootm",
+        "uboot-booti",
+        "arm64-boot",
+        "uboot-init"
+      ],
+      "anchor": "直接回答",
+      "kind": "question"
+    }
+  ]
+}

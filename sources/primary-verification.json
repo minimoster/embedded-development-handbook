@@ -1,0 +1,352 @@
+[
+  {
+    "source_id": "fork2",
+    "url": "https://man7.org/linux/man-pages/man2/fork.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "Linux/POSIX；DESCRIPTION/NOTES，COW及多线程fork安全边界",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "execve2",
+    "url": "https://man7.org/linux/man-pages/man2/execve.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "Linux用户态；DESCRIPTION/NOTES，替换程序不创建新PID",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "wait2",
+    "url": "https://man7.org/linux/man-pages/man2/wait.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "返回值/状态宏/NOTES，zombie与subreaper；容器依namespace",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "open2",
+    "url": "https://man7.org/linux/man-pages/man2/open.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "DESCRIPTION/NOTES；fd与open file description，标志层次",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "dup2",
+    "url": "https://man7.org/linux/man-pages/man2/dup.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "DESCRIPTION；共享偏移/文件状态与独立fd标志",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "unlink2",
+    "url": "https://man7.org/linux/man-pages/man2/unlink.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "DESCRIPTION；删除名字与打开引用生命周期",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "linux-sched",
+    "url": "https://man7.org/linux/man-pages/man7/sched.7.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "调度策略、实时优先级与权限边界，目标配置为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "linux-eevdf",
+    "url": "https://docs.kernel.org/scheduler/sched-eevdf.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "滚动内核文档；当前公平调度模型，旧CFS内核不能照套",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "page-tables",
+    "url": "https://docs.kernel.org/mm/page_tables.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "MMU/TLB/Page Faults；有MMU语境，不把swap作虚拟内存必要条件",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "gnu-make",
+    "url": "https://raw.githubusercontent.com/mirror/make/master/doc/make.texi",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "GNU作者源文档镜像正文已读相关章节；GNU站点正文多次超时；Automatic Variables/Text Functions/Automatic Prerequisites",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "gcc-deps",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Preprocessor-Options.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "-M/-MF/-MD/-MMD/-MP；GCC滚动版本，非所有编译器通用",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "cond-wait",
+    "url": "https://man7.org/linux/man-pages/man3/pthread_cond_wait.3p.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "谓词重检查/虚假唤醒/原子释放再获取mutex",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "select2",
+    "url": "https://man7.org/linux/man-pages/man2/select.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "fd_set/FD_SETSIZE、修改集合；glibc与内核接口需区分",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "resource2",
+    "url": "https://man7.org/linux/man-pages/man2/getrlimit.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "RLIMIT_NOFILE；只读预算核对，不建议随意扩大系统限制",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "http-semantics",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2022；§7.2 Host、§9方法/幂等、§10.1.1 Expect",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "http1-framing",
+    "url": "https://www.rfc-editor.org/rfc/rfc9112.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2022；§6.3定界优先级、§7chunked、§11.2请求走私",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "http2",
+    "url": "https://www.rfc-editor.org/rfc/rfc9113.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2022；stream/二进制帧/HPACK字段压缩，非内容gzip替代",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "kbuild",
+    "url": "https://docs.kernel.org/kbuild/kbuild.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "ARCH/CROSS_COMPILE/输出/INSTALL变量；目标内核固定版本",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "kbuild-modules",
+    "url": "https://docs.kernel.org/kbuild/modules.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "匹配构建树、modules_prepare与INSTALL_MOD_PATH；实际BSP须验证",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "rcu",
+    "url": "https://docs.kernel.org/RCU/whatisRCU.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "removal/reclamation/宽限期/API，RCU不自动串行化所有写者",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "seqlock",
+    "url": "https://docs.kernel.org/locking/seqlock.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "读侧重试/写侧串行化与指针生命周期，版本/配置为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "driver-infra",
+    "url": "https://docs.kernel.org/driver-api/infrastructure.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "device_create/dev_t/sysfs等API，目标头文件签名为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "devtmpfs-source",
+    "url": "https://github.com/torvalds/linux/blob/master/drivers/base/devtmpfs.c",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "主线滚动源码devtmpfs_create_node；配置/挂载行为另查部署",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "uboot-bootm",
+    "url": "https://docs.u-boot.org/en/latest/usage/cmd/bootm.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "FIT配置/子镜像和legacy位置参数；命令可用性依构建配置",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "uboot-booti",
+    "url": "https://docs.u-boot.org/en/latest/usage/cmd/booti.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "Image、initrd:size、占位减号、FDT地址与解压条件",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "arm64-boot",
+    "url": "https://docs.kernel.org/arch/arm64/booting.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "直接入口x0/DAIF/EL/MMU/cache；EFI/ARM32另查",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "workqueue",
+    "url": "https://docs.kernel.org/core-api/workqueue.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "threaded与WQ_BH上下文不同；cancel_work_sync只在无并发再入队时保证收敛",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "dns-tcp",
+    "url": "https://www.rfc-editor.org/rfc/rfc7766.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2016；§5通用实现需UDP/TCP，不只zone transfer用TCP",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "cookie",
+    "url": "https://www.rfc-editor.org/rfc/rfc6265.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2011基线；Cookie存name/value状态；现代扩展另查",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "jwt",
+    "url": "https://www.rfc-editor.org/rfc/rfc7519.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2015基线；JWS签名/MAC与JWE加密不同，非所有token都是JWT",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "http3",
+    "url": "https://www.rfc-editor.org/rfc/rfc9114.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2022；HTTP映射QUIC，不能一律TCP",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "rbtree",
+    "url": "https://docs.kernel.org/core-api/rbtree.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "rbtree复杂度/插删和实现；不当C++标准mandate",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "cpp-assoc",
+    "url": "https://eel.is/c++draft/associative.reqmts",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "滚动草案；有序关联键/复杂度，C++17示例不得套未来特性",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "cpp-unord",
+    "url": "https://eel.is/c++draft/unord.req",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "滚动草案；哈希相等约束/平均与最坏复杂度",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "boost-adj",
+    "url": "https://www.boost.org/doc/libs/1_85_0/libs/graph/doc/adjacency_list.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "固定1.85文档；V/E存储与容器选择，不是完整算法新增",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "boost-floyd",
+    "url": "https://www.boost.org/doc/libs/1_85_0/libs/graph/doc/floyd_warshall_shortest.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "固定1.85文档；负环检测/所有点对距离/O(V3)",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "mm-api",
+    "url": "https://docs.kernel.org/core-api/mm-api.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "内核分配/页API；目标版本/配置为准，旧经验上限非通用保证",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "highmem",
+    "url": "https://docs.kernel.org/mm/highmem.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "page映射返回虚拟地址及highmem生命周期，不能当物理地址API",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "device-io",
+    "url": "https://docs.kernel.org/driver-api/device-io.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "MMIO映射/访问器与物理映射，非普通RAM分配",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "listen2",
+    "url": "https://man7.org/linux/man-pages/man2/listen.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "backlog是待accept队列及somaxconn约束，非总连接容量",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "vmstat",
+    "url": "https://man7.org/linux/man-pages/man8/vmstat.8.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "-a活动/非活动内存，-s统计表；procps版本需对应",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "ld-options",
+    "url": "https://sourceware.org/binutils/docs/ld/Options.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "-l archive提取与--whole-archive区别；ELF/平台条件明确",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "glibc-loader",
+    "url": "https://sourceware.org/glibc/manual/latest/html_node/Dynamic-Linker.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "动态链接的重定位/查找/依赖结构；安全与速度不天然优劣",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "procfs",
+    "url": "https://docs.kernel.org/filesystems/proc.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "进程/系统观测接口；权限和namespace影响可见性",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "igmp",
+    "url": "https://www.rfc-editor.org/rfc/rfc3376.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "2002 IGMPv3；组播成员关系报告/查询，非传输数据协议",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "setpgid2",
+    "url": "https://man7.org/linux/man-pages/man2/setpgid.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "进程组ID/会话约束；shell job control依具体实现",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "setsid2",
+    "url": "https://man7.org/linux/man-pages/man2/setsid.2.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "创建会话及控制终端/进程组限制；不是任意脱离终端模板",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "pthread-exit",
+    "url": "https://man7.org/linux/man-pages/man3/pthread_exit.3.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "线程终止与最后线程终止的进程行为；资源与join需分别核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "driver-basics",
+    "url": "https://docs.kernel.org/driver-api/basics.html",
+    "verification": "正文相关条款/章节可读",
+    "read_scope": "模块加载/内建入口与退出差别；目标内核API签名与配置为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "source_id": "gnu-web-timeouts",
+    "url": "https://www.gnu.org/software/make/manual/",
+    "verification": "正文多次timeout，搜索摘要存在；未声称该站全文可读",
+    "read_scope": "已以GNU源文档镜像交叉核对",
+    "checked_date": "2026-10-10"
+  }
+]

@@ -1,0 +1,807 @@
+[
+  {
+    "id": "c11",
+    "title": "C11 委员会草案 N1570（2011）",
+    "url": "https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf",
+    "boundary": "公开草案，作为 C11 基线；不是最新版 C 标准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cpp-life",
+    "title": "C++ 工作草案：对象生命周期",
+    "url": "https://eel.is/c++draft/basic.life",
+    "boundary": "滚动草案；本仓库可运行代码限定 C++17",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cpp-race",
+    "title": "C++ 工作草案：数据竞争",
+    "url": "https://eel.is/c++draft/intro.races",
+    "boundary": "滚动草案；C++17 代码不能推定支持后续版本特性",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "volatile",
+    "title": "GCC：Volatiles",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Volatiles.html",
+    "boundary": "GCC 语义；volatile 不提供线程同步",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "ld",
+    "title": "GNU ld：Linker Scripts",
+    "url": "https://sourceware.org/binutils/docs/ld/Scripts.html",
+    "boundary": "GNU 工具链，不能直接照搬到所有商业链接器",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "lma",
+    "title": "GNU ld：Output Section LMA",
+    "url": "https://sourceware.org/binutils/docs/ld/Output-Section-LMA.html",
+    "boundary": "链接脚本的装载地址与运行地址",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cmake",
+    "title": "CMake：Toolchains",
+    "url": "https://cmake.org/cmake/help/latest/manual/cmake-toolchains.7.html",
+    "boundary": "滚动文档；使用前核对本机 CMake 版本",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "asan",
+    "title": "Clang：AddressSanitizer",
+    "url": "https://clang.llvm.org/docs/AddressSanitizer.html",
+    "boundary": "主机动态检查；不是裸机硬件测试",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "ubsan",
+    "title": "Clang：UndefinedBehaviorSanitizer",
+    "url": "https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html",
+    "boundary": "只能发现执行路径上的部分 UB",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "nvic",
+    "title": "Arm CMSIS-Core 6：NVIC",
+    "url": "https://arm-software.github.io/CMSIS_6/latest/Core/group__NVIC__gr.html",
+    "boundary": "Cortex-M；芯片实现的优先级位数依设备变化",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "abi",
+    "title": "Arm AAPCS32",
+    "url": "https://github.com/ARM-software/abi-aa/blob/main/aapcs32/aapcs32.rst",
+    "boundary": "AArch32 调用约定；ABI 与编译选项必须一致",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "timer",
+    "title": "ST AN4776：通用定时器",
+    "url": "https://www.st.com/resource/en/application_note/an4776-generalpurpose-timer-cookbook-for-stm32-microcontrollers-stmicroelectronics.pdf",
+    "boundary": "STM32 定时器入门；具体功能以所选芯片 RM 为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "dma-cache",
+    "title": "ST AN4839：F7 / H7 一级缓存",
+    "url": "https://www.st.com/resource/en/application_note/an4839-level-1-cache-on-stm32f7-series-and-stm32h7-series-stmicroelectronics.pdf",
+    "boundary": "仅针对相应 Cortex-M7 F7/H7，不能套用于所有 STM32",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "i2c",
+    "title": "NXP UM10204：I²C 规范",
+    "url": "https://cache.nxp.com/docs/en/user-guide/UM10204.pdf?fsrch=1&pageNum=1&sr=3",
+    "boundary": "Rev.7，2021；模式和时序需逐项核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rtos-book",
+    "title": "FreeRTOS Kernel Book：中断与同步",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel-Book/blob/main/ch07.md",
+    "boundary": "以单核 Cortex-M 常见移植为教学语境；项目需固定实际内核版本",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rtos-mutex",
+    "title": "FreeRTOS：Mutexes",
+    "url": "https://freertos.org/Real-time-embedded-RTOS-mutexes.html",
+    "boundary": "官方页面与 Kernel Book 对照；优先级继承为简化机制",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rtos-schedule",
+    "title": "FreeRTOS：Task scheduling",
+    "url": "https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/01-Tasks-and-co-routines/04-Task-scheduling",
+    "boundary": "调度行为受抢占、时间片、tick 和 SMP 配置影响",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rtos-heap",
+    "title": "FreeRTOS：Memory management",
+    "url": "https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/09-Memory-management/01-Memory-management",
+    "boundary": "heap_1..heap_5 取舍依实际内核版本核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "epoll",
+    "title": "Linux man-pages：epoll(7)",
+    "url": "https://man7.org/linux/man-pages/man7/epoll.7.html",
+    "boundary": "Linux API；ET 模式要求非阻塞与处理至 EAGAIN",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "mmap",
+    "title": "Linux man-pages：mmap(2)",
+    "url": "https://man7.org/linux/man-pages/man2/mmap.2.html",
+    "boundary": "映射不等于自动一致性、持久性或生命周期安全",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "vfs",
+    "title": "Linux kernel：VFS",
+    "url": "https://docs.kernel.org/filesystems/vfs.html",
+    "boundary": "滚动内核文档；编写模块时固定目标内核",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "locks",
+    "title": "Linux kernel：Lock types",
+    "url": "https://docs.kernel.org/locking/locktypes.html",
+    "boundary": "PREEMPT_RT 改变部分锁语义，不能套用普通内核简化结论",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "ioctl",
+    "title": "Linux kernel：ioctl",
+    "url": "https://docs.kernel.org/driver-api/ioctl.html",
+    "boundary": "用户/内核 ABI 需跨架构与兼容处理",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "dt",
+    "title": "Linux kernel：Device Tree usage model",
+    "url": "https://docs.kernel.org/devicetree/usage-model.html",
+    "boundary": "DT 描述硬件；binding 与平台支持需匹配",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "dma-linux",
+    "title": "Linux kernel：DMA API HOWTO",
+    "url": "https://docs.kernel.org/core-api/dma-api-howto.html",
+    "boundary": "DMA 地址不等于 CPU 虚拟地址，API 因架构而实现",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gpio-linux",
+    "title": "Linux kernel：GPIO descriptor consumer",
+    "url": "https://docs.kernel.org/driver-api/gpio/consumer.html",
+    "boundary": "GPIO 描述符 API；睡眠性由控制器决定",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "kunit",
+    "title": "Linux kernel：KUnit",
+    "url": "https://docs.kernel.org/dev-tools/kunit/index.html",
+    "boundary": "内核单元测试框架，不代表真实板级集成测试",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "kselftest",
+    "title": "Linux kernel：kselftest",
+    "url": "https://docs.kernel.org/dev-tools/kselftest.html",
+    "boundary": "测试内核用户空间接口，测试范围需明确",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "uboot-init",
+    "title": "U-Boot：Initialization",
+    "url": "https://docs.u-boot.org/en/latest/develop/init.html",
+    "boundary": "平台初始化流程可不同，记录选型版本",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "uboot-spl",
+    "title": "U-Boot：SPL",
+    "url": "https://docs.u-boot.org/en/latest/develop/spl.html",
+    "boundary": "SPL/TPL/VPL 为可选组件，非所有平台固定必经",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "buildroot",
+    "title": "Buildroot manual",
+    "url": "https://buildroot.org/downloads/manual/manual.html",
+    "boundary": "本次核查页标 2026.08；不可将滚动链接视为永久版本快照",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "openocd",
+    "title": "OpenOCD：GDB and OpenOCD",
+    "url": "https://openocd.org/doc/html/GDB-and-OpenOCD.html",
+    "boundary": "真实调试依目标/探针/硬件断点与观察点能力",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "tcp",
+    "title": "IETF RFC 9293：TCP",
+    "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+    "boundary": "2022 Internet Standard；TCP 是字节流",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "udp",
+    "title": "IETF RFC 768：UDP",
+    "url": "https://www.rfc-editor.org/rfc/rfc768.html",
+    "boundary": "UDP 保留数据报边界，但不提供 TCP 的交付保证",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rm0090",
+    "title": "ST RM0090：STM32F4 参考手册",
+    "url": "https://www.st.com/resource/en/reference_manual/rm0090-stm32f405415-stm32f407417-stm32f427437-and-stm32f429439-advanced-armbased-32bit-mcus-stmicroelectronics.pdf",
+    "boundary": "官方目录/响应已核验，正文因工具 10 MB 上限未完整读取；寄存器级用法必须再查",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "adc",
+    "title": "ST AN2834：ADC 精度",
+    "url": "https://www.st.com/resource/en/application_note/an2834-how-to-optimize-the-adc-accuracy-in-the-stm32-mcus-stmicroelectronics.pdf",
+    "boundary": "Rev 10，2024-10；不同器件 ADC 能力不同",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "pm0214",
+    "title": "ST PM0214：Cortex-M4",
+    "url": "https://www.st.com/resource/en/programming_manual/pm0214-stm32-cortexm4-mcus-and-mpus-programming-manual-stmicroelectronics.pdf",
+    "boundary": "Cortex-M4 编程手册，不泛化至 M0/M7/A 核",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "can",
+    "title": "CiA：Classic CAN",
+    "url": "https://www.can-cia.org/can-knowledge/can-cc",
+    "boundary": "CAN CC；不等同 CAN FD 或某 MCU 的具体控制器实现",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "canfd",
+    "title": "CiA：CAN FD",
+    "url": "https://can-cia.org/can-knowledge/can-fd-the-basic-idea",
+    "boundary": "CAN FD 概念；F4 bxCAN 不等于 FDCAN",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "modbus",
+    "title": "Modbus Organization：规范入口",
+    "url": "https://www.modbus.org/modbus-specifications",
+    "boundary": "官方列 Serial Line V1.02 与应用协议；具体文档许可/访问按原站",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "read",
+    "title": "Linux man-pages：read(2)",
+    "url": "https://man7.org/linux/man-pages/man2/read.2.html",
+    "boundary": "返回值与 EINTR/EAGAIN，目标 libc/内核仍需核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "write",
+    "title": "Linux man-pages：write(2)",
+    "url": "https://man7.org/linux/man-pages/man2/write.2.html",
+    "boundary": "短写、错误与持久化边界",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "pthread",
+    "title": "Linux man-pages：pthreads(7)",
+    "url": "https://man7.org/linux/man-pages/man7/pthreads.7.html",
+    "boundary": "POSIX 线程实现与共享属性",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cond",
+    "title": "Linux man-pages：condition variables",
+    "url": "https://www.man7.org/linux/man-pages/man3/pthread_cond_signal.3.html",
+    "boundary": "等待释放/重新取得 mutex；实际条件属性核对 libc",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "signal",
+    "title": "Linux man-pages：signal-safety(7)",
+    "url": "https://man7.org/linux/man-pages/man7/signal-safety.7.html",
+    "boundary": "async-signal-safe 的列表与解释",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "pipe",
+    "title": "Linux man-pages：pipe(7)",
+    "url": "https://man7.org/linux/man-pages/man7/pipe.7.html",
+    "boundary": "字节流、EOF/SIGPIPE 与原子写范围",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "socket",
+    "title": "Linux man-pages：socket(7)",
+    "url": "https://man7.org/linux/man-pages/man7/socket.7.html",
+    "boundary": "Linux socket API 与事件",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cpp17",
+    "title": "C++17 工作草案 N4659",
+    "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf",
+    "boundary": "2017公开工作草案，不是正式ISO出版文本",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "guidelines",
+    "title": "C++ Core Guidelines",
+    "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+    "boundary": "工程建议而非语言标准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "dns",
+    "title": "IETF RFC 1034：DNS Concepts",
+    "url": "https://www.rfc-editor.org/rfc/rfc1034.html",
+    "boundary": "DNS 基础，现代扩展另查对应 RFC",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "arp",
+    "title": "IETF RFC 826：ARP",
+    "url": "https://www.rfc-editor.org/rfc/rfc826.html",
+    "boundary": "以太网 IPv4 地址解析；IPv6 使用不同机制",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "tls",
+    "title": "IETF RFC 8446：TLS 1.3",
+    "url": "https://www.rfc-editor.org/rfc/rfc8446.html",
+    "boundary": "2018；本页只限定 TLS1.3 基础，不描述所有 HTTPS 传输为 TCP",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "timerfd",
+    "title": "Linux man-pages：timerfd_create(2)",
+    "url": "https://man7.org/linux/man-pages/man2/timerfd_create.2.html",
+    "boundary": "Linux timerfd，读计数和时钟选择需核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "nanosleep",
+    "title": "Linux man-pages：clock_nanosleep(2)",
+    "url": "https://man7.org/linux/man-pages/man2/clock_nanosleep.2.html",
+    "boundary": "绝对时刻等待不保证立即调度",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "allocation",
+    "title": "Linux kernel：Memory Allocation Guide",
+    "url": "https://docs.kernel.org/core-api/memory-allocation.html",
+    "boundary": "GFP与分配接口依上下文、大小和目标内核",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "initramfs",
+    "title": "Linux kernel：ramfs/rootfs/initramfs",
+    "url": "https://docs.kernel.org/filesystems/ramfs-rootfs-initramfs.html",
+    "boundary": "initramfs cpio解包与历史initrd机制区分",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gcc-macro",
+    "title": "GCC：Macro Pitfalls",
+    "url": "https://gcc.gnu.org/onlinedocs/cpp/Macro-Pitfalls.html",
+    "boundary": "GCC预处理官方文档；重复求值与单语句宏；语句表达式/typeof为扩展，不作为C11正例",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gcc-inline",
+    "title": "GCC：Inline",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Inline.html",
+    "boundary": "GCC实现；C99/C11、GNU89、C++链接语义分开；inline不保证展开",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "strtol",
+    "title": "Linux man-pages：strtol(3)",
+    "url": "https://man7.org/linux/man-pages/man3/strtol.3.html",
+    "boundary": "维护者原始API文档，C11示例固定base10；页面含C23/glibc2.38新增0b语义，不能套到全部旧环境",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cxx-abi",
+    "title": "Itanium C++ ABI",
+    "url": "https://itanium-cxx-abi.github.io/cxx-abi/abi.html",
+    "boundary": "特定ABI，不是C++标准或所有Arm/Windows布局；虚表组、构造虚表与数组cookie",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "malloc-linux",
+    "title": "Linux man-pages：malloc(3)",
+    "url": "https://man7.org/linux/man-pages/man3/malloc.3.html",
+    "boundary": "Linux/glibc等环境的API说明；overcommit、映射和资源限制不可套到裸机",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "irq-generic",
+    "title": "Linux kernel：Generic IRQ handling",
+    "url": "https://docs.kernel.org/core-api/genericirq.html",
+    "boundary": "滚动内核文档；request_irq/threaded-IRQ的参数与结果，不能类推Cortex-M入口",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "linux-rt",
+    "title": "Linux kernel：Real-time preemption",
+    "url": "https://docs.kernel.org/core-api/real-time/index.html",
+    "boundary": "PREEMPT_RT机制；支持配置不等于对任意应用保证deadline",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "proc-stat",
+    "title": "Linux man-pages：proc_pid_stat(5)",
+    "url": "https://man7.org/linux/man-pages/man5/proc_pid_stat.5.html",
+    "boundary": "Linux观察状态，与教科书五状态不同；R含运行或可运行，D/Z不能直接等同一般阻塞/结束",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rtos-task-source",
+    "title": "FreeRTOS Kernel：tasks.c",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/tasks.c",
+    "boundary": "官方源码滚动main；核验时间片与合作任务机制，教学需固定实际版本/单核或SMP",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rtos-queue-source",
+    "title": "FreeRTOS Kernel：queue.h",
+    "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/include/queue.h",
+    "boundary": "官方源码滚动main；uxQueueLength是最大项数且按值拷贝，任务通知与事件组语义单独核验",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "fork2",
+    "title": "Linux man-pages fork(2)",
+    "url": "https://man7.org/linux/man-pages/man2/fork.2.html",
+    "boundary": "Linux/POSIX；DESCRIPTION/NOTES，COW及多线程fork安全边界",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "execve2",
+    "title": "Linux man-pages execve(2)",
+    "url": "https://man7.org/linux/man-pages/man2/execve.2.html",
+    "boundary": "Linux用户态；DESCRIPTION/NOTES，替换程序不创建新PID",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "wait2",
+    "title": "Linux man-pages wait(2)",
+    "url": "https://man7.org/linux/man-pages/man2/wait.2.html",
+    "boundary": "返回值/状态宏/NOTES，zombie与subreaper；容器依namespace",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "open2",
+    "title": "Linux man-pages open(2)",
+    "url": "https://man7.org/linux/man-pages/man2/open.2.html",
+    "boundary": "DESCRIPTION/NOTES；fd与open file description，标志层次",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "dup2",
+    "title": "Linux man-pages dup(2)",
+    "url": "https://man7.org/linux/man-pages/man2/dup.2.html",
+    "boundary": "DESCRIPTION；共享偏移/文件状态与独立fd标志",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "unlink2",
+    "title": "Linux man-pages unlink(2)",
+    "url": "https://man7.org/linux/man-pages/man2/unlink.2.html",
+    "boundary": "DESCRIPTION；删除名字与打开引用生命周期",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "linux-sched",
+    "title": "Linux man-pages sched(7)",
+    "url": "https://man7.org/linux/man-pages/man7/sched.7.html",
+    "boundary": "调度策略、实时优先级与权限边界，目标配置为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "linux-eevdf",
+    "title": "Linux kernel EEVDF Scheduler",
+    "url": "https://docs.kernel.org/scheduler/sched-eevdf.html",
+    "boundary": "滚动内核文档；当前公平调度模型，旧CFS内核不能照套",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "page-tables",
+    "title": "Linux kernel Page Tables",
+    "url": "https://docs.kernel.org/mm/page_tables.html",
+    "boundary": "MMU/TLB/Page Faults；有MMU语境，不把swap作虚拟内存必要条件",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gnu-make",
+    "title": "GNU Make manual源文档镜像",
+    "url": "https://raw.githubusercontent.com/mirror/make/master/doc/make.texi",
+    "boundary": "GNU作者源文档镜像正文已读相关章节；GNU站点正文多次超时；Automatic Variables/Text Functions/Automatic Prerequisites",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "gcc-deps",
+    "title": "GCC Preprocessor Options",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Preprocessor-Options.html",
+    "boundary": "-M/-MF/-MD/-MMD/-MP；GCC滚动版本，非所有编译器通用",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cond-wait",
+    "title": "POSIX pthread_cond_wait",
+    "url": "https://man7.org/linux/man-pages/man3/pthread_cond_wait.3p.html",
+    "boundary": "谓词重检查/虚假唤醒/原子释放再获取mutex",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "select2",
+    "title": "Linux man-pages select(2)",
+    "url": "https://man7.org/linux/man-pages/man2/select.2.html",
+    "boundary": "fd_set/FD_SETSIZE、修改集合；glibc与内核接口需区分",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "resource2",
+    "title": "Linux man-pages getrlimit(2)",
+    "url": "https://man7.org/linux/man-pages/man2/getrlimit.2.html",
+    "boundary": "RLIMIT_NOFILE；只读预算核对，不建议随意扩大系统限制",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "http-semantics",
+    "title": "IETF RFC9110 HTTP Semantics",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "boundary": "2022；§7.2 Host、§9方法/幂等、§10.1.1 Expect",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "http1-framing",
+    "title": "IETF RFC9112 HTTP1.1",
+    "url": "https://www.rfc-editor.org/rfc/rfc9112.html",
+    "boundary": "2022；§6.3定界优先级、§7chunked、§11.2请求走私",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "http2",
+    "title": "IETF RFC9113 HTTP2",
+    "url": "https://www.rfc-editor.org/rfc/rfc9113.html",
+    "boundary": "2022；stream/二进制帧/HPACK字段压缩，非内容gzip替代",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "kbuild",
+    "title": "Linux Kbuild",
+    "url": "https://docs.kernel.org/kbuild/kbuild.html",
+    "boundary": "ARCH/CROSS_COMPILE/输出/INSTALL变量；目标内核固定版本",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "kbuild-modules",
+    "title": "Linux Building External Modules",
+    "url": "https://docs.kernel.org/kbuild/modules.html",
+    "boundary": "匹配构建树、modules_prepare与INSTALL_MOD_PATH；实际BSP须验证",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rcu",
+    "title": "Linux What is RCU",
+    "url": "https://docs.kernel.org/RCU/whatisRCU.html",
+    "boundary": "removal/reclamation/宽限期/API，RCU不自动串行化所有写者",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "seqlock",
+    "title": "Linux Sequence counters and seqlocks",
+    "url": "https://docs.kernel.org/locking/seqlock.html",
+    "boundary": "读侧重试/写侧串行化与指针生命周期，版本/配置为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "driver-infra",
+    "title": "Linux Device drivers infrastructure",
+    "url": "https://docs.kernel.org/driver-api/infrastructure.html",
+    "boundary": "device_create/dev_t/sysfs等API，目标头文件签名为准",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "devtmpfs-source",
+    "title": "Linux主线devtmpfs源码",
+    "url": "https://github.com/torvalds/linux/blob/master/drivers/base/devtmpfs.c",
+    "boundary": "主线滚动源码devtmpfs_create_node；配置/挂载行为另查部署",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "uboot-bootm",
+    "title": "U-Boot bootm command",
+    "url": "https://docs.u-boot.org/en/latest/usage/cmd/bootm.html",
+    "boundary": "FIT配置/子镜像和legacy位置参数；命令可用性依构建配置",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "uboot-booti",
+    "title": "U-Boot booti command",
+    "url": "https://docs.u-boot.org/en/latest/usage/cmd/booti.html",
+    "boundary": "Image、initrd:size、占位减号、FDT地址与解压条件",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "arm64-boot",
+    "title": "Linux Booting AArch64",
+    "url": "https://docs.kernel.org/arch/arm64/booting.html",
+    "boundary": "直接入口x0/DAIF/EL/MMU/cache；EFI/ARM32另查",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "workqueue",
+    "title": "Linux Workqueue",
+    "url": "https://docs.kernel.org/core-api/workqueue.html",
+    "boundary": "threaded与WQ_BH上下文不同；cancel_work_sync只在无并发再入队时保证收敛",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "dns-tcp",
+    "title": "IETF RFC7766 DNS over TCP",
+    "url": "https://www.rfc-editor.org/rfc/rfc7766.html",
+    "boundary": "2016；§5通用实现需UDP/TCP，不只zone transfer用TCP",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cookie",
+    "title": "IETF RFC6265 HTTP State Management",
+    "url": "https://www.rfc-editor.org/rfc/rfc6265.html",
+    "boundary": "2011基线；Cookie存name/value状态；现代扩展另查",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "jwt",
+    "title": "IETF RFC7519 JSON Web Token",
+    "url": "https://www.rfc-editor.org/rfc/rfc7519.html",
+    "boundary": "2015基线；JWS签名/MAC与JWE加密不同，非所有token都是JWT",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "http3",
+    "title": "IETF RFC9114 HTTP3",
+    "url": "https://www.rfc-editor.org/rfc/rfc9114.html",
+    "boundary": "2022；HTTP映射QUIC，不能一律TCP",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "rbtree",
+    "title": "Linux Red-black Trees",
+    "url": "https://docs.kernel.org/core-api/rbtree.html",
+    "boundary": "rbtree复杂度/插删和实现；不当C++标准mandate",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cpp-assoc",
+    "title": "C++ associative container requirements",
+    "url": "https://eel.is/c++draft/associative.reqmts",
+    "boundary": "滚动草案；有序关联键/复杂度，C++17示例不得套未来特性",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "cpp-unord",
+    "title": "C++ unordered container requirements",
+    "url": "https://eel.is/c++draft/unord.req",
+    "boundary": "滚动草案；哈希相等约束/平均与最坏复杂度",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "boost-adj",
+    "title": "Boost Graph adjacency_list",
+    "url": "https://www.boost.org/doc/libs/1_85_0/libs/graph/doc/adjacency_list.html",
+    "boundary": "固定1.85文档；V/E存储与容器选择，不是完整算法新增",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "boost-floyd",
+    "title": "Boost Graph Floyd-Warshall",
+    "url": "https://www.boost.org/doc/libs/1_85_0/libs/graph/doc/floyd_warshall_shortest.html",
+    "boundary": "固定1.85文档；负环检测/所有点对距离/O(V3)",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "mm-api",
+    "title": "Linux Memory Management APIs",
+    "url": "https://docs.kernel.org/core-api/mm-api.html",
+    "boundary": "内核分配/页API；目标版本/配置为准，旧经验上限非通用保证",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "highmem",
+    "title": "Linux High Memory Handling",
+    "url": "https://docs.kernel.org/mm/highmem.html",
+    "boundary": "page映射返回虚拟地址及highmem生命周期，不能当物理地址API",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "device-io",
+    "title": "Linux Bus-independent device access",
+    "url": "https://docs.kernel.org/driver-api/device-io.html",
+    "boundary": "MMIO映射/访问器与物理映射，非普通RAM分配",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "listen2",
+    "title": "Linux man-pages listen(2)",
+    "url": "https://man7.org/linux/man-pages/man2/listen.2.html",
+    "boundary": "backlog是待accept队列及somaxconn约束，非总连接容量",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "vmstat",
+    "title": "procps vmstat manual",
+    "url": "https://man7.org/linux/man-pages/man8/vmstat.8.html",
+    "boundary": "-a活动/非活动内存，-s统计表；procps版本需对应",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "ld-options",
+    "title": "GNU ld Options",
+    "url": "https://sourceware.org/binutils/docs/ld/Options.html",
+    "boundary": "-l archive提取与--whole-archive区别；ELF/平台条件明确",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "glibc-loader",
+    "title": "GNU C Library Dynamic Linker",
+    "url": "https://sourceware.org/glibc/manual/latest/html_node/Dynamic-Linker.html",
+    "boundary": "动态链接的重定位/查找/依赖结构；安全与速度不天然优劣",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "procfs",
+    "title": "Linux proc filesystem",
+    "url": "https://docs.kernel.org/filesystems/proc.html",
+    "boundary": "进程/系统观测接口；权限和namespace影响可见性",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "igmp",
+    "title": "IETF RFC3376 IGMPv3",
+    "url": "https://www.rfc-editor.org/rfc/rfc3376.html",
+    "boundary": "2002 IGMPv3；组播成员关系报告/查询，非传输数据协议",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "setpgid2",
+    "title": "Linux man-pages setpgid(2)",
+    "url": "https://man7.org/linux/man-pages/man2/setpgid.2.html",
+    "boundary": "进程组ID/会话约束；shell job control依具体实现",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "setsid2",
+    "title": "Linux man-pages setsid(2)",
+    "url": "https://man7.org/linux/man-pages/man2/setsid.2.html",
+    "boundary": "创建会话及控制终端/进程组限制；不是任意脱离终端模板",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "pthread-exit",
+    "title": "Linux man-pages pthread_exit(3)",
+    "url": "https://man7.org/linux/man-pages/man3/pthread_exit.3.html",
+    "boundary": "线程终止与最后线程终止的进程行为；资源与join需分别核对",
+    "checked_date": "2026-10-10"
+  },
+  {
+    "id": "driver-basics",
+    "title": "Linux driver basics module_init/module_exit",
+    "url": "https://docs.kernel.org/driver-api/basics.html",
+    "boundary": "模块加载/内建入口与退出差别；目标内核API签名与配置为准",
+    "checked_date": "2026-10-10"
+  }
+]
