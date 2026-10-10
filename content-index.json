@@ -320,6 +320,74 @@
       ]
     },
     {
+      "path": "docs/120-interviews/README.md",
+      "title": "公开面经 → 原理 → 故障场景",
+      "module": "interview",
+      "question_ids": []
+    },
+    {
+      "path": "docs/120-interviews/ic01.md",
+      "title": "IC01 · UART中断把队列塞满，偶发丢命令",
+      "module": "interview",
+      "question_ids": [
+        "IC01"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/ic02.md",
+      "title": "IC02 · 停止采集后删队列，下一次中断 HardFault",
+      "module": "interview",
+      "question_ids": [
+        "IC02"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/ic03.md",
+      "title": "IC03 · Cortex-M7 DMA接收结束，CPU仍读到旧帧",
+      "module": "interview",
+      "question_ids": [
+        "IC03"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/ic04.md",
+      "title": "IC04 · Linux DMA收发环，指针地址与缓存所有权混用",
+      "module": "interview",
+      "question_ids": [
+        "IC04"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/ic05.md",
+      "title": "IC05 · OTA在擦除、复制或状态写入时断电",
+      "module": "interview",
+      "question_ids": [
+        "IC05"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/ic06.md",
+      "title": "IC06 · 新固件能启动，却在一分钟后故障，如何确认升级",
+      "module": "interview",
+      "question_ids": [
+        "IC06"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/ic07.md",
+      "title": "IC07 · Linux设备remove后，打开的fd和异步worker仍访问旧对象",
+      "module": "interview",
+      "question_ids": [
+        "IC07"
+      ]
+    },
+    {
+      "path": "docs/120-interviews/source-catalog.md",
+      "title": "公开自报面经目录：17份新增完整页面",
+      "module": "interview",
+      "question_ids": []
+    },
+    {
       "path": "docs/130-reference/coverage-boundaries.md",
       "title": "知道已经做了什么，也知道还没有做什么",
       "module": "reference",
@@ -3652,6 +3720,55 @@
       "anchor": "直接回答",
       "kind": "question",
       "relative_path": "docs/90-boot-rootfs/bt08.md"
+    },
+    {
+      "id": "IC01",
+      "title": "UART中断把队列塞满，偶发丢命令",
+      "path": "docs/120-interviews/ic01.md",
+      "module": "interview",
+      "kind": "original_scenario"
+    },
+    {
+      "id": "IC02",
+      "title": "停止采集后删队列，下一次中断 HardFault",
+      "path": "docs/120-interviews/ic02.md",
+      "module": "interview",
+      "kind": "original_scenario"
+    },
+    {
+      "id": "IC03",
+      "title": "Cortex-M7 DMA接收结束，CPU仍读到旧帧",
+      "path": "docs/120-interviews/ic03.md",
+      "module": "interview",
+      "kind": "original_scenario"
+    },
+    {
+      "id": "IC04",
+      "title": "Linux DMA收发环，指针地址与缓存所有权混用",
+      "path": "docs/120-interviews/ic04.md",
+      "module": "interview",
+      "kind": "original_scenario"
+    },
+    {
+      "id": "IC05",
+      "title": "OTA在擦除、复制或状态写入时断电",
+      "path": "docs/120-interviews/ic05.md",
+      "module": "interview",
+      "kind": "original_scenario"
+    },
+    {
+      "id": "IC06",
+      "title": "新固件能启动，却在一分钟后故障，如何确认升级",
+      "path": "docs/120-interviews/ic06.md",
+      "module": "interview",
+      "kind": "original_scenario"
+    },
+    {
+      "id": "IC07",
+      "title": "Linux设备remove后，打开的fd和异步worker仍访问旧对象",
+      "path": "docs/120-interviews/ic07.md",
+      "module": "interview",
+      "kind": "original_scenario"
     },
     {
       "id": "LC1",

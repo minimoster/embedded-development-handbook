@@ -14,6 +14,10 @@ for m in modules:
     if not qs:continue
     summary.append({'module':m['id'],'label':m['label'],'original_core_count':len(qs)})
     lines += [f"## {m['label']} · {len(qs)}主题",'']+[f"- [{q['id']} · {q['title']}]({q['path']}) · {q['priority']}" for q in qs]+['']
+interviewfile=R/'docs/120-interviews/manifest.json'
+interview=json.loads(interviewfile.read_text()) if interviewfile.exists() else {'cards':[],'counts':{}}
+if interview['cards']:
+    lines += [f"## 公开面经与原创故障场景 · {len(interview['cards'])}卡",'',f"{interview['counts']['new_full_public_pages']}份新增完整自报页面，试读和无日期GitHub日志另列；场景不计入120核心主题或Hot100。",'', '- [来源日期、岗位与学习导航](docs/120-interviews/README.md)', '- [公开自报目录](docs/120-interviews/source-catalog.md)']+[f"- [{c['id']} · {c['title']}]({c['path']})" for c in interview['cards']]+['']
 lines+=['## Hot100 · C++17','','- [学习路线、完整题单与测试](docs/80-hot100-cpp/README.md)','- [源码与编译](algorithms/cpp/README.md)','']
 for c in hot.get('categories',[]):
     ps=[p for p in hot['problems'] if p['category']==c['name']]
@@ -21,5 +25,5 @@ for c in hot.get('categories',[]):
 if hot.get('supplementary'):
     lines += ['### 额外公开练习：不计入官方100','']+[f"- [LC{p['id']} · {p['title_zh']}]({p['doc_path']})" for p in hot['supplementary']]+['']
 (R/'QUESTION_INDEX.md').write_text('\n'.join(lines))
-(R/'coverage/topic-summary.json').write_text(json.dumps({'checked_date':'2026-10-10','core_count':len(core),'core_modules':summary,'official_hot100_count':len(hot['problems']),'supplementary_count':len(hot.get('supplementary',[]))},ensure_ascii=False,indent=2)+'\n')
+(R/'coverage/topic-summary.json').write_text(json.dumps({'checked_date':'2026-10-10','core_count':len(core),'original_interview_scenario_count':len(interview['cards']),'new_full_public_interview_pages':interview['counts'].get('new_full_public_pages',0),'core_modules':summary,'official_hot100_count':len(hot['problems']),'supplementary_count':len(hot.get('supplementary',[]))},ensure_ascii=False,indent=2)+'\n')
 print(f"Index regenerated: {len(core)} core + {len(hot['problems'])} official + {len(hot.get('supplementary',[]))} supplementary")

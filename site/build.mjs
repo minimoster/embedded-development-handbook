@@ -17,15 +17,18 @@ const hotpath='docs/80-hot100-cpp/manifest.json';
 const hot=fs.existsSync(path.join(root,hotpath))?JSON.parse(fs.readFileSync(path.join(root,hotpath),'utf8')):{problems:[],supplementary:[],categories:[]};
 if(!/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(config.repository_url))throw Error('Invalid source repository');
 const sourceUrl=(file,anchor='')=>`${config.repository_url}/blob/${encodeURIComponent(config.branch)}/${file.split('/').map(encodeURIComponent).join('/')}${anchor?'#'+encodeURIComponent(anchor):''}`;
+const scenarioPath='docs/120-interviews/manifest.json';
+const interviews=fs.existsSync(path.join(root,scenarioPath))?JSON.parse(fs.readFileSync(path.join(root,scenarioPath),'utf8')):{cards:[],counts:{}};
+const scenarios=new Map(interviews.cards.map(c=>[c.path,c]));
 const indexed=new Map(core.questions.map(q=>[q.path,q]));
 const problems=new Map([...hot.problems,...(hot.supplementary||[])].map(p=>[p.doc_path,p]));
 const files=[...new Set([...['docs','sources','coverage','examples','algorithms'].flatMap(d=>walk(d).filter(f=>f.endsWith('.md'))),'README.md','QUESTION_INDEX.md','VERSIONS.md','CHANGELOG.md','CONTRIBUTING.md','LICENSE.md','site/README.md'])].filter(f=>fs.existsSync(path.join(root,f))).sort();
 const fileSet=new Set(files),resources=new Set(),broken=[];
-const inputs=['site/config.json','coverage/core-question-manifest.json',...(fs.existsSync(path.join(root,hotpath))?[hotpath]:[])].map(f=>[f,fs.readFileSync(path.join(root,f))]);
+const inputs=['site/config.json','coverage/core-question-manifest.json',...(fs.existsSync(path.join(root,scenarioPath))?[scenarioPath]:[]),...(fs.existsSync(path.join(root,hotpath))?[hotpath]:[])].map(f=>[f,fs.readFileSync(path.join(root,f))]);
 const docs=[];
 for(const file of files){
  const source=fs.readFileSync(path.join(root,file),'utf8');inputs.push([file,source]);
- const q=indexed.get(file),p=problems.get(file);
+ const q=indexed.get(file),p=problems.get(file),c=scenarios.get(file);
  const module=config.modules.find(m=>file.startsWith(`docs/${m.folder}/`))||config.modules.find(m=>m.id==='reference');
  const title=plain(source.match(/^# (.+)$/m)?.[1]||file),headings=[],sections=[],ids=new Set();
  const renderer=new Renderer();let nextAnchor='';
@@ -61,18 +64,18 @@ for(const file of files){
  }
  if(answer)html+='</div></details>';if(section.text.trim())sections.push(section);
  const summary=(sections.find(s=>s.heading==='直接回答')||sections.find(s=>s.text.length>50))?.text.replace(/\s+/g,' ').trim().slice(0,180)||module.description;
- docs.push({path:file,sourceUrl:sourceUrl(file),title,module:module.id,moduleName:module.label,category:p?.category||module.label,difficulty:p?.difficulty||null,problemId:p?.id||null,supplemental:Boolean(p?.supplemental),questionIds:q?[q.id]:p?[`LC${p.id}`]:[],priorities:q?[q.priority]:[],kind:p?'problem':q?'question':path.basename(file)==='README.md'?'overview':'chapter',summary,minutes:Math.max(1,Math.ceil(source.replace(/\s/g,'').length/450)),headings,sections,html,source});
+ docs.push({path:file,sourceUrl:sourceUrl(file),title,module:module.id,moduleName:module.label,category:p?.category||c?.category||module.label,difficulty:p?.difficulty||null,problemId:p?.id||null,supplemental:Boolean(p?.supplemental),questionIds:q?[q.id]:p?[`LC${p.id}`]:c?[c.id]:[],priorities:q?[q.priority]:[],kind:p?'problem':q?'question':c?'scenario':path.basename(file)==='README.md'?'overview':'chapter',summary,minutes:Math.max(1,Math.ceil(source.replace(/\s/g,'').length/450)),headings,sections,html,source});
 }
 if(broken.length)throw Error('Broken local links:\n'+JSON.stringify(broken,null,2));
 const hashFiles=new Set(inputs.map(([f])=>f));
 for(const f of [...resources].sort()){if(!hashFiles.has(f))inputs.push([f,fs.readFileSync(path.join(root,f))]);}
 const sourceHash=crypto.createHash('sha256').update(inputs.sort(([a],[b])=>a.localeCompare(b,'en')).map(([f,b])=>`${f}\0${b}`).join('\0')).digest('hex');
 const algDocs=docs.filter(d=>d.module==='hot100cpp'&&d.problemId&&!d.supplemental);
-const data={schemaVersion:'1.0',repositoryUrl:config.repository_url,checkedDate:config.checked_date,sourceHash,coreCount:core.questions.length,questionCount:core.questions.length+algDocs.length,hot100Count:algDocs.length,hot100Expected:hot.problems.length,supplementaryCount:docs.filter(d=>d.supplemental).length,hot100Categories:hot.categories.map(c=>c.name),modules:config.modules.map(m=>({...m,count:docs.filter(d=>d.module===m.id).length,countUnit:'篇文档'})),docs};
+const data={schemaVersion:'1.0',repositoryUrl:config.repository_url,checkedDate:config.checked_date,sourceHash,coreCount:core.questions.length,originalScenarioCount:interviews.cards.length,newPublicReportCount:interviews.counts.new_full_public_pages||0,interviewCounts:interviews.counts,questionCount:core.questions.length+algDocs.length,hot100Count:algDocs.length,hot100Expected:hot.problems.length,supplementaryCount:docs.filter(d=>d.supplemental).length,hot100Categories:hot.categories.map(c=>c.name),modules:config.modules.map(m=>({...m,count:docs.filter(d=>d.module===m.id).length,countUnit:'篇文档'})),docs};
 const output='window.STUDY_DATA = '+JSON.stringify(data)+';\n';
 const generated=path.join(site,'assets/data.js');
-const index={checked_date:config.checked_date,documents:docs.map(d=>({path:d.path,title:d.title,module:d.module,question_ids:d.questionIds})),items:[...core.questions.map(q=>({...q,relative_path:q.path})),...docs.filter(d=>d.problemId).map(d=>({id:'LC'+d.problemId,title:d.title,path:d.path,module:d.module,supplemental:d.supplemental}))]};
+const index={checked_date:config.checked_date,documents:docs.map(d=>({path:d.path,title:d.title,module:d.module,question_ids:d.questionIds})),items:[...core.questions.map(q=>({...q,relative_path:q.path})),...interviews.cards.map(c=>({id:c.id,title:c.title,path:c.path,module:c.module,kind:c.kind})),...docs.filter(d=>d.problemId).map(d=>({id:'LC'+d.problemId,title:d.title,path:d.path,module:d.module,supplemental:d.supplemental}))]};
 if(check){if(!fs.existsSync(path.join(root,'content-index.json'))||fs.readFileSync(path.join(root,'content-index.json'),'utf8')!==JSON.stringify(index,null,2)+'\n')throw Error('Generated content index is stale');if(!fs.existsSync(generated)||fs.readFileSync(generated,'utf8')!==output)throw Error('Generated reader is stale');const actualResources=walk('site/assets/repo').map(f=>f.slice('site/assets/repo/'.length)).sort();if(JSON.stringify(actualResources)!==JSON.stringify([...resources].sort()))throw Error('Offline resource inventory is stale');for(const f of resources){if(!fs.existsSync(path.join(site,'assets/repo',f))||!fs.readFileSync(path.join(root,f)).equals(fs.readFileSync(path.join(site,'assets/repo',f))))throw Error(`Resource stale: ${f}`);}}else{
  fs.writeFileSync(generated,output);fs.writeFileSync(path.join(root,'content-index.json'),JSON.stringify(index,null,2)+'\n');fs.rmSync(path.join(site,'assets/repo'),{recursive:true,force:true});for(const f of resources){const dest=path.join(site,'assets/repo',f);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(root,f),dest);}
 }
-console.log(`${check?'Checked':'Built'} ${docs.length} documents, ${core.questions.length} core topics, ${algDocs.length}/${hot.problems.length} official Hot100 docs, ${data.supplementaryCount} supplementary; ${resources.size} offline resources.`);
+console.log(`${check?'Checked':'Built'} ${docs.length} documents, ${core.questions.length} core topics, ${algDocs.length}/${hot.problems.length} official Hot100 docs, ${data.supplementaryCount} supplementary, ${interviews.cards.length} original interview scenarios; ${resources.size} offline resources.`);

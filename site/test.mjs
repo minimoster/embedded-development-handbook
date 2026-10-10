@@ -28,6 +28,14 @@ const core=engine.query(new URLSearchParams({module:'c',priority:'P0'})).results
 const alg=engine.query(new URLSearchParams({module:'hot100cpp',difficulty:'HARD'})).results;assert(alg.length>0);assert(alg.every(r=>r.d.difficulty==='HARD'));
 assert.equal(docs.filter(d=>d.module==='hot100cpp'&&d.problemId&&!d.supplemental).length,data.hot100Count);
 assert.equal(docs.filter(d=>d.supplemental).length,data.supplementaryCount);
+const interview=JSON.parse(fs.readFileSync(path.join(root,'docs/120-interviews/manifest.json'),'utf8'));
+assert.equal(data.coreCount,120);assert.equal(data.hot100Count,100);assert.equal(data.supplementaryCount,1);
+assert.equal(data.originalScenarioCount,7);assert.equal(data.newPublicReportCount,17);assert.equal(data.interviewCounts.new_2026_full_public_pages,0);assert.equal(data.interviewCounts.verified_xiaohongshu_original_pages,0);
+const cases=docs.filter(d=>d.kind==='scenario');assert.equal(cases.length,7);assert(cases.every(d=>d.module==='interview'&&!d.problemId&&!d.supplemental&&!d.priorities.length));
+for(const c of interview.cards){const d=byPath.get(c.path);assert(d&&d.questionIds.includes(c.id)&&d.category===c.category);assert(engine.query(new URLSearchParams({q:c.id,module:'interview'})).results.some(r=>r.d.path===c.path),c.id);}
+for(const term of ['EN01','EN18','STM32','remove','试运行确认'])assert(engine.query(new URLSearchParams({q:term,module:'interview'})).results.length,term);
+assert.equal(engine.query(new URLSearchParams({module:'interview'})).results.length,9);
+assert(engine.query(new URLSearchParams({q:'IC01'})).results.some(r=>r.d.path.endsWith('ic01.md')));
 const app=fs.readFileSync(path.join(site,'assets/app.js'),'utf8');assert(app.includes('zhixing.embedded.reader.v1'));assert(!app.includes('zhixing.reader.v1'));assert(!/\bfetch\s*\(|XMLHttpRequest|https?:\/\//.test(app));
 console.log(`Static reader PASS: ${docs.length} source-consistent docs, exact local routes/anchors, escaped output, resources, search/filter/counts.`);
 

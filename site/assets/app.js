@@ -86,7 +86,7 @@
     return (start?'…':'')+clean.slice(start,end)+(end<clean.length?'…':'');
   }
   function badges(d) {
-    return (d.kind==='external-resource'||d.kind==='resource-bank'?'<span class="badge">外部资源题库</span>':'')+(d.difficulty?`<span class="badge ${d.difficulty.toLowerCase()}">${difficultyName[d.difficulty]}</span>`:'') + d.priorities.map(p=>`<span class="badge priority">${p} 优先级</span>`).join('');
+    return (d.kind==='scenario'?'<span class="badge">原创故障场景</span>':'')+(d.kind==='external-resource'||d.kind==='resource-bank'?'<span class="badge">外部资源题库</span>':'')+(d.difficulty?`<span class="badge ${d.difficulty.toLowerCase()}">${difficultyName[d.difficulty]}</span>`:'') + d.priorities.map(p=>`<span class="badge priority">${p} 优先级</span>`).join('');
   }
   function art() {
     return `<svg class="hero-art" aria-hidden="true" viewBox="0 0 245 215"><g fill="none" stroke="currentColor" stroke-width="1.15"><circle cx="121" cy="103" r="84" opacity=".1"/><circle cx="121" cy="103" r="63" stroke-dasharray="2 5" opacity=".15"/><path d="M46 76 120 54l75 22v101l-75-22-74 22z" fill="var(--panel)"/><path d="M120 54v101M46 76l74 23 75-23M120 99v74M46 177l74 22 75-22v-101"/><path d="m57 88 49 15m-49-1 49 15m-49-1 35 11m-35 3 44 14m-44 0 24 8m111-64-49 15m49-1-49 15m49-1-35 11m35 3-44 14m44 0-24 8" opacity=".3"/><path d="M23 48h41m139-2h24m-7 0v27M15 143h19m173 21h26" opacity=".3"/><path d="m145 32 11 4 11-4-11-4zM156 36v14" opacity=".7"/></g><g fill="currentColor"><circle cx="44" cy="42" r="3" opacity=".5"/><circle cx="213" cy="128" r="2" opacity=".4"/><circle cx="31" cy="183" r="2" opacity=".4"/></g><text x="157" y="198" fill="currentColor" font-size="7" letter-spacing="1.7" opacity=".5">LEARN · CONNECT</text></svg>`;

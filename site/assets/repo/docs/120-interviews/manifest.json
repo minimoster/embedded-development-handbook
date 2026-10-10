@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-10",
+  "kind": "original_scenario_supplement",
+  "source_catalog_path": "sources/interview-supplement.json",
+  "counts": {
+    "original_scenarios": 7,
+    "new_full_public_pages": 17,
+    "partial_public_pages": 1,
+    "undated_github_logs": 1,
+    "verified_xiaohongshu_original_pages": 0,
+    "new_2026_full_public_pages": 0
+  },
+  "execution_status": "scenario_design_only_unexecuted",
+  "cards": [
+    {
+      "id": "IC01",
+      "source_card_id": "C01",
+      "title": "UART中断把队列塞满，偶发丢命令",
+      "path": "docs/120-interviews/ic01.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "UART / ISR / 背压",
+      "public_report_ids": [
+        "EN01",
+        "EN05"
+      ],
+      "foundation_paths": [
+        "docs/40-mcu/mc04.md",
+        "docs/50-rtos/rt05.md",
+        "docs/50-rtos/rt06.md",
+        "docs/50-rtos/rt09.md"
+      ],
+      "official_urls": [
+        "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/queue.h",
+        "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/portable/GCC/ARM_CM4F/port.c"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    },
+    {
+      "id": "IC02",
+      "source_card_id": "C02",
+      "title": "停止采集后删队列，下一次中断 HardFault",
+      "path": "docs/120-interviews/ic02.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "RTOS关闭 / 对象寿命",
+      "public_report_ids": [
+        "EN05",
+        "EN08"
+      ],
+      "foundation_paths": [
+        "docs/50-rtos/rt10.md",
+        "docs/50-rtos/rt06.md",
+        "docs/40-mcu/mc05.md"
+      ],
+      "official_urls": [
+        "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/task.h",
+        "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/include/queue.h",
+        "https://raw.githubusercontent.com/FreeRTOS/FreeRTOS-Kernel/V11.1.0/queue.c"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    },
+    {
+      "id": "IC03",
+      "source_card_id": "C03",
+      "title": "Cortex-M7 DMA接收结束，CPU仍读到旧帧",
+      "path": "docs/120-interviews/ic03.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "MCU DMA / cache",
+      "public_report_ids": [
+        "EN08"
+      ],
+      "foundation_paths": [
+        "docs/40-mcu/mc05.md",
+        "docs/40-mcu/mc06.md"
+      ],
+      "official_urls": [
+        "https://www.st.com/resource/en/application_note/an4839-level-1-cache-on-stm32f7-series-and-stm32h7-series-stmicroelectronics.pdf",
+        "https://raw.githubusercontent.com/ARM-software/CMSIS_5/5.9.0/CMSIS/Core/Include/cachel1_armv7.h"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    },
+    {
+      "id": "IC04",
+      "source_card_id": "C04",
+      "title": "Linux DMA收发环，指针地址与缓存所有权混用",
+      "path": "docs/120-interviews/ic04.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "Linux DMA / 所有权",
+      "public_report_ids": [
+        "EN02",
+        "EN05"
+      ],
+      "foundation_paths": [
+        "docs/80-linux-drivers/dv05.md",
+        "docs/80-linux-drivers/dv04.md"
+      ],
+      "official_urls": [
+        "https://docs.kernel.org/6.6/core-api/dma-api-howto.html"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    },
+    {
+      "id": "IC05",
+      "source_card_id": "C05",
+      "title": "OTA在擦除、复制或状态写入时断电",
+      "path": "docs/120-interviews/ic05.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "OTA / 掉电恢复",
+      "public_report_ids": [
+        "EN08"
+      ],
+      "foundation_paths": [
+        "docs/40-mcu/mc10.md",
+        "docs/90-boot-rootfs/bt04.md",
+        "docs/90-boot-rootfs/bt05.md"
+      ],
+      "official_urls": [
+        "https://raw.githubusercontent.com/mcu-tools/mcuboot/v2.1.0/docs/design.md"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    },
+    {
+      "id": "IC06",
+      "source_card_id": "C06",
+      "title": "新固件能启动，却在一分钟后故障，如何确认升级",
+      "path": "docs/120-interviews/ic06.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "OTA / 试运行确认",
+      "public_report_ids": [
+        "EN08"
+      ],
+      "foundation_paths": [
+        "docs/40-mcu/mc09.md",
+        "docs/90-boot-rootfs/bt04.md"
+      ],
+      "official_urls": [
+        "https://docs.zephyrproject.org/3.7.0/services/device_mgmt/dfu.html"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    },
+    {
+      "id": "IC07",
+      "source_card_id": "C07",
+      "title": "Linux设备remove后，打开的fd和异步worker仍访问旧对象",
+      "path": "docs/120-interviews/ic07.md",
+      "module": "interview",
+      "kind": "original_scenario",
+      "category": "Linux驱动 / remove",
+      "public_report_ids": [
+        "EN02",
+        "EN05"
+      ],
+      "foundation_paths": [
+        "docs/80-linux-drivers/dv01.md",
+        "docs/80-linux-drivers/dv07.md",
+        "docs/80-linux-drivers/dv10.md"
+      ],
+      "official_urls": [
+        "https://docs.kernel.org/6.6/core-api/kref.html",
+        "https://docs.kernel.org/6.6/core-api/workqueue.html",
+        "https://docs.kernel.org/6.6/core-api/genericirq.html",
+        "https://docs.kernel.org/6.6/dev-tools/kasan.html"
+      ],
+      "exercise_status": "design_only_unexecuted"
+    }
+  ]
+}

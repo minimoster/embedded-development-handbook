@@ -95,11 +95,18 @@
       "number": "13"
     },
     {
+      "id": "interview",
+      "folder": "120-interviews",
+      "label": "公开面经与故障场景",
+      "description": "按公开自报主题复习原理，练ISR、DMA、OTA与驱动寿命",
+      "number": "14"
+    },
+    {
       "id": "reference",
       "folder": "130-reference",
       "label": "来源与覆盖边界",
       "description": "阅读状态、版本、权利与尚未覆盖的内容",
-      "number": "14"
+      "number": "15"
     }
   ]
 }

@@ -157,6 +157,20 @@
 - [PJ04 · 一场模拟面试如何评分与复盘？](docs/110-projects/pj04.md) · P0
 - [PJ05 · 面向 EE 背景怎样连接硬件优势与软件短板？](docs/110-projects/pj05.md) · P1
 
+## 公开面经与原创故障场景 · 7卡
+
+17份新增完整自报页面，试读和无日期GitHub日志另列；场景不计入120核心主题或Hot100。
+
+- [来源日期、岗位与学习导航](docs/120-interviews/README.md)
+- [公开自报目录](docs/120-interviews/source-catalog.md)
+- [IC01 · UART中断把队列塞满，偶发丢命令](docs/120-interviews/ic01.md)
+- [IC02 · 停止采集后删队列，下一次中断 HardFault](docs/120-interviews/ic02.md)
+- [IC03 · Cortex-M7 DMA接收结束，CPU仍读到旧帧](docs/120-interviews/ic03.md)
+- [IC04 · Linux DMA收发环，指针地址与缓存所有权混用](docs/120-interviews/ic04.md)
+- [IC05 · OTA在擦除、复制或状态写入时断电](docs/120-interviews/ic05.md)
+- [IC06 · 新固件能启动，却在一分钟后故障，如何确认升级](docs/120-interviews/ic06.md)
+- [IC07 · Linux设备remove后，打开的fd和异步worker仍访问旧对象](docs/120-interviews/ic07.md)
+
 ## Hot100 · C++17
 
 - [学习路线、完整题单与测试](docs/80-hot100-cpp/README.md)
