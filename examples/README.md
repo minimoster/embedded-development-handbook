@@ -82,3 +82,20 @@ python3 tests/run_protocol_depth_tests.py --sanitize --disable-leak-detection
 ```
 
 这是原创有限教学模型与同步mock，不是总线/网络模拟器、内核符合性认证或板测。具体假设、来源版本和手推轨迹在三章分别说明；不推断芯片寄存器、设备恢复政策、板级上拉电阻或Linux默认TCP算法。
+
+## 面试深度：发布、优先级、DMA寿命与fault副本
+
+- [C++17单槽交接](cpp/spsc_publication_slot.hpp)、[固定Packet](cpp/publication_packet.hpp)、[演示](cpp/publication_demo.cpp)、[运行测试](../tests/host_publication_ownership_test.cpp)与[独立入口](../tests/run_publication_ownership_tests.py)：双向发布、失败保持、借用/复用和unique_ptr责任。
+- [NVIC整数模型](python/nvic_priority_contract.py)与[11个测试方法](../tests/test_nvic_priority_contract.py)：逻辑/寄存器/分组和指定端口门槛，无IRQ或内核执行。
+- [DMA事件模型](python/dma_lifecycle_contract.py)与[定向测试](../tests/test_dma_lifecycle_contract.py)：拥有权、超时、回调、同步停机和失败隔离；无真实设备或驱动。
+- [M4合成副本解码](python/cortex_m4_fault_snapshot.py)与[16个测试方法](../tests/test_cortex_m4_fault_snapshot.py)：只解释复制整数，不探测内存，不编译异常handler。
+- [四章统一入口](../tests/run_interview_depth_tests.py)。
+
+```bash
+python3 tests/run_interview_depth_tests.py
+python3 tests/run_interview_depth_tests.py --sanitize
+# 仅在受限宿主显式关闭LSan；不是泄漏检测通过：
+python3 tests/run_interview_depth_tests.py --sanitize --disable-leak-detection
+```
+
+C++新实验默认LSan尝试实际报ptrace限制，关闭后ASan/UBSan通过；Python模型不属于C sanitizer范围。实际结果和未执行项目见各章与[验证摘要](../coverage/validation-summary.json)。

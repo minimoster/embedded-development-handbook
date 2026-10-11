@@ -4,7 +4,7 @@ from pathlib import Path
 import json,re,hashlib
 R=Path(__file__).resolve().parents[1]
 def read(name): return json.loads((R/name).read_text())
-expected={'README.md','core-catalog.json','official-catalog.json','primary-verification.json','interview-sample.json','interview-supplement.json'}
+expected={'README.md','core-catalog.json','official-catalog.json','primary-verification.json','interview-sample.json','interview-supplement.json','publication-ownership-verification.json'}
 assert {p.name for p in (R/'sources').iterdir() if p.is_file()} == expected,'Unexpected source inventory'
 assert {p.name for p in (R/'coverage').iterdir() if p.is_file()} == {'README.md','core-question-manifest.json','topic-summary.json','validation-summary.json'},'Unexpected coverage inventory'
 core=read('coverage/core-question-manifest.json')

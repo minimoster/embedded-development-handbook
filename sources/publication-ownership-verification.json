@@ -1,0 +1,120 @@
+{
+  "chapter": "docs/10-c-cpp/publication-ownership-contracts.md",
+  "checked_date_utc": "2026-10-11",
+  "language_baseline": "C++17",
+  "method": "Fixed official primary-source sections support the stated rules; implementation, proof, scenarios and tests are original.",
+  "scope": "Host C++ threads; strict non-reentrant single producer and single consumer; no hardware/ISR/DMA certification",
+  "sources": [
+    {
+      "id": "N4659",
+      "type": "primary_public_working_draft",
+      "title": "N4659 Working Draft, Standard for Programming Language C++",
+      "date": "2017-03-21",
+      "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf",
+      "version_note": "Fixed C++17-era public draft; not the published ISO standard and not a rolling draft.",
+      "sections": [
+        {
+          "section": "4.7.1 [intro.races]",
+          "paragraphs": "2, 4, 6, 9-10, 14-17, 20",
+          "pdf_pages": "29-32",
+          "verified_topic": "Conflict, modification order, synchronizes-with, happens-before, coherence, data-race boundary"
+        },
+        {
+          "section": "32.4 [atomics.order]",
+          "paragraphs": "1-2",
+          "pdf_pages": "1360-1361",
+          "verified_topic": "release/acquire matching; relaxed is not a payload-publication substitute"
+        },
+        {
+          "section": "32.6.1 [atomics.types.generic]",
+          "paragraphs": "5-6",
+          "pdf_pages": "1364",
+          "verified_topic": "is_always_lock_free and is_lock_free queries"
+        },
+        {
+          "section": "23.11.1.2.3 [unique.ptr.single.asgn]",
+          "paragraphs": "1-3",
+          "pdf_pages": "628",
+          "verified_topic": "Move assignment transfers unique_ptr ownership"
+        },
+        {
+          "section": "23.11.1.2.2 [unique.ptr.single.dtor]",
+          "paragraphs": "1-2",
+          "pdf_pages": "628",
+          "verified_topic": "Non-null managed resource destruction and deleter constraints"
+        },
+        {
+          "section": "23.11.1.2.5 [unique.ptr.single.modifiers]",
+          "paragraphs": "1-5",
+          "pdf_pages": "629",
+          "verified_topic": "release/reset postconditions and old-resource disposal"
+        },
+        {
+          "section": "33.3.2.2 [thread.thread.constr]",
+          "paragraphs": "6",
+          "pdf_pages": "1379",
+          "verified_topic": "Thread-constructor completion/start synchronization"
+        },
+        {
+          "section": "33.3.2.5 [thread.thread.member]",
+          "paragraphs": "3-4",
+          "pdf_pages": "1379",
+          "verified_topic": "Completion and successful join synchronization"
+        },
+        {
+          "section": "33.3.3 [thread.thread.this]",
+          "paragraphs": "2-3",
+          "pdf_pages": "1381",
+          "verified_topic": "yield is a rescheduling opportunity, with no synchronization"
+        },
+        {
+          "section": "6.8 [basic.life]",
+          "paragraphs": "1",
+          "pdf_pages": "88",
+          "verified_topic": "Object lifetime boundary; the lab keeps one live payload rather than reusing raw storage"
+        }
+      ]
+    },
+    {
+      "id": "GCC14-VOLATILES",
+      "type": "primary_official_compiler_documentation",
+      "title": "GCC 14.2.0 §6.47 When is a Volatile Object Accessed?",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Volatiles.html",
+      "verified_topic": "Non-volatile memory is not ordered by volatile accesses; no volatile-based payload proof"
+    },
+    {
+      "id": "GCC14-ATOMIC",
+      "type": "primary_official_compiler_documentation",
+      "title": "GCC 14.2.0 §6.57 Built-in Functions for Memory Model Aware Atomic Operations",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/_005f_005fatomic-Builtins.html",
+      "verified_topic": "Target support can require external routines; host std::atomic observations do not certify a target"
+    },
+    {
+      "id": "GCC14-SANITIZERS",
+      "type": "primary_official_compiler_documentation",
+      "title": "GCC 14.2.0 Instrumentation Options",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Instrumentation-Options.html",
+      "sections": [
+        "-fsanitize=address",
+        "-fsanitize=undefined",
+        "-fsanitize=leak",
+        "-fno-sanitize-recover"
+      ],
+      "verified_topic": "Instrumentation and runtime-option boundaries; ASan/UBSan are not a race proof"
+    }
+  ],
+  "not_technical_authority": [
+    "third-party interview answers",
+    "social-platform anecdotes",
+    "successful host schedules"
+  ],
+  "never_run": [
+    "TSan",
+    "Clang",
+    "formal model checker",
+    "old aggregate suites",
+    "cross-compiler/disassembly",
+    "MCU/ISR/RTOS/DMA/cache/WCET",
+    "deliberately racy runtime variants"
+  ]
+}

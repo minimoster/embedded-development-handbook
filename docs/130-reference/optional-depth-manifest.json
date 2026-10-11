@@ -2,7 +2,7 @@
   "schema_version": 1,
   "checked_date": "2026-10-11",
   "kind": "original_optional_depth",
-  "chapter_count": 12,
+  "chapter_count": 16,
   "preserved_counts": {
     "core": 120,
     "official_hot100": 100,
@@ -183,6 +183,69 @@
         "PR12"
       ],
       "sha256": "da8aade3d7165b1c1791d2c2a4a19953e9175dc0cbc1b6d8c6e9868d806be3b9"
+    },
+    {
+      "path": "docs/10-c-cpp/publication-ownership-contracts.md",
+      "title": "发布完成之后，谁还能碰这块内存？C++17 双向所有权交接实验",
+      "module": "c",
+      "kind": "optional-depth",
+      "category": "C++发布与复用",
+      "priority": "P1",
+      "order": 13,
+      "prerequisite_ids": [
+        "C04",
+        "C08",
+        "C09",
+        "RT09"
+      ],
+      "sha256": "e9b0be8b63680eb5f575b43a32522a9789ddd6ec32c87e2263bf278b5dfd10a7"
+    },
+    {
+      "path": "docs/50-rtos/nvic-priority-audit.md",
+      "title": "NVIC 优先级编码与 FreeRTOS ISR 边界审计",
+      "module": "rtos",
+      "kind": "optional-depth",
+      "category": "NVIC与ISR门槛",
+      "priority": "P1",
+      "order": 14,
+      "prerequisite_ids": [
+        "AR04",
+        "RT06",
+        "RT07",
+        "MC05"
+      ],
+      "sha256": "d1dbaf09ea75389720af820e545e51b366661d65034c4363102ff603df10a574"
+    },
+    {
+      "path": "docs/80-linux-drivers/dma-lifecycle-contracts.md",
+      "title": "可选深化 · Linux DMA 的所有权、取消与 remove 生命周期合约",
+      "module": "driver",
+      "kind": "optional-depth",
+      "category": "DMA取消与移除",
+      "priority": "P1",
+      "order": 15,
+      "prerequisite_ids": [
+        "DV05",
+        "DV09",
+        "MC06"
+      ],
+      "sha256": "b2d7b5472c26bfd148949ccca4ea463a25c0c973cc909b6c1a562b6be8312512"
+    },
+    {
+      "path": "docs/100-debugging/cortex-m4-fault-frame-contracts.md",
+      "title": "Cortex-M4 HardFault 可信帧与离线解码",
+      "module": "debug",
+      "kind": "optional-depth",
+      "category": "M4可信fault帧",
+      "priority": "P1",
+      "order": 16,
+      "prerequisite_ids": [
+        "DB01",
+        "AR07",
+        "RT08",
+        "MC06"
+      ],
+      "sha256": "0b102252c213f242f9141abd3e3c282728fc1ca0f26f5707e4f275ddc8530814"
     }
   ]
 }

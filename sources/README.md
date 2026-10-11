@@ -17,3 +17,8 @@
 - [7篇原创扩展与阅读顺序](../docs/50-rtos/source-study-manifest.json)、[源码导读](../docs/50-rtos/source-reading.md)：章节引用公开固定版本源码，用于机制核对；手推与设计练习尚未运行。
 - [现代V11.1.0固定提交](https://github.com/FreeRTOS/FreeRTOS-Kernel/tree/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0)，单核GCC ARM_CM4F，MIT；[历史V9.0.0固定提交](https://github.com/FreeRTOS/FreeRTOS/tree/165c24cba94e3d3f386c3b77d3bb0f4a524d8511)仅用于co-routines选读，GPLv2加FreeRTOS exception。
 - 引用范围是各章实际讨论的文件与分支，不声称读完所有版本、所有配置或全部官方文档；没有转载上游实现与注释。
+
+## 2026-10-11 · 面试问法与深度合同
+
+- [本轮公开读取范围与四章映射](../docs/130-reference/interview-depth-refresh.md)：3份新增自报线索（1份含推广）、2份GitHub题单、知乎推广型问法与牛客试读分开；小红书没有核实到新增原帖正文。原17份清单不重复计数，不推定面试年份或考频。
+- [C++17固定条款清单](publication-ownership-verification.json)：只核对列明的公开草案/编译器规则；新模型、推导和测试原创。其他三章在正文引用固定官方版本。

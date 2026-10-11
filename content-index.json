@@ -232,6 +232,18 @@
       ]
     },
     {
+      "path": "docs/10-c-cpp/publication-ownership-contracts.md",
+      "title": "发布完成之后，谁还能碰这块内存？C++17 双向所有权交接实验",
+      "module": "c",
+      "question_ids": []
+    },
+    {
+      "path": "docs/100-debugging/cortex-m4-fault-frame-contracts.md",
+      "title": "Cortex-M4 HardFault 可信帧与离线解码",
+      "module": "debug",
+      "question_ids": []
+    },
+    {
       "path": "docs/100-debugging/db01.md",
       "title": "DB01 · HardFault 怎么从寄存器走到源码？",
       "module": "debug",
@@ -402,6 +414,12 @@
     {
       "path": "docs/130-reference/coverage-boundaries.md",
       "title": "知道已经做了什么，也知道还没有做什么",
+      "module": "reference",
+      "question_ids": []
+    },
+    {
+      "path": "docs/130-reference/interview-depth-refresh.md",
+      "title": "公开面试问法复核与四个深度实验",
       "module": "reference",
       "question_ids": []
     },
@@ -664,6 +682,12 @@
     {
       "path": "docs/50-rtos/memory-policy-contracts.md",
       "title": "RTOS 内存策略：从空闲块选择到释放合同",
+      "module": "rtos",
+      "question_ids": []
+    },
+    {
+      "path": "docs/50-rtos/nvic-priority-audit.md",
+      "title": "NVIC 优先级编码与 FreeRTOS ISR 边界审计",
       "module": "rtos",
       "question_ids": []
     },
@@ -1886,6 +1910,12 @@
       "question_ids": [
         "LC695"
       ]
+    },
+    {
+      "path": "docs/80-linux-drivers/dma-lifecycle-contracts.md",
+      "title": "可选深化 · Linux DMA 的所有权、取消与 remove 生命周期合约",
+      "module": "driver",
+      "question_ids": []
     },
     {
       "path": "docs/80-linux-drivers/dv01.md",
@@ -4119,6 +4149,65 @@
         "PR07",
         "PR08",
         "PR12"
+      ]
+    },
+    {
+      "title": "发布完成之后，谁还能碰这块内存？C++17 双向所有权交接实验",
+      "path": "docs/10-c-cpp/publication-ownership-contracts.md",
+      "module": "c",
+      "kind": "optional-depth",
+      "category": "C++发布与复用",
+      "priority": "P1",
+      "order": 13,
+      "prerequisite_ids": [
+        "C04",
+        "C08",
+        "C09",
+        "RT09"
+      ]
+    },
+    {
+      "title": "NVIC 优先级编码与 FreeRTOS ISR 边界审计",
+      "path": "docs/50-rtos/nvic-priority-audit.md",
+      "module": "rtos",
+      "kind": "optional-depth",
+      "category": "NVIC与ISR门槛",
+      "priority": "P1",
+      "order": 14,
+      "prerequisite_ids": [
+        "AR04",
+        "RT06",
+        "RT07",
+        "MC05"
+      ]
+    },
+    {
+      "title": "可选深化 · Linux DMA 的所有权、取消与 remove 生命周期合约",
+      "path": "docs/80-linux-drivers/dma-lifecycle-contracts.md",
+      "module": "driver",
+      "kind": "optional-depth",
+      "category": "DMA取消与移除",
+      "priority": "P1",
+      "order": 15,
+      "prerequisite_ids": [
+        "DV05",
+        "DV09",
+        "MC06"
+      ]
+    },
+    {
+      "title": "Cortex-M4 HardFault 可信帧与离线解码",
+      "path": "docs/100-debugging/cortex-m4-fault-frame-contracts.md",
+      "module": "debug",
+      "kind": "optional-depth",
+      "category": "M4可信fault帧",
+      "priority": "P1",
+      "order": 16,
+      "prerequisite_ids": [
+        "DB01",
+        "AR07",
+        "RT08",
+        "MC06"
       ]
     },
     {

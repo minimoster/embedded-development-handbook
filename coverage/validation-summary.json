@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-11T03:05:20.624671+00:00",
+  "checked_at_utc": "2026-10-11T05:21:37.728086+00:00",
   "core_topics": 120,
   "official_hot100": 100,
   "core_host_tests": {
@@ -30,7 +30,8 @@
       "status": "normal and ASan/UBSan passed; independent checked-iterator run also passed"
     },
     "fresh_regression": "All nine existing host suites rerun against this derivative in normal and fail-fast ASan/UBSan modes; explicit detect_leaks=0. LeakSanitizer is not a pass.",
-    "fresh_regression_checked_at_utc": "2026-10-11T03:05:20.624671+00:00"
+    "fresh_regression_checked_at_utc": "2026-10-11T03:05:20.624671+00:00",
+    "record_scope": "Historical protocol-baseline execution, not a fresh four-chapter rerun. All compiled inputs remain byte-identical in this candidate."
   },
   "algorithms": {
     "passed": true,
@@ -45,11 +46,12 @@
     "result_path": "docs/80-hot100-cpp/validation-result.json",
     "execution_status": "Fresh complete 101-entry normal, ASan/UBSan and checked-iterator regression passed; 17 independent bounded exhaustive oracles passed; no compiled input changed during run.",
     "fresh_regression_checked_at_utc": "2026-10-11T03:05:20.624671+00:00",
-    "result_path_status": "Previously published detailed record kept byte-identical; the fresh regression result is summarized here."
+    "result_path_status": "Previously published detailed record kept byte-identical; the fresh regression result is summarized here.",
+    "record_scope": "Historical protocol-baseline execution. Algorithm sources, tests, freeze manifest and detailed result remain byte-identical; no unnecessary local full rerun in this batch."
   },
   "reader_static": {
-    "status": "passed",
-    "documents": 268,
+    "status": "passed: strict content/public metadata, source hashes, exact routes/anchors/resources, four new search probes, deterministic build and dependency-free navigation simulation",
+    "documents": 273,
     "checks": [
       "source consistency",
       "exact local routes and anchors",
@@ -59,18 +61,18 @@
       "manifest counts",
       "no fetch or remote services"
     ],
-    "offline_resources": 239,
+    "offline_resources": 252,
     "navigation_simulation": "Repeated/current and changed sections, collapse-before-scroll, heading focus, back/forward history, modified clicks, responsive960px boundary, sidebar close/Esc/focus trap passed",
     "freertos_extensions": "7 distinct categories, full-text searches and ordered RT01–RT10 then seven-chapter route passed; extension count is independent of core and algorithm counts.",
-    "optional_depth": "Twelve hash-fixed chapters classified separately; new I2C/SPI/TCP search probes, prerequisite/category checks, unchanged core/scenario/source-study/algorithm counts passed."
+    "optional_depth": "Sixteen separately counted hash-fixed chapters; all metadata/prerequisite/category checks and the four new search probes passed."
   },
   "leak_sanitizer": {
     "status": "blocked",
-    "reason": "A previously observed default sanitizer attempt failed under the executor ptrace restriction. This integration did not repeat the default attempt; current ASan/UBSan runs explicitly used detect_leaks=0. Not a leak-check pass.",
-    "current_integration_status": "not run; explicitly disabled in current ASan/UBSan execution"
+    "reason": "The new C++ publication author actually attempted default sanitizer execution; demo exit reported LSan fatal error and ptrace restriction. Later stages of that default attempt did not run. Explicit detect_leaks=0 ASan/UBSan passed in author and integrated runs. Not a leak-check pass.",
+    "current_integration_status": "New integrated C++ ASan/UBSan passed with explicit detect_leaks=0; integrated default LSan was not repeated."
   },
   "hardware_rtos_kernel_online_judge": "not run",
-  "release_status": "Local unpublished review candidate based on 1c8e067. Prior release browser evidence is retained as history. Exact-commit CI, deployment and live QA have not run for this candidate.",
+  "release_status": "Local four-chapter candidate based on b1db45ddf8249da8ff8a75633cd48e09b0a81af3. Exact-commit CI, Pages and real online reading checks are subsequent release gates, not preclaimed here.",
   "publication_privacy": {
     "status": "passed",
     "scope": "Full UTF-8 public source and generated-output scan; bounded metadata schemas and exact offline resource inventory verified"
@@ -118,8 +120,8 @@
     "scope": "Historical QA of the preceding nine-chapter release; not a browser pass for the three protocol additions."
   },
   "actual_browser": {
-    "status": "not_run_for_protocol_candidate",
-    "scope": "Only static rendering, routes, search and DOM/navigation simulation were rerun for this local candidate. No actual browser, physical mobile, touch, assistive technology or live deployment claim."
+    "status": "not_run_for_four_chapter_candidate",
+    "scope": "This local freeze uses static source/routes/search/resource and dependency-free DOM navigation checks; exact-commit real online browser checks are a subsequent release gate. No physical mobile, touch or assistive-technology pass."
   },
   "prior_release_optional_depth_validation": {
     "chapters": 9,
@@ -138,13 +140,6 @@
     "queue_timer": "Source/prose review only; no host queue/timer model, kernel, simulator or board run",
     "scope": "Bounded host arithmetic, synthetic artifact bookkeeping, local I/O and original application models; no target integration certification",
     "remaining_teaching": "Optional chapters do not complete all specialized directions; see docs/130-reference/optional-depth.md and coverage-boundaries.md."
-  },
-  "optional_depth_validation": {
-    "chapters": 12,
-    "prior_chapters_byte_identical": 9,
-    "new_protocol_chapters": 3,
-    "core_ids_added": 0,
-    "scope": "Original narrow supplements with synthetic host verification; no target integration certification. Prior optional experiments are retained as historical evidence, not claimed as fresh reruns here."
   },
   "protocol_depth_candidate": {
     "status": "LOCAL_REVIEW_CANDIDATE_NOT_PUBLISHED",
@@ -184,6 +179,64 @@
       "candidate remote CI/deployment/live QA"
     ],
     "source_complete": false,
-    "source_boundary": "This work did not recover restricted or previously unread external source bodies. Original teaching equivalence and target validation remain separate."
+    "source_boundary": "This work did not recover restricted or previously unread external source bodies. Original teaching equivalence and target validation remain separate.",
+    "record_scope": "Historical local review record for the subsequently published protocol release b1db45ddf8249da8ff8a75633cd48e09b0a81af3; its then-pending stages are not current four-chapter status."
+  },
+  "prior_release_protocol_optional_validation": {
+    "chapters": 12,
+    "prior_chapters_byte_identical": 9,
+    "new_protocol_chapters": 3,
+    "core_ids_added": 0,
+    "scope": "Original narrow supplements with synthetic host verification; no target integration certification. Prior optional experiments are retained as historical evidence, not claimed as fresh reruns here."
+  },
+  "optional_depth_validation": {
+    "chapters": 16,
+    "prior_chapters_byte_identical": 12,
+    "new_interview_depth_chapters": 4,
+    "core_ids_added": 0,
+    "scope": "Original host-thread, integer-priority, serialized-DMA-event and copied-fault-snapshot contracts; no target integration certification."
+  },
+  "interview_depth_candidate": {
+    "status": "LOCAL_HOST_AND_STATIC_PASS",
+    "base_commit": "b1db45ddf8249da8ff8a75633cd48e09b0a81af3",
+    "new_chapters": 4,
+    "new_reader_overview": 1,
+    "python_host_methods": {
+      "nvic_priority_arithmetic": 11,
+      "cortex_m4_synthetic_fault_snapshot": 16,
+      "dma_lifecycle_events": 28
+    },
+    "dma_bounded_event_exploration": {
+      "maximum_depth": 14,
+      "unique_abstract_states": 295,
+      "rejected_edges": 5701,
+      "completed_removal_states": 15
+    },
+    "cpp_publication": {
+      "strict_cpp17": "passed",
+      "runtime_groups": 7,
+      "compile_rejection_groups": 3,
+      "compile_rejection_not_executed": true,
+      "fifo_items": 90000,
+      "demo_items": 32,
+      "asan_ubsan": "passed fail-fast; explicit detect_leaks=0",
+      "default_lsan": "author demo exit blocked under ptrace; later default stages not run",
+      "host_atomic_observation": "lock-free observed on this host only; no target inference"
+    },
+    "integration_execution": "New unified runner passed normal and ASan/UBSan modes against integrated sources. Python models are not C sanitizer runs.",
+    "old_suites": "Not rerun locally; all compiled old inputs byte-identical and prior receipts retained. Exact-commit CI is separate.",
+    "independent_review": "Separate integration release gate; this local execution summary does not preclaim its outcome.",
+    "not_run": [
+      "formal C++ model checker",
+      "TSan",
+      "target cross-compilation/disassembly",
+      "MCU/IRQ/FPU/RTOS execution",
+      "actual DMA/cache/kernel driver or concurrent removal",
+      "target fault collector/symbolization/fault injection",
+      "physical mobile/touch/assistive technology",
+      "candidate exact-commit remote CI/Pages/online reading"
+    ],
+    "source_complete": false,
+    "source_boundary": "Publicly visible self-report, collection, promotional, partial and no-body states are separately disclosed. Existing unread/partial/media/retry-exhausted external states and specialized gaps are not converted to complete by these new host labs."
   }
 }

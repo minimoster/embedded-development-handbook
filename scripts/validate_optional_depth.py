@@ -13,10 +13,10 @@ R = Path(__file__).resolve().parents[1]
 manifest = json.loads((R / 'docs/130-reference/optional-depth-manifest.json').read_text())
 assert set(manifest) == {'schema_version', 'checked_date', 'kind', 'chapter_count', 'preserved_counts', 'chapters'}
 assert manifest['schema_version'] == 1 and manifest['kind'] == 'original_optional_depth'
-assert manifest['chapter_count'] == 12
+assert manifest['chapter_count'] == 16
 assert manifest['preserved_counts'] == {'core': 120, 'official_hot100': 100, 'supplementary_algorithm': 1, 'interview_scenarios': 7, 'freertos_source_study': 7}
 chapters = manifest['chapters']
-assert len(chapters) == 12 and len({c['path'] for c in chapters}) == 12
+assert len(chapters) == 16 and len({c['path'] for c in chapters}) == 16
 core = json.loads((R / 'coverage/core-question-manifest.json').read_text())['questions']
 core_ids = {q['id'] for q in core}
 study = json.loads((R / 'docs/50-rtos/source-study-manifest.json').read_text())['chapters']
@@ -53,7 +53,7 @@ for order, c in enumerate(chapters, 1):
         ast.parse(code, filename=c['path'])
         python_blocks += 1
 summary = json.loads((R / 'coverage/topic-summary.json').read_text())
-assert summary['optional_depth_chapter_count'] == 12
+assert summary['optional_depth_chapter_count'] == 16
 assert summary['core_count'] == 120 and summary['official_hot100_count'] == 100
 assert summary['supplementary_count'] == 1 and summary['original_interview_scenario_count'] == 7
 assert summary['freertos_source_study_chapter_count'] == 7
@@ -61,4 +61,4 @@ event = (R / 'docs/50-rtos/kernel-event-groups.md').read_text()
 assert '(task-diagnostics.md)' in event
 assert event.count('可选追踪编号不是对象寿命凭证') == 1
 assert 'kernel-event-groups.md' in catalog and 'kernel-timer-daemon.md' in catalog
-print(f'Optional-depth metadata PASS: 12 hash-fixed chapters; separate counts, prerequisites, paired trace/diagnostics links, {python_blocks} parsed Python examples. No target execution claim.')
+print(f'Optional-depth metadata PASS: 16 hash-fixed chapters; separate counts, prerequisites, paired trace/diagnostics links, {python_blocks} parsed Python examples. No target execution claim.')

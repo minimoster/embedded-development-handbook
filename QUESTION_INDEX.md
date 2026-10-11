@@ -183,7 +183,7 @@
 - [软件定时器与共享 daemon 的命令和寿命](docs/50-rtos/kernel-timer-daemon.md) · P1 · 软件定时器 / daemon寿命
 - [历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？](docs/50-rtos/historical-co-routines.md) · P2 · 历史选读 / co-routines
 
-## 可选深化讲义 · 12篇
+## 可选深化讲义 · 16篇
 
 接口与验证合同选读，独立于核心、算法、故障场景和FreeRTOS源码导读计数。
 
@@ -200,6 +200,10 @@
 - [I²C 时序预算、上拉区间与有界总线恢复](docs/60-protocols/i2c-timing-recovery.md) · P2 · I²C时序与有界恢复
 - [SPI 四模式逐边沿与 spidev 命令数据事务](docs/60-protocols/spi-edges-spidev.md) · P2 · SPI逐边沿与完整事务
 - [TCP Reno 与 RTO · 从累计 ACK 手推一次有限恢复](docs/60-protocols/tcp-reno-rto.md) · P2 · Reno与RTO有限恢复
+- [发布完成之后，谁还能碰这块内存？C++17 双向所有权交接实验](docs/10-c-cpp/publication-ownership-contracts.md) · P1 · C++发布与复用
+- [NVIC 优先级编码与 FreeRTOS ISR 边界审计](docs/50-rtos/nvic-priority-audit.md) · P1 · NVIC与ISR门槛
+- [可选深化 · Linux DMA 的所有权、取消与 remove 生命周期合约](docs/80-linux-drivers/dma-lifecycle-contracts.md) · P1 · DMA取消与移除
+- [Cortex-M4 HardFault 可信帧与离线解码](docs/100-debugging/cortex-m4-fault-frame-contracts.md) · P1 · M4可信fault帧
 
 ## Hot100 · C++17
 
