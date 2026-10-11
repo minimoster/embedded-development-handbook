@@ -54,6 +54,21 @@
     toastTimer=setTimeout(()=>element.classList.remove('visible'),2800);
   }
   function hashForRead(path, section='') { return `#/read/${encodeURIComponent(path)}${section?'?section='+encodeURIComponent(section):''}`; }
+  function sourceDownloads(html) {
+    // Keep ordinary source browsing; explicit same-origin controls save files
+    // even when Pages serves teaching code or JSON with a text MIME type.
+    return html.replace(/<a href="(assets\/repo\/([^"#?]+\.(?:c|h|cpp|hpp|py|json))(?:#[^"]*)?)"([^>]*)>([\s\S]*?)<\/a>/gi,
+      (anchor, href, resource, attributes, label) => {
+        let parts;
+        try { parts=resource.split('/').map(part=>decodeURIComponent(part)); }
+        catch { return anchor; }
+        if(parts.some(part=>!part||part==='.'||part==='..'||/[\u0000-\u001f\u007f/\\]/.test(part)))return anchor;
+        if(/\sdownload(?:\s|=|$)/i.test(attributes))return anchor;
+        const filename=esc(parts[parts.length-1]);
+        if(/下载/.test(label))return `<a href="${href}"${attributes} download="${filename}">${label}</a>`;
+        return `${anchor} <a class="resource-download" href="assets/repo/${resource}" download="${filename}" aria-label="下载 ${filename}">下载 ↧</a>`;
+      });
+  }
   function libraryHash(params={}) { const q=new URLSearchParams(Object.entries(params).filter(([,v])=>v!==''&&v!=null));return '#/library'+(q.size?'?'+q.toString():''); }
   function navigate(hash, replace=false) {
     if (hash===location.hash) { render(); return; }
@@ -124,7 +139,7 @@
     if(d.module==='rtos')peers.sort((a,b)=>(a.readingOrder||0)-(b.readingOrder||0));
     const i=peers.findIndex(x=>x.path===d.path),prev=peers[i-1],next=peers[i+1];
     main.className='reader-main';
-    main.innerHTML=`<div class="breadcrumb"><a href="#/">学习总览</a><span>/</span><a href="${libraryHash({module:d.module})}">${esc(d.moduleName)}</a><span>/</span><span>${d.problemId?d.problemId+' · '+esc(d.category):'章节阅读'}</span></div><div class="reader-layout"><div class="reader-column"><header><div class="eyebrow">${d.problemId?(d.supplemental?'独立补充 / ':'HOT100 · C++ / ')+esc(d.category):esc(d.moduleName)+' / READ & UNDERSTAND'}</div><h1 class="reader-title">${esc(d.title)}</h1><div class="reader-meta">${badges(d)}<span>约 ${d.minutes} 分钟</span><span>${d.supplemental?'· 额外公开练习':'· 原创讲义'}</span><span>· 来源与版本见正文</span></div><div class="reader-tools"><button class="button" id="save-doc" aria-pressed="${state.saved.includes(d.path)}">${state.saved.includes(d.path)?'★ 已收藏':'☆ 收藏章节'}</button><button class="button" id="done-doc" aria-pressed="${state.done.includes(d.path)}">${state.done.includes(d.path)?'✓ 已读':'标记已读'}</button><a class="button" href="${esc(d.sourceUrl)}" target="_blank" rel="noopener noreferrer">GitHub 原文 ↗</a><button class="button" id="toggle-answers" aria-pressed="false">收起知识 / 解答</button><div class="text-size-controls"><span>字号</span><button id="font-minus" aria-label="缩小正文字号"${state.fontSize<=15?' disabled':''}>A−</button><button id="font-plus" aria-label="放大正文字号"${state.fontSize>=22?' disabled':''}>A+</button><button id="line-height" aria-label="切换正文行距" title="切换正文行距">↕</button></div></div></header>${toc?`<details class="mobile-toc"><summary>本章目录 · ${d.headings.filter(h=>h.level>1&&h.level<=3).length} 个小节</summary><nav aria-label="本章目录">${toc}</nav></details>`:''}<article class="reader-content" id="reader-content" aria-label="${esc(d.title)}正文">${d.html}</article><details class="source-view"><summary>查看本章 Markdown 源文 · 构建自 ${esc(d.path)}</summary><pre>${esc(d.source)}</pre></details><nav class="reader-next" aria-label="同专题前后章节">${prev?`<a href="${hashForRead(prev.path)}"><span>← 上一篇</span>${esc(prev.title)}</a>`:''}${next?`<a href="${hashForRead(next.path)}"><span>下一篇 →</span>${esc(next.title)}</a>`:''}</nav></div>${toc?`<aside class="toc" aria-label="本章目录"><h2>这一章的主线</h2><nav>${toc}</nav></aside>`:''}</div>`;
+    main.innerHTML=`<div class="breadcrumb"><a href="#/">学习总览</a><span>/</span><a href="${libraryHash({module:d.module})}">${esc(d.moduleName)}</a><span>/</span><span>${d.problemId?d.problemId+' · '+esc(d.category):'章节阅读'}</span></div><div class="reader-layout"><div class="reader-column"><header><div class="eyebrow">${d.problemId?(d.supplemental?'独立补充 / ':'HOT100 · C++ / ')+esc(d.category):esc(d.moduleName)+' / READ & UNDERSTAND'}</div><h1 class="reader-title">${esc(d.title)}</h1><div class="reader-meta">${badges(d)}<span>约 ${d.minutes} 分钟</span><span>${d.supplemental?'· 额外公开练习':'· 原创讲义'}</span><span>· 来源与版本见正文</span></div><div class="reader-tools"><button class="button" id="save-doc" aria-pressed="${state.saved.includes(d.path)}">${state.saved.includes(d.path)?'★ 已收藏':'☆ 收藏章节'}</button><button class="button" id="done-doc" aria-pressed="${state.done.includes(d.path)}">${state.done.includes(d.path)?'✓ 已读':'标记已读'}</button><a class="button" href="${esc(d.sourceUrl)}" target="_blank" rel="noopener noreferrer">GitHub 原文 ↗</a><button class="button" id="toggle-answers" aria-pressed="false">收起知识 / 解答</button><div class="text-size-controls"><span>字号</span><button id="font-minus" aria-label="缩小正文字号"${state.fontSize<=15?' disabled':''}>A−</button><button id="font-plus" aria-label="放大正文字号"${state.fontSize>=22?' disabled':''}>A+</button><button id="line-height" aria-label="切换正文行距" title="切换正文行距">↕</button></div></div></header>${toc?`<details class="mobile-toc"><summary>本章目录 · ${d.headings.filter(h=>h.level>1&&h.level<=3).length} 个小节</summary><nav aria-label="本章目录">${toc}</nav></details>`:''}<article class="reader-content" id="reader-content" aria-label="${esc(d.title)}正文">${sourceDownloads(d.html)}</article><details class="source-view"><summary>查看本章 Markdown 源文 · 构建自 ${esc(d.path)}</summary><pre>${esc(d.source)}</pre></details><nav class="reader-next" aria-label="同专题前后章节">${prev?`<a href="${hashForRead(prev.path)}"><span>← 上一篇</span>${esc(prev.title)}</a>`:''}${next?`<a href="${hashForRead(next.path)}"><span>下一篇 →</span>${esc(next.title)}</a>`:''}</nav></div>${toc?`<aside class="toc" aria-label="本章目录"><h2>这一章的主线</h2><nav>${toc}</nav></aside>`:''}</div>`;
     observeHeadings();
   }
   function observeHeadings() {

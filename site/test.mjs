@@ -11,7 +11,7 @@ const shards=scripts.filter(f=>/^assets\/data\.[^.]+\.\d{3}\.js$/.test(f));
 assert(shards.length>1,'Reader must use multiple bounded data shards');
 assert.equal(new Set(scripts).size,scripts.length,'Script paths must be unique');
 assert.deepEqual(scripts.slice(0,shards.length),shards,'All shards load before the data assembler');
-assert.deepEqual(scripts.slice(shards.length),['assets/data.js','assets/search.js','assets/app.js'],'Data assembly precedes search and UI');
+assert.deepEqual(scripts.slice(shards.length),['assets/data.js','assets/search.js','assets/app.js?v=named-source-downloads-20261011'],'Data assembly precedes search and UI');
 const context={window:{}};
 for(const f of shards){
  const file=path.join(site,f);assert(fs.statSync(file).size<=262144,'Reader shard byte bound');
@@ -70,6 +70,53 @@ for(const [term,filename] of [['bus-clear','i2c-timing-recovery.md'],['spi_ioc_t
 for(const [term,filename] of [['双向所有权','publication-ownership-contracts.md'],['PRIGROUP','nvic-priority-audit.md'],['terminate_async','dma-lifecycle-contracts.md'],['LSPACT','cortex-m4-fault-frame-contracts.md']])assert(engine.query(new URLSearchParams({q:term})).results.some(r=>r.d.path.endsWith(filename)),term);
 assert(byPath.get('docs/130-reference/interview-depth-refresh.md').html.includes('xiaohongshu.com'));
 const app=fs.readFileSync(path.join(site,'assets/app.js'),'utf8');assert(app.includes('zhixing.embedded.reader.v1'));assert(!app.includes('zhixing.reader.v1'));assert(!/\bfetch\s*\(|XMLHttpRequest|https?:\/\//.test(app));
+// Exercise the production helper independently of MIME-specific browser behavior.
+const escLine=app.split('\n').find(line=>line.trim().startsWith('const esc ='));
+const downloadStart=app.indexOf('  function sourceDownloads(html) {');
+const downloadEnd=app.indexOf('  function libraryHash(params={})',downloadStart);
+assert(downloadStart>0&&downloadEnd>downloadStart);
+assert(app.includes('${sourceDownloads(d.html)}'),'Helper applies only to rendered reader article HTML');
+const sourceDownloads=vm.runInNewContext(`${escLine}\n${app.slice(downloadStart,downloadEnd)}\nsourceDownloads`,{}, {timeout:1000});
+for(const extension of ['c','h','cpp','hpp','py','json']){
+ const original=`<a href="assets/repo/examples/demo.${extension}">查看源码</a>`;
+ const converted=sourceDownloads(original);
+ assert(converted.startsWith(original+' '),'Plain source browsing remains intact');
+ assert(converted.includes(`download="demo.${extension}"`));
+ assert(converted.includes(`aria-label="下载 demo.${extension}"`));
+ const explicit=`<a href="assets/repo/examples/demo.${extension}" class="button">下载源码</a>`;
+ assert.equal((sourceDownloads(explicit).match(/<a /g)||[]).length,1,'Existing download control is not duplicated');
+ assert(sourceDownloads(explicit).includes(`download="demo.${extension}"`));
+}
+for(const unchanged of [
+ '<a href="https://github.com/owner/repo/blob/main/demo.cpp">查看源码</a>',
+ '<a href="https://example.com/assets/repo/demo.cpp">下载源码</a>',
+ '<a href="//example.com/assets/repo/demo.cpp">下载源码</a>',
+ '<a href="#/read/docs%2Fdemo.md">讲义</a>',
+ '<a href="assets/repo/diagram.svg">图示</a>',
+ '<a href="assets/repo/demo.cpp?token=x">源码</a>',
+ '<a href="assets/repo/../demo.cpp">源码</a>',
+ '<a href="assets/repo/%2e%2e/demo.cpp">源码</a>',
+ '<a href="assets/repo/%2fetc/demo.cpp">源码</a>',
+ '<a href="assets/repo/%5cetc/demo.cpp">源码</a>',
+ '<a href="assets/repo/%00demo.cpp">源码</a>',
+ '<a href="assets/repo/%zzdemo.cpp">源码</a>',
+ '<a href="assets/repo/demo.cpp" download="custom.cpp">已命名下载</a>'
+])assert.equal(sourceDownloads(unchanged),unchanged,'Unrelated or invalid resource anchors stay unchanged');
+const quoted=sourceDownloads('<a href="assets/repo/%22demo.cpp#L5">源码</a>');
+assert(quoted.includes('download="&quot;demo.cpp"'),'Decoded filenames are escaped');
+assert(quoted.includes('class="resource-download" href="assets/repo/%22demo.cpp"'),'New download controls omit view-only fragments');
+let resourceAnchors=0;
+for(const d of docs){
+ const rendered=sourceDownloads(d.html);
+ for(const match of d.html.matchAll(/<a href="assets\/repo\/[^"#?]+\.(?:c|h|cpp|hpp|py|json)(?:#[^"]*)?"[^>]*>[\s\S]*?<\/a>/gi)){
+  resourceAnchors++;
+  if(!/下载/.test(match[0]))assert(rendered.includes(match[0]),`Original source anchor lost: ${d.path}`);
+ }
+ assert(!/download="[^"<>]*[<>]/.test(rendered));
+}
+assert(resourceAnchors>=252,'Check download behavior across the complete resource-linked reader corpus');
+console.log(`Named source download helper PASS: six teaching extensions, unchanged browsing/external/Markdown/image links, unsafe-path rejection, escaped filenames, ${resourceAnchors} full-corpus resource anchors. Browser clicks remain a separate gate.`);
+
 console.log(`Static reader PASS: ${docs.length} source-consistent docs, exact local routes/anchors, escaped output, resources, search/filter/counts.`);
 
 await import('./test-navigation.mjs');
