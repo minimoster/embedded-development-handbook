@@ -45,3 +45,5 @@ import runpy
 runpy.run_path(str(R/'scripts/validate_interview_supplement.py'),run_name='__main__')
 
 runpy.run_path(str(R/'scripts/validate_source_study.py'),run_name='__main__')
+
+runpy.run_path(str(R/'scripts/validate_optional_depth.py'),run_name='__main__')

@@ -86,7 +86,7 @@
       "priority": "P1",
       "order": 5,
       "optional_historical": false,
-      "sha256": "e59948d8add4908936559c57586ec8325af3998e24e9d874977ac77a8b93620a"
+      "sha256": "3a1ba8aa06fde639757ce622fb3dd43ece210aede8e886d055a0cbf10035653c"
     },
     {
       "path": "docs/50-rtos/kernel-timer-daemon.md",
@@ -97,7 +97,7 @@
       "priority": "P1",
       "order": 6,
       "optional_historical": false,
-      "sha256": "e2431b896302439fe2c780afea7f7baca539ca1cb036fb8751727bdcefde7acc"
+      "sha256": "7220c873e7916a2fd769787a9002a7bf2a731dcd133b4fb0fc4f8be420dc912e"
     },
     {
       "path": "docs/50-rtos/historical-co-routines.md",

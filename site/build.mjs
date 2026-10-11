@@ -23,15 +23,18 @@ const scenarios=new Map(interviews.cards.map(c=>[c.path,c]));
 const studyPath='docs/50-rtos/source-study-manifest.json';
 const study=JSON.parse(fs.readFileSync(path.join(root,studyPath),'utf8'));
 const studyChapters=new Map(study.chapters.map(c=>[c.path,c]));
+const optionalPath='docs/130-reference/optional-depth-manifest.json';
+const optional=JSON.parse(fs.readFileSync(path.join(root,optionalPath),'utf8'));
+const optionalChapters=new Map(optional.chapters.map(c=>[c.path,c]));
 const indexed=new Map(core.questions.map(q=>[q.path,q]));
 const problems=new Map([...hot.problems,...(hot.supplementary||[])].map(p=>[p.doc_path,p]));
 const files=[...new Set([...['docs','sources','coverage','examples','algorithms'].flatMap(d=>walk(d).filter(f=>f.endsWith('.md'))),'README.md','QUESTION_INDEX.md','VERSIONS.md','CHANGELOG.md','CONTRIBUTING.md','LICENSE.md','site/README.md'])].filter(f=>fs.existsSync(path.join(root,f))).sort();
 const fileSet=new Set(files),resources=new Set(),broken=[];
-const inputs=['site/config.json','coverage/core-question-manifest.json',studyPath,...(fs.existsSync(path.join(root,scenarioPath))?[scenarioPath]:[]),...(fs.existsSync(path.join(root,hotpath))?[hotpath]:[])].map(f=>[f,fs.readFileSync(path.join(root,f))]);
+const inputs=['site/config.json','coverage/core-question-manifest.json',studyPath,optionalPath,...(fs.existsSync(path.join(root,scenarioPath))?[scenarioPath]:[]),...(fs.existsSync(path.join(root,hotpath))?[hotpath]:[])].map(f=>[f,fs.readFileSync(path.join(root,f))]);
 const docs=[];
 for(const file of files){
  const source=fs.readFileSync(path.join(root,file),'utf8');inputs.push([file,source]);
- const q=indexed.get(file),p=problems.get(file),c=scenarios.get(file),s=studyChapters.get(file);
+ const q=indexed.get(file),p=problems.get(file),c=scenarios.get(file),s=studyChapters.get(file),o=optionalChapters.get(file);
  const module=config.modules.find(m=>file.startsWith(`docs/${m.folder}/`))||config.modules.find(m=>m.id==='reference');
  const title=plain(source.match(/^# (.+)$/m)?.[1]||file),headings=[],sections=[],ids=new Set();
  const renderer=new Renderer();let nextAnchor='';
@@ -67,18 +70,41 @@ for(const file of files){
  }
  if(answer)html+='</div></details>';if(section.text.trim())sections.push(section);
  const summary=(sections.find(s=>s.heading==='直接回答')||sections.find(s=>s.text.length>50))?.text.replace(/\s+/g,' ').trim().slice(0,180)||module.description;
- docs.push({path:file,sourceUrl:sourceUrl(file),title,module:module.id,moduleName:module.label,category:p?.category||c?.category||s?.category||module.label,difficulty:p?.difficulty||null,problemId:p?.id||null,supplemental:Boolean(p?.supplemental),questionIds:q?[q.id]:p?[`LC${p.id}`]:c?[c.id]:[],priorities:q?[q.priority]:s?[s.priority]:[],readingOrder:module.id==='rtos'?(q?Number(q.id.slice(2)):s?100+s.order:0):null,optionalHistorical:Boolean(s?.optional_historical),kind:p?'problem':q?'question':c?'scenario':s?'source-study':path.basename(file)==='README.md'?'overview':'chapter',summary,minutes:Math.max(1,Math.ceil(source.replace(/\s/g,'').length/450)),headings,sections,html,source});
+ docs.push({path:file,sourceUrl:sourceUrl(file),title,module:module.id,moduleName:module.label,category:p?.category||c?.category||s?.category||o?.category||module.label,difficulty:p?.difficulty||null,problemId:p?.id||null,supplemental:Boolean(p?.supplemental),questionIds:q?[q.id]:p?[`LC${p.id}`]:c?[c.id]:[],priorities:q?[q.priority]:s?[s.priority]:o?[o.priority]:[],readingOrder:module.id==='rtos'?(q?Number(q.id.slice(2)):s?100+s.order:o?200+o.order:0):null,optionalHistorical:Boolean(s?.optional_historical),kind:p?'problem':q?'question':c?'scenario':s?'source-study':o?'optional-depth':path.basename(file)==='README.md'?'overview':'chapter',summary,minutes:Math.max(1,Math.ceil(source.replace(/\s/g,'').length/450)),headings,sections,html,source});
 }
 if(broken.length)throw Error('Broken local links:\n'+JSON.stringify(broken,null,2));
 const hashFiles=new Set(inputs.map(([f])=>f));
 for(const f of [...resources].sort()){if(!hashFiles.has(f))inputs.push([f,fs.readFileSync(path.join(root,f))]);}
 const sourceHash=crypto.createHash('sha256').update(inputs.sort(([a],[b])=>a.localeCompare(b,'en')).map(([f,b])=>`${f}\0${b}`).join('\0')).digest('hex');
 const algDocs=docs.filter(d=>d.module==='hot100cpp'&&d.problemId&&!d.supplemental);
-const data={schemaVersion:'1.0',repositoryUrl:config.repository_url,checkedDate:config.checked_date,sourceHash,coreCount:core.questions.length,sourceStudyCount:study.chapters.length,originalScenarioCount:interviews.cards.length,newPublicReportCount:interviews.counts.new_full_public_pages||0,interviewCounts:interviews.counts,questionCount:core.questions.length+algDocs.length,hot100Count:algDocs.length,hot100Expected:hot.problems.length,supplementaryCount:docs.filter(d=>d.supplemental).length,hot100Categories:hot.categories.map(c=>c.name),modules:config.modules.map(m=>({...m,count:docs.filter(d=>d.module===m.id).length,countUnit:'篇文档'})),docs};
-const output='window.STUDY_DATA = '+JSON.stringify(data)+';\n';
-const generated=path.join(site,'assets/data.js');
-const index={checked_date:config.checked_date,documents:docs.map(d=>({path:d.path,title:d.title,module:d.module,question_ids:d.questionIds})),items:[...core.questions.map(q=>({...q,relative_path:q.path})),...interviews.cards.map(c=>({id:c.id,title:c.title,path:c.path,module:c.module,kind:c.kind})),...study.chapters.map(c=>({title:c.title,path:c.path,module:c.module,kind:c.kind,category:c.category,priority:c.priority,order:c.order,optional_historical:c.optional_historical})),...docs.filter(d=>d.problemId).map(d=>({id:'LC'+d.problemId,title:d.title,path:d.path,module:d.module,supplemental:d.supplemental}))]};
-if(check){if(!fs.existsSync(path.join(root,'content-index.json'))||fs.readFileSync(path.join(root,'content-index.json'),'utf8')!==JSON.stringify(index,null,2)+'\n')throw Error('Generated content index is stale');if(!fs.existsSync(generated)||fs.readFileSync(generated,'utf8')!==output)throw Error('Generated reader is stale');const actualResources=walk('site/assets/repo').map(f=>f.slice('site/assets/repo/'.length)).sort();if(JSON.stringify(actualResources)!==JSON.stringify([...resources].sort()))throw Error('Offline resource inventory is stale');for(const f of resources){if(!fs.existsSync(path.join(site,'assets/repo',f))||!fs.readFileSync(path.join(root,f)).equals(fs.readFileSync(path.join(site,'assets/repo',f))))throw Error(`Resource stale: ${f}`);}}else{
- fs.writeFileSync(generated,output);fs.writeFileSync(path.join(root,'content-index.json'),JSON.stringify(index,null,2)+'\n');fs.rmSync(path.join(site,'assets/repo'),{recursive:true,force:true});for(const f of resources){const dest=path.join(site,'assets/repo',f);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(root,f),dest);}
+const data={schemaVersion:'1.0',repositoryUrl:config.repository_url,checkedDate:config.checked_date,sourceHash,coreCount:core.questions.length,sourceStudyCount:study.chapters.length,optionalDepthCount:optional.chapters.length,originalScenarioCount:interviews.cards.length,newPublicReportCount:interviews.counts.new_full_public_pages||0,interviewCounts:interviews.counts,questionCount:core.questions.length+algDocs.length,hot100Count:algDocs.length,hot100Expected:hot.problems.length,supplementaryCount:docs.filter(d=>d.supplemental).length,hot100Categories:hot.categories.map(c=>c.name),modules:config.modules.map(m=>({...m,count:docs.filter(d=>d.module===m.id).length,countUnit:'篇文档'})),docs};
+// Ordered deferred scripts preserve the complete offline payload without fetch.
+// Source-digest filenames prevent mixing old cached shards with a new build.
+const serialized=JSON.stringify(data),parts=[];
+for(let offset=0;offset<serialized.length;offset+=65536){
+ const filename=`data.${sourceHash.slice(0,16)}.${String(parts.length+1).padStart(3,'0')}.js`;
+ const literal=JSON.stringify(serialized.slice(offset,offset+65536)).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
+ const content=`window.STUDY_DATA_TEXT = (window.STUDY_DATA_TEXT || "") + ${literal};\n`;
+ if(Buffer.byteLength(content,'utf8')>262144)throw Error(`Reader shard exceeds 256 KiB: ${filename}`);
+ parts.push({filename,content});
 }
-console.log(`${check?'Checked':'Built'} ${docs.length} documents, ${core.questions.length} core topics, ${algDocs.length}/${hot.problems.length} official Hot100 docs, ${data.supplementaryCount} supplementary, ${interviews.cards.length} original interview scenarios, ${study.chapters.length} FreeRTOS source-study chapters; ${resources.size} offline resources.`);
+const output=`/* Generated by node site/build.mjs. Source SHA-256: ${sourceHash} */\nwindow.STUDY_DATA = JSON.parse(window.STUDY_DATA_TEXT);\ndelete window.STUDY_DATA_TEXT;\n`;
+const generated=path.join(site,'assets/data.js');
+const htmlPath=path.join(site,'index.html'),originalHtml=fs.readFileSync(htmlPath,'utf8');
+const scriptBlock=parts.map(p=>`  <script src="assets/${p.filename}" defer></script>`).join('\n')+'\n  <script src="assets/data.js" defer></script>';
+const html=originalHtml.replace(/(?:  <script src="assets\/data\.[^"\n]+\.js" defer><\/script>\n)*  <script src="assets\/data\.js" defer><\/script>/,scriptBlock);
+if(html===originalHtml&&!originalHtml.includes(`assets/${parts[0].filename}`))throw Error('Missing reader data script insertion point');
+
+const index={checked_date:config.checked_date,documents:docs.map(d=>({path:d.path,title:d.title,module:d.module,question_ids:d.questionIds})),items:[...core.questions.map(q=>({...q,relative_path:q.path})),...interviews.cards.map(c=>({id:c.id,title:c.title,path:c.path,module:c.module,kind:c.kind})),...study.chapters.map(c=>({title:c.title,path:c.path,module:c.module,kind:c.kind,category:c.category,priority:c.priority,order:c.order,optional_historical:c.optional_historical})),...optional.chapters.map(c=>({title:c.title,path:c.path,module:c.module,kind:c.kind,category:c.category,priority:c.priority,order:c.order,prerequisite_ids:c.prerequisite_ids})),...docs.filter(d=>d.problemId).map(d=>({id:'LC'+d.problemId,title:d.title,path:d.path,module:d.module,supplemental:d.supplemental}))]};
+if(check){
+ if(originalHtml!==html)throw Error('Generated reader script order is stale');
+ const expected=new Set(parts.map(p=>p.filename));
+ for(const p of parts)if(!fs.existsSync(path.join(site,'assets',p.filename))||fs.readFileSync(path.join(site,'assets',p.filename),'utf8')!==p.content)throw Error(`Reader shard is stale: ${p.filename}`);
+ for(const f of fs.readdirSync(path.join(site,'assets')).filter(f=>/^data\..+\.js$/.test(f)))if(!expected.has(f))throw Error(`Unexpected stale reader shard: ${f}`);
+ if(!fs.existsSync(path.join(root,'content-index.json'))||fs.readFileSync(path.join(root,'content-index.json'),'utf8')!==JSON.stringify(index,null,2)+'\n')throw Error('Generated content index is stale');if(!fs.existsSync(generated)||fs.readFileSync(generated,'utf8')!==output)throw Error('Generated reader is stale');const actualResources=walk('site/assets/repo').map(f=>f.slice('site/assets/repo/'.length)).sort();if(JSON.stringify(actualResources)!==JSON.stringify([...resources].sort()))throw Error('Offline resource inventory is stale');for(const f of resources){if(!fs.existsSync(path.join(site,'assets/repo',f))||!fs.readFileSync(path.join(root,f)).equals(fs.readFileSync(path.join(site,'assets/repo',f))))throw Error(`Resource stale: ${f}`);}}else{
+ fs.writeFileSync(generated,output);fs.writeFileSync(htmlPath,html);
+ for(const f of fs.readdirSync(path.join(site,'assets')).filter(f=>/^data\..+\.js$/.test(f)))fs.unlinkSync(path.join(site,'assets',f));
+ for(const p of parts)fs.writeFileSync(path.join(site,'assets',p.filename),p.content);
+ fs.writeFileSync(path.join(root,'content-index.json'),JSON.stringify(index,null,2)+'\n');fs.rmSync(path.join(site,'assets/repo'),{recursive:true,force:true});for(const f of resources){const dest=path.join(site,'assets/repo',f);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.copyFileSync(path.join(root,f),dest);}
+}
+console.log(`${check?'Checked':'Built'} ${docs.length} documents, ${core.questions.length} core topics, ${algDocs.length}/${hot.problems.length} official Hot100 docs, ${data.supplementaryCount} supplementary, ${interviews.cards.length} original interview scenarios, ${study.chapters.length} FreeRTOS source-study chapters, ${optional.chapters.length} optional-depth chapters; ${resources.size} offline resources.`);

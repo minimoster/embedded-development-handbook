@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "checked_date": "2026-10-10",
+  "kind": "original_optional_depth",
+  "chapter_count": 9,
+  "preserved_counts": {
+    "core": 120,
+    "official_hot100": 100,
+    "supplementary_algorithm": 1,
+    "interview_scenarios": 7,
+    "freertos_source_study": 7
+  },
+  "chapters": [
+    {
+      "path": "docs/50-rtos/task-diagnostics.md",
+      "title": "FreeRTOS 任务诊断与运行时集成",
+      "module": "rtos",
+      "kind": "optional-depth",
+      "category": "任务诊断与运行时",
+      "priority": "P1",
+      "order": 1,
+      "prerequisite_ids": [
+        "RT08",
+        "RT10"
+      ],
+      "sha256": "5b3d595d5a0d26250e47d94a64798463c9cb875586661b244a3c4fccaa897d39"
+    },
+    {
+      "path": "docs/110-projects/edge-inference-validation.md",
+      "title": "可选扩展  从算法输入到目标设备结果的部署验证",
+      "module": "project",
+      "kind": "optional-depth",
+      "category": "模型部署验证",
+      "priority": "P2",
+      "order": 2,
+      "prerequisite_ids": [
+        "PJ05"
+      ],
+      "sha256": "b95f360c7d50a716f1c07950d6211c340f2356d3b665522eea27063a655b7c33"
+    },
+    {
+      "path": "docs/70-linux-apps/integration-stacks.md",
+      "title": "可选扩展  GUI 存储网络与媒体的集成边界",
+      "module": "linux",
+      "kind": "optional-depth",
+      "category": "应用库集成",
+      "priority": "P2",
+      "order": 3,
+      "prerequisite_ids": [
+        "LX17"
+      ],
+      "sha256": "3bb7654a7552b8392062a5ca941bca7e07a8f11a00db2899ec0c196a938ba41c"
+    },
+    {
+      "path": "docs/40-mcu/clock-systick-contracts.md",
+      "title": "MCU 时钟层级与 SysTick 时间基准",
+      "module": "mcu",
+      "kind": "optional-depth",
+      "category": "时钟与SysTick",
+      "priority": "P2",
+      "order": 4,
+      "prerequisite_ids": [
+        "MC02",
+        "AR04",
+        "RT02"
+      ],
+      "sha256": "0b052d75a3767bcc938bf15b2e19caeb0e3feca539df7b872efaf5ae19e86dca"
+    },
+    {
+      "path": "docs/100-debugging/linux-postmortem-evidence.md",
+      "title": "可选诊断补充 · 用崩溃快照建立可复核的证据链",
+      "module": "debug",
+      "kind": "optional-depth",
+      "category": "事后诊断证据",
+      "priority": "P2",
+      "order": 5,
+      "prerequisite_ids": [
+        "DB02",
+        "LX08"
+      ],
+      "sha256": "8a7c1b2ea1aef89f99774e3e8faf31f76c4a31e5fa5530fd1cf3deace56d3b7a"
+    },
+    {
+      "path": "docs/50-rtos/queue-operation-contracts.md",
+      "title": "可选合同补充 · 队列操作、调试名称与 queue sets",
+      "module": "rtos",
+      "kind": "optional-depth",
+      "category": "队列操作与集合",
+      "priority": "P2",
+      "order": 6,
+      "prerequisite_ids": [
+        "RT05"
+      ],
+      "sha256": "7ee7db2c072ae91f26b528aa984e30887873c038942843c36ab7a3cfb9ddba98"
+    },
+    {
+      "path": "docs/70-linux-apps/socket-websocket-contracts.md",
+      "title": "socket 生命周期与 WebSocket 消息合同",
+      "module": "linux",
+      "kind": "optional-depth",
+      "category": "socket与WebSocket",
+      "priority": "P2",
+      "order": 7,
+      "prerequisite_ids": [
+        "PR05",
+        "PR08",
+        "LX03",
+        "LX18"
+      ],
+      "sha256": "0464afde7df870e77bd07e3ce8589ba2d6d68b3243a4cdf85755ca977b45a292"
+    },
+    {
+      "path": "docs/60-protocols/uart-termios-contracts.md",
+      "title": "UART 电气帧格式与 Linux 串口合同",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "UART与termios",
+      "priority": "P2",
+      "order": 8,
+      "prerequisite_ids": [
+        "MC04",
+        "MC05",
+        "PR03",
+        "LX12"
+      ],
+      "sha256": "6b452c4bdbe0f6f4a61d79c1d3523cadad694db08a5c7d826cd63193f7eb81d1"
+    },
+    {
+      "path": "docs/50-rtos/memory-policy-contracts.md",
+      "title": "RTOS 内存策略：从空闲块选择到释放合同",
+      "module": "rtos",
+      "kind": "optional-depth",
+      "category": "内存分配策略",
+      "priority": "P2",
+      "order": 9,
+      "prerequisite_ids": [
+        "C07",
+        "RT08",
+        "RT10"
+      ],
+      "sha256": "59d5ad6327a5d6673af5b205c27eac91fa61d6f894669f57aa556521d039cabe"
+    }
+  ]
+}

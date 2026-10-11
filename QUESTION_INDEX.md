@@ -183,6 +183,21 @@
 - [软件定时器与共享 daemon 的命令和寿命](docs/50-rtos/kernel-timer-daemon.md) · P1 · 软件定时器 / daemon寿命
 - [历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？](docs/50-rtos/historical-co-routines.md) · P2 · 历史选读 / co-routines
 
+## 可选深化讲义 · 9篇
+
+接口与验证合同选读，独立于核心、算法、故障场景和FreeRTOS源码导读计数。
+
+- [选读路线与验证边界](docs/130-reference/optional-depth.md)
+- [FreeRTOS 任务诊断与运行时集成](docs/50-rtos/task-diagnostics.md) · P1 · 任务诊断与运行时
+- [可选扩展  从算法输入到目标设备结果的部署验证](docs/110-projects/edge-inference-validation.md) · P2 · 模型部署验证
+- [可选扩展  GUI 存储网络与媒体的集成边界](docs/70-linux-apps/integration-stacks.md) · P2 · 应用库集成
+- [MCU 时钟层级与 SysTick 时间基准](docs/40-mcu/clock-systick-contracts.md) · P2 · 时钟与SysTick
+- [可选诊断补充 · 用崩溃快照建立可复核的证据链](docs/100-debugging/linux-postmortem-evidence.md) · P2 · 事后诊断证据
+- [可选合同补充 · 队列操作、调试名称与 queue sets](docs/50-rtos/queue-operation-contracts.md) · P2 · 队列操作与集合
+- [socket 生命周期与 WebSocket 消息合同](docs/70-linux-apps/socket-websocket-contracts.md) · P2 · socket与WebSocket
+- [UART 电气帧格式与 Linux 串口合同](docs/60-protocols/uart-termios-contracts.md) · P2 · UART与termios
+- [RTOS 内存策略：从空闲块选择到释放合同](docs/50-rtos/memory-policy-contracts.md) · P2 · 内存分配策略
+
 ## Hot100 · C++17
 
 - [学习路线、完整题单与测试](docs/80-hot100-cpp/README.md)

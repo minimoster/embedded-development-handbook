@@ -32,6 +32,12 @@
 
 `EventGroup_t` 的核心字段是当前位图 `uxEventBits` 和等待者链表 `xTasksWaitingForBits`。事件组有自己的实现，不由修改 `Queue_t` 配置生成。trace 字段和静态分配标记受配置影响，读结构体时应沿着条件编译看实际布局。[event_groups.c](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.1.0/event_groups.c)
 
+### 可选追踪编号不是对象寿命凭证
+
+V11.1.0 在 `configUSE_TRACE_FACILITY=1` 时提供 `uxEventGroupGetNumber` 与 `vEventGroupSetNumber`。它们读取或写入 `uxEventGroupNumber`；创建路径调用可定制的 trace 宏，并不在通用内核路径自动递增一个事件组唯一编号。由应用或记录器约定赋值、有限宽度、复用和会话边界，不能把字段名当成永久唯一性的保证。[创建路径](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/event_groups.c#L91-L178)、[编号接口](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/event_groups.c#L833-L879)
+
+getter 对 `NULL` 返回 0，不代表任意无效或已删除的非空句柄都可安全查询。setter/getter 也不把对象初始化、并发访问和删除组成寿命协议；在受控初始化阶段安装记录器编号，并保持有效句柄和同步条件。长期日志保存已复制的启动标识和应用实例编号，删除后停止查询旧对象，不靠地址或编号“恢复”句柄。相关诊断边界见[任务诊断与运行时集成](task-diagnostics.md)。
+
 ### 2. AND 与 OR 是针对掩码的两个谓词
 
 设返回位值为 `bits`，关心的位为非零掩码 `mask`：

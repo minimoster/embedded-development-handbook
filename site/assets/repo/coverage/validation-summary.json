@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-10T15:56:06.349319+00:00",
+  "checked_at_utc": "2026-10-10T18:29:55.465240+00:00",
   "core_topics": 120,
   "official_hot100": 100,
   "core_host_tests": {
@@ -29,7 +29,7 @@
       "median_streams": 19607,
       "status": "normal and ASan/UBSan passed; independent checked-iterator run also passed"
     },
-    "fresh_regression": "All nine existing host suites rerun in normal and fail-fast ASan/UBSan modes; explicit detect_leaks=0."
+    "fresh_regression": "All nine existing host suites rerun against this derivative in normal and fail-fast ASan/UBSan modes; explicit detect_leaks=0. LeakSanitizer is not a pass."
   },
   "algorithms": {
     "passed": true,
@@ -43,12 +43,12 @@
     "source_link_checks": 529,
     "result_path": "docs/80-hot100-cpp/validation-result.json",
     "execution_status": "Fresh complete 101-entry normal, ASan/UBSan and checked-iterator regression passed; 17 independent bounded exhaustive oracles passed; no compiled input changed during run.",
-    "fresh_regression_checked_at_utc": "2026-10-10T15:47:51.304643+00:00",
+    "fresh_regression_checked_at_utc": "2026-10-10T18:22:57.249282+00:00",
     "result_path_status": "Previously published detailed record kept byte-identical; the fresh regression result is summarized here."
   },
   "reader_static": {
     "status": "passed",
-    "documents": 255,
+    "documents": 265,
     "checks": [
       "source consistency",
       "exact local routes and anchors",
@@ -60,44 +60,47 @@
     ],
     "offline_resources": 231,
     "navigation_simulation": "Repeated/current and changed sections, collapse-before-scroll, heading focus, back/forward history, modified clicks, responsive960px boundary, sidebar close/Esc/focus trap passed",
-    "freertos_extensions": "7 distinct categories, full-text searches and ordered RT01–RT10 then seven-chapter route passed; extension count is independent of core and algorithm counts."
+    "freertos_extensions": "7 distinct categories, full-text searches and ordered RT01–RT10 then seven-chapter route passed; extension count is independent of core and algorithm counts.",
+    "optional_depth": "Nine hash-fixed chapters classified separately; prerequisites, paired diagnostics/trace links, P1/P2 categories, searches, unchanged core/scenario/source-study/algorithm counts passed."
   },
   "actual_browser": {
-    "status": "passed bounded current Chrome QA",
-    "method": "Native cloud Chrome, loopback-only HTTP preview; measured desktop and narrow desktop viewports",
+    "status": "passed bounded current native cloud Chromium QA",
+    "method": "Supported cloud browser over native localhost-only HTTP preview",
     "desktop_css_viewport": [
-      1180,
-      757
+      1183,
+      759
     ],
     "narrow_desktop_css_viewport": [
-      385,
-      621
+      400,
+      607
     ],
-    "narrow_zoom_percent": 150,
-    "source_study_documents_checked": 7,
-    "source_view_sha256": "All seven exactly match current chapter files and frozen manifest",
-    "flow_groups_passed": 19,
+    "narrow_zoom_percent": 125,
+    "changed_chapters_checked": 11,
+    "new_optional_chapters": 9,
+    "source_view_sha256": "All eleven changed chapter source views exactly match reviewed files",
     "checks": [
-      "All seven titles and chapter renders",
-      "Seven category filters and seven searches; full-text symbol search",
-      "RTOS order and actual RT10 then seven-chapter next links",
-      "All seven beginner-link targets with foundation and version boundaries",
-      "Repeated TOC, heading focus and back/forward",
-      "All seven narrow pages without page-wide overflow; table/code local overflow and keyboard scroll",
-      "Narrow menu focus, Escape close and navigation"
+      "Nine-chapter route and independent count boundary",
+      "All eleven titles and source-view identities",
+      "All nine actual full-text searches with optional-depth badges",
+      "All eleven narrow pages without page-wide horizontal overflow",
+      "Repeated/current and changed TOC links; heading focus and Back/Forward",
+      "Narrow menu open/Escape-close and focus restoration",
+      "Focusable local table and actual code horizontal keyboard scroll"
     ],
-    "console_sample": "Captured sample had no application-origin warnings/errors; this is not a complete error or network audit.",
+    "console_sample": "Twenty captured errors were browser-extension-origin metadata messages; no application-origin warning/error in this bounded sample. Not a full console or network audit.",
     "not_run": [
-      "Full 255-document actual browser sweep",
-      "Physical mobile/touch device or exact touch emulation",
-      "Assistive technology accessibility audit",
-      "Complete request/network/error capture",
-      "New FreeRTOS chapter host models, kernels, simulators or board experiments"
+      "physical mobile device",
+      "touchscreen interaction",
+      "assistive technology",
+      "full 265-document visual traversal",
+      "complete network/error audit",
+      "candidate public deployment"
     ]
   },
   "leak_sanitizer": {
     "status": "blocked",
-    "reason": "A fresh default sanitizer attempt reported the LeakSanitizer ptrace fatal error before the first suite completed. Explicit detect_leaks=0 regression passed ASan/UBSan; this is not leak-check evidence."
+    "reason": "A previously observed default sanitizer attempt failed under the executor ptrace restriction. This integration did not repeat the default attempt; current ASan/UBSan runs explicitly used detect_leaks=0. Not a leak-check pass.",
+    "current_integration_status": "not run; explicitly disabled in current ASan/UBSan execution"
   },
   "hardware_rtos_kernel_online_judge": "not run",
   "release_status": "This record describes local verification before publication; exact-commit CI, deployment and live checks are separate release evidence.",
@@ -110,5 +113,23 @@
   "freertos_source_study_runtime": {
     "status": "not run",
     "scope": "Seven source-reviewed original chapters, hand traces and proposed exercises; no chapter host model, kernel, simulator or board experiments were compiled or executed."
+  },
+  "optional_depth_validation": {
+    "chapters": 9,
+    "narrow_replacements": 2,
+    "core_ids_added": 0,
+    "reviewed_chapter_hashes": "exactly preserved during integration",
+    "executed_host_methods": {
+      "clock_systick_arithmetic_state": 38,
+      "synthetic_elf_evidence_policy": 10,
+      "socket_pty_and_scripted_contracts": 9,
+      "integer_interval_memory_policy": 10,
+      "task_stat_arithmetic": 7
+    },
+    "application_examples": "Both self-contained Python examples extracted from exact integrated chapter bytes and executed successfully",
+    "prior_independent_application_regressions": "23 bounded checks previously passed against the same reviewed bytes; not described as a fresh integrated rerun",
+    "queue_timer": "Source/prose review only; no host queue/timer model, kernel, simulator or board run",
+    "scope": "Bounded host arithmetic, synthetic artifact bookkeeping, local I/O and original application models; no target integration certification",
+    "remaining_teaching": "Optional chapters do not complete all specialized directions; see docs/130-reference/optional-depth.md and coverage-boundaries.md."
   }
 }

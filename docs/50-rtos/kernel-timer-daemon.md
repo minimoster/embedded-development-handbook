@@ -54,6 +54,14 @@ daemon 一轮工作：
 
 在 V11.1.0 中，`prvTimerTask()` 的主循环先处理到期或等待，再处理收到的命令。命令处理循环一直读取到队列为空，不能据此推导出每轮固定处理 N 个命令的公平性保证。持续的命令流、长回调和其他任务的抢占都要进入负载分析。[daemon 主循环与等待路径](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/timers.c#L748-L842)；[命令处理](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/timers.c#L938-L1084)
 
+### 可选阅读 等待路径的 Boolean 与启动钩子
+
+在本章单核 V11.1.0 的等待分支，daemon 先登记等待，再调用 `xTaskResumeAll()`。其返回值不是“是否有更高优先级任务”的查询；实现中的 `xAlreadyYielded` 记录该恢复路径是否已按抢占配置发起让出处理。返回 `pdFALSE` 可能只是没有走到该让出路径。daemon 因而在该分支补 `taskYIELD_WITHIN_API()`，让已经登记的阻塞等待生效；若期间来了命令，重新调度后仍按实际条件处理。不能把这几行抽成所有应用均可套用的休眠模板，也不能把一次恢复当成配平所有嵌套的 scheduler suspension。[daemon 等待分支](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/timers.c#L805-L838)、[恢复调度器实现](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/tasks.c#L3956-L4102)
+
+若开启 `configUSE_DAEMON_TASK_STARTUP_HOOK`，`vApplicationDaemonTaskStartupHook()` 在 daemon 开始循环前执行。它仍占用这一共享服务任务：初始化必须有界，不能等待只有本 daemon 的后续 timer/延后工作才能满足的条件，且它的运行时间进入最初一批命令/到期的延迟预算。[启动钩子位置](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/timers.c#L748-L774)
+
+还要区分“合法命令队列当前为空”与“命令队列创建失败为 NULL”：前者是正常运行状态，后者必须沿创建返回和配置/内存失败路径处理，不能画成 daemon 正常等待空队列。前面的容量推演只讨论已经有效建立的服务设施。这些补充仅做固定源码核读，未执行 FreeRTOS、模拟器或板级验证。
+
 ### 2 创建只建立对象
 
 `xTimerCreate()` 动态申请定时器控制块，失败返回 `NULL`。`xTimerCreateStatic()` 使用应用提供的 `StaticTimer_t` 缓冲；缓冲必须有效且足够长寿命。新对象处于 dormant 状态，创建成功不会自动启动倒计时。创建期间也可能初始化服务所需的链表和队列；创建返回一个非空 timer 句柄，不等于整套服务任务已经成功开始运行。[创建与初始化路径](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/timers.c#L334-L446)
