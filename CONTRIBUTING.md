@@ -11,6 +11,7 @@ python3 scripts/update_index.py
 python3 scripts/validate.py --strict
 python3 scripts/validate_public_metadata.py
 python3 tests/run_host_tests.py
+python3 tests/run_protocol_depth_tests.py
 node site/build.mjs
 node site/build.mjs --check
 node site/test.mjs

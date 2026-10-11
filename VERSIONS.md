@@ -23,3 +23,11 @@
 - 六篇现代源码讲义：FreeRTOS-Kernel V11.1.0，commit `dbf70559b27d39c1fdb68dfb9a32140b6a6777a0`，单核GCC `portable/GCC/ARM_CM4F`；tick宽度、抢占/时间片、timer队列和可选功能以各章明确的配置为准。[固定源码与MIT许可](https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/dbf70559b27d39c1fdb68dfb9a32140b6a6777a0/LICENSE.md)
 - 历史co-routines选读：FreeRTOS V9.0.0，commit `165c24cba94e3d3f386c3b77d3bb0f4a524d8511`；GPLv2加FreeRTOS exception，与现代MIT边界分别记录。[历史许可](https://github.com/FreeRTOS/FreeRTOS/blob/165c24cba94e3d3f386c3b77d3bb0f4a524d8511/FreeRTOS/License/license.txt)
 - 源码核读、原创伪代码和手推时序不是运行记录；这些章节没有编译或运行主机模型、内核、模拟器及板级实验。其他版本、SMP、MPU包装、厂商修改内核和其他port须重新核对。
+
+## 2026-10-11 · 协议三章的固定教学基线
+
+- [I²C时序与恢复](docs/60-protocols/i2c-timing-recovery.md)：NXP UM10204 Rev.7.0（2021-10-01），只核对章内相关时序、上拉和bus-clear段落；原创策略和规范原句分别说明。
+- [SPI逐边沿与事务](docs/60-protocols/spi-edges-spidev.md)：官方Linux v6.6 UAPI与spidev文档。主机C代码实际编译于本机系统头文件并注入mock ioctl，没有编译/运行Linux v6.6内核或访问真实设备。
+- [经典Reno与RTO](docs/60-protocols/tcp-reno-rto.md)：RFC9293、5681和6298；采用章内显式限定的单缺口、无SACK、有限事件教学模型，不能代表Linux默认拥塞算法或真实网络。
+
+这三章的规范核对、合成状态/边沿和主机运行范围单独记录，不替代板级电气、目标内核或生产网络验证。未恢复既有受限或未读原文，不据此宣称全部来源已完整覆盖。

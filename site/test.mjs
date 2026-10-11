@@ -55,7 +55,7 @@ for(const term of ['EN01','EN18','STM32','remove','试运行确认'])assert(engi
 assert.equal(engine.query(new URLSearchParams({module:'interview'})).results.length,9);
 assert(engine.query(new URLSearchParams({q:'IC01'})).results.some(r=>r.d.path.endsWith('ic01.md')));
 const study=JSON.parse(fs.readFileSync(path.join(root,'docs/50-rtos/source-study-manifest.json'),'utf8'));
-assert.equal(data.sourceStudyCount,7);assert.equal(data.optionalDepthCount,9);assert.equal(docs.length,265);
+assert.equal(data.sourceStudyCount,7);assert.equal(data.optionalDepthCount,12);assert.equal(docs.length,268);
 const studyDocs=docs.filter(d=>d.kind==='source-study');assert.equal(studyDocs.length,7);
 for(const c of study.chapters){const d=byPath.get(c.path);assert(d&&d.module==='rtos'&&d.category===c.category&&!d.questionIds.length&&!d.problemId&&!d.supplemental);assert(d.priorities.includes(c.priority));assert(engine.query(new URLSearchParams({module:'rtos',topic:c.category})).results.some(r=>r.d.path===c.path),c.path);}
 assert.equal(docs.filter(d=>d.module==='rtos'&&d.kind==='question').length,10);
@@ -63,9 +63,10 @@ const rtosRoute=engine.query(new URLSearchParams({module:'rtos'})).results.map(r
 assert.deepEqual(Array.from(rtosRoute.slice(10,17)),study.chapters.map(c=>c.path));
 for(const [term,filename] of [['pxContainer','kernel-lists.md'],['TCB','kernel-task-lifecycle.md'],['超时复查','kernel-queue-waits.md'],['事件组','kernel-event-groups.md'],['daemon','kernel-timer-daemon.md'],['co-routine','historical-co-routines.md']])assert(engine.query(new URLSearchParams({q:term,module:'rtos'})).results.some(r=>r.d.path.endsWith(filename)),term);
 const optional=JSON.parse(fs.readFileSync(path.join(root,'docs/130-reference/optional-depth-manifest.json'),'utf8'));
-assert.equal(docs.filter(d=>d.kind==='optional-depth').length,9);
+assert.equal(docs.filter(d=>d.kind==='optional-depth').length,12);
 for(const c of optional.chapters){const d=byPath.get(c.path);assert(d&&d.kind===c.kind&&d.module===c.module&&d.category===c.category&&d.priorities.includes(c.priority)&&!d.questionIds.length&&!d.problemId&&!d.supplemental);assert(engine.query(new URLSearchParams({module:c.module,topic:c.category,priority:c.priority})).results.some(r=>r.d.path===c.path),c.path);}
 assert(byPath.get('docs/130-reference/optional-depth.md').html.includes('task-diagnostics.md'));
+for(const [term,filename] of [['bus-clear','i2c-timing-recovery.md'],['spi_ioc_transfer','spi-edges-spidev.md'],['ssthresh','tcp-reno-rto.md']])assert(engine.query(new URLSearchParams({q:term,module:'protocol'})).results.some(r=>r.d.path.endsWith(filename)),term);
 const app=fs.readFileSync(path.join(site,'assets/app.js'),'utf8');assert(app.includes('zhixing.embedded.reader.v1'));assert(!app.includes('zhixing.reader.v1'));assert(!/\bfetch\s*\(|XMLHttpRequest|https?:\/\//.test(app));
 console.log(`Static reader PASS: ${docs.length} source-consistent docs, exact local routes/anchors, escaped output, resources, search/filter/counts.`);
 

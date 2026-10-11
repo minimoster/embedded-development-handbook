@@ -183,7 +183,7 @@
 - [软件定时器与共享 daemon 的命令和寿命](docs/50-rtos/kernel-timer-daemon.md) · P1 · 软件定时器 / daemon寿命
 - [历史选读 · FreeRTOS V9.0.0 co-routines 如何保存状态？](docs/50-rtos/historical-co-routines.md) · P2 · 历史选读 / co-routines
 
-## 可选深化讲义 · 9篇
+## 可选深化讲义 · 12篇
 
 接口与验证合同选读，独立于核心、算法、故障场景和FreeRTOS源码导读计数。
 
@@ -197,6 +197,9 @@
 - [socket 生命周期与 WebSocket 消息合同](docs/70-linux-apps/socket-websocket-contracts.md) · P2 · socket与WebSocket
 - [UART 电气帧格式与 Linux 串口合同](docs/60-protocols/uart-termios-contracts.md) · P2 · UART与termios
 - [RTOS 内存策略：从空闲块选择到释放合同](docs/50-rtos/memory-policy-contracts.md) · P2 · 内存分配策略
+- [I²C 时序预算、上拉区间与有界总线恢复](docs/60-protocols/i2c-timing-recovery.md) · P2 · I²C时序与有界恢复
+- [SPI 四模式逐边沿与 spidev 命令数据事务](docs/60-protocols/spi-edges-spidev.md) · P2 · SPI逐边沿与完整事务
+- [TCP Reno 与 RTO · 从累计 ACK 手推一次有限恢复](docs/60-protocols/tcp-reno-rto.md) · P2 · Reno与RTO有限恢复
 
 ## Hot100 · C++17
 

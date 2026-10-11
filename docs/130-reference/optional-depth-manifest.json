@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "checked_date": "2026-10-10",
+  "checked_date": "2026-10-11",
   "kind": "original_optional_depth",
-  "chapter_count": 9,
+  "chapter_count": 12,
   "preserved_counts": {
     "core": 120,
     "official_hot100": 100,
@@ -139,6 +139,50 @@
         "RT10"
       ],
       "sha256": "59d5ad6327a5d6673af5b205c27eac91fa61d6f894669f57aa556521d039cabe"
+    },
+    {
+      "path": "docs/60-protocols/i2c-timing-recovery.md",
+      "title": "I²C 时序预算、上拉区间与有界总线恢复",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "I²C时序与有界恢复",
+      "priority": "P2",
+      "order": 10,
+      "prerequisite_ids": [
+        "PR01",
+        "LX12"
+      ],
+      "sha256": "8d0c3303bd2c36ae38babf924fdb72e9720902720aa0d32df15ac63b563fa539"
+    },
+    {
+      "path": "docs/60-protocols/spi-edges-spidev.md",
+      "title": "SPI 四模式逐边沿与 spidev 命令数据事务",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "SPI逐边沿与完整事务",
+      "priority": "P2",
+      "order": 11,
+      "prerequisite_ids": [
+        "PR02",
+        "LX12"
+      ],
+      "sha256": "de99138c4a380b07d969c2a3590ea5c895d841c787013921ffd50e20207dc28f"
+    },
+    {
+      "path": "docs/60-protocols/tcp-reno-rto.md",
+      "title": "TCP Reno 与 RTO · 从累计 ACK 手推一次有限恢复",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "Reno与RTO有限恢复",
+      "priority": "P2",
+      "order": 12,
+      "prerequisite_ids": [
+        "PR06",
+        "PR07",
+        "PR08",
+        "PR12"
+      ],
+      "sha256": "da8aade3d7165b1c1791d2c2a4a19953e9175dc0cbc1b6d8c6e9868d806be3b9"
     }
   ]
 }

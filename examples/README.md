@@ -66,3 +66,19 @@ Linux fixture只fork自己的孩子，用waitpid回收并检查退出状态，ex
 ## 实验9：真正的C/C++ ABI边界
 
 [共享头文件](cpp/device_boundary.h)、[C++实现](cpp/device_boundary.cpp)与[C调用方](../tests/host_c_abi_test.c)由脚本分别按C11/C++17编译、再链接。假计数资源通过opaque handle配对创建/销毁；测试空参数、耗尽后不改输出、空句柄销毁与非零限值。实现-fno-exceptions并使用nothrow分配；不模拟板上设备，不宣称分配失败注入或任意非法句柄可恢复。
+
+## 协议深化：有限主机模型与 mock 接口
+
+- [I²C模型](python/i2c_timing_recovery.py)与[20项测试](../tests/host_i2c_timing_recovery_test.py)：时序/上拉区间、逐边沿组合读以及2532条有限bus-clear故障轨迹。
+- [SPI接口](c/spidev_transaction.h)、[C实现](c/spidev_transaction.c)与[mock测试](../tests/host_spidev_transaction_test.c)：四模式理想边沿和单消息命令/数据，含配置失败、异常返回与长度；不访问真实设备。
+- [经典Reno/RTO模型](python/tcp_reno_rto.py)与[19组测试](../tests/host_tcp_reno_rto_test.py)：累计ACK、窗口、快恢复、超时/退避和保守Karn边界；无真实socket或网络。
+- [统一入口](../tests/run_protocol_depth_tests.py)：Python模型及严格C编译；可为C mock追加ASan/UBSan。
+
+```bash
+python3 tests/run_protocol_depth_tests.py
+python3 tests/run_protocol_depth_tests.py --sanitize
+# 仅在ptrace限制环境中显式关闭泄漏检测；不算LSan通过：
+python3 tests/run_protocol_depth_tests.py --sanitize --disable-leak-detection
+```
+
+这是原创有限教学模型与同步mock，不是总线/网络模拟器、内核符合性认证或板测。具体假设、来源版本和手推轨迹在三章分别说明；不推断芯片寄存器、设备恢复政策、板级上拉电阻或Linux默认TCP算法。

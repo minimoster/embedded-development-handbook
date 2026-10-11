@@ -1,5 +1,5 @@
 {
-  "checked_date": "2026-10-10",
+  "checked_date": "2026-10-11",
   "documents": [
     {
       "path": "CHANGELOG.md",
@@ -766,6 +766,12 @@
       "question_ids": []
     },
     {
+      "path": "docs/60-protocols/i2c-timing-recovery.md",
+      "title": "I²C 时序预算、上拉区间与有界总线恢复",
+      "module": "protocol",
+      "question_ids": []
+    },
+    {
       "path": "docs/60-protocols/pr01.md",
       "title": "PR01 · I²C 起止、ACK、仲裁和时钟拉伸怎么理解？",
       "module": "protocol",
@@ -868,6 +874,18 @@
       "question_ids": [
         "PR13"
       ]
+    },
+    {
+      "path": "docs/60-protocols/spi-edges-spidev.md",
+      "title": "SPI 四模式逐边沿与 spidev 命令数据事务",
+      "module": "protocol",
+      "question_ids": []
+    },
+    {
+      "path": "docs/60-protocols/tcp-reno-rto.md",
+      "title": "TCP Reno 与 RTO · 从累计 ACK 手推一次有限恢复",
+      "module": "protocol",
+      "question_ids": []
     },
     {
       "path": "docs/60-protocols/uart-termios-contracts.md",
@@ -4060,6 +4078,47 @@
         "C07",
         "RT08",
         "RT10"
+      ]
+    },
+    {
+      "title": "I²C 时序预算、上拉区间与有界总线恢复",
+      "path": "docs/60-protocols/i2c-timing-recovery.md",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "I²C时序与有界恢复",
+      "priority": "P2",
+      "order": 10,
+      "prerequisite_ids": [
+        "PR01",
+        "LX12"
+      ]
+    },
+    {
+      "title": "SPI 四模式逐边沿与 spidev 命令数据事务",
+      "path": "docs/60-protocols/spi-edges-spidev.md",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "SPI逐边沿与完整事务",
+      "priority": "P2",
+      "order": 11,
+      "prerequisite_ids": [
+        "PR02",
+        "LX12"
+      ]
+    },
+    {
+      "title": "TCP Reno 与 RTO · 从累计 ACK 手推一次有限恢复",
+      "path": "docs/60-protocols/tcp-reno-rto.md",
+      "module": "protocol",
+      "kind": "optional-depth",
+      "category": "Reno与RTO有限恢复",
+      "priority": "P2",
+      "order": 12,
+      "prerequisite_ids": [
+        "PR06",
+        "PR07",
+        "PR08",
+        "PR12"
       ]
     },
     {

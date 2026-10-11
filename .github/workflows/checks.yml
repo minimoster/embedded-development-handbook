@@ -18,6 +18,8 @@ jobs:
       - run: python3 scripts/validate_public_metadata.py
       - run: python3 tests/run_host_tests.py
       - run: python3 tests/run_host_tests.py --sanitize
+      - run: python3 tests/run_protocol_depth_tests.py
+      - run: python3 tests/run_protocol_depth_tests.py --sanitize
       - run: python3 algorithms/cpp/validate.py --output /tmp/hot100-ci-validation.json
       - run: node site/build.mjs --check
       - run: node site/test.mjs
